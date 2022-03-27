@@ -160,3 +160,5 @@ info	2022-03-28 12:57:59	POST Request to /api/auth/login
 info	2022-03-28 01:07:31	POST Request to /api/auth/login
 info	2022-03-28 01:12:23	POST Request to /api/auth/register
 info	2022-03-28 01:12:32	POST Request to /api/auth/login
+info	2022-03-28 01:26:51	POST Request to /api/auth/login
+info	2022-03-28 01:27:13	POST Request to /api/auth/register
