@@ -16,6 +16,7 @@ header, footer {
 }
 
 main {
-    grid-column: span 5;
+    grid-column: span 6;
+    /* grid-column: span 5; */
     overflow: auto;
 }

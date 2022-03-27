@@ -16,7 +16,7 @@ function errorsHandler(err: any, request: Request, response: Response, next: Nex
     }
 
     if (err instanceof ErrorModel) {
-        logger.info(err.message)
+        logger.info(err.message)   //!STRICT POLICY ?? Then don't return message to frontend
         response.status(err.status).send(err.message)
         return
     }
