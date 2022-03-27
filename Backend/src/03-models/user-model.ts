@@ -18,14 +18,13 @@ class UserModel {
         this.roleId = user.roleId
     }
 
-    private static postValidationSchema = Joi.object({
+    private static postValidationSchema = Joi.object({ //400 errors
         userId: Joi.forbidden(),
         firstName: Joi.string().required().min(2).max(100),
         lastName: Joi.string().required().min(2).max(100),
         username: Joi.string().required().min(2).max(100),
-        password: Joi.string().required().min(2).max(100),  //salted hash 128 ch
-        // password: Joi.string().required().length(128)  //salted hash 128 ch wrong! we get regular password from user and delete it
-        roleId: Joi.number().optional().min(RoleEnum.USER).max(RoleEnum.ADMIN) //? correct???
+        password: Joi.string().required().min(2).max(100),  
+        roleId: Joi.number().optional().integer().min(RoleEnum.USER).max(RoleEnum.ADMIN) 
     })
 
     validatePost():string {

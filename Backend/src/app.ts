@@ -10,7 +10,7 @@ import errorsHandler from './02-middleware/errors-handler'
 import logRequests from './02-middleware/log-request'
 import sanitize from './02-middleware/sanitize'
 import ErrorModel from './03-models/error-model'
-import controller from './06-controllers/controller'
+import authController from './06-controllers/auth-controller'
 import helmet from 'helmet'
 // import path from 'path'
 
@@ -31,7 +31,7 @@ server.use(logRequests)
 // const frontEndDir = path.join(__dirname, '07-frontend');
 // server.use(express.static(frontEndDir))
 
-server.use('/api', controller)
+server.use('/api', authController)
 
 server.use('*', (request: Request, response: Response, next: NextFunction) => {
     if(config.isDevelopment){
@@ -42,7 +42,7 @@ server.use('*', (request: Request, response: Response, next: NextFunction) => {
     //     response.sendFile(indexHtmlFile)
     // }
 })
-
+ 
 server.use(errorsHandler)
 
 

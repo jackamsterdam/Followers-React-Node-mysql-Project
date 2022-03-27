@@ -1,12 +1,14 @@
 import Logo from "../Logo/Logo";
 import "./Header.css";
 import {Typography} from '@material-ui/core'
+import AuthMenu from "../../AuthArea/AuthMenu/AuthMenu";
 
 function Header(): JSX.Element {
     return (
         <div className="Header">
 			<Logo/>
-            <Typography variant="h3">Project By Jack</Typography>
+            <Typography variant="h3">Vacations by Jack</Typography>
+            <AuthMenu/>
         </div>
     );
 }

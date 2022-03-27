@@ -10,9 +10,9 @@ function Layout(): JSX.Element {
           <header>
             <Header/>
           </header>
-          <aside>
+          {/* <aside>
             <Menu/>
-          </aside>
+          </aside> */}
           <main>
             <Routing/>
           </main>
