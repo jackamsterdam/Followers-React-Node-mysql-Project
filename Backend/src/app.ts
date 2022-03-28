@@ -11,6 +11,7 @@ import logRequests from './02-middleware/log-request'
 import sanitize from './02-middleware/sanitize'
 import ErrorModel from './03-models/error-model'
 import authController from './06-controllers/auth-controller'
+import vacationsController from './06-controllers/vacations-controller'
 import helmet from 'helmet'
 // import path from 'path'
 
@@ -32,6 +33,7 @@ server.use(logRequests)
 // server.use(express.static(frontEndDir))
 
 server.use('/api', authController)
+server.use('/api/admin', vacationsController)
 
 server.use('*', (request: Request, response: Response, next: NextFunction) => {
     if(config.isDevelopment){

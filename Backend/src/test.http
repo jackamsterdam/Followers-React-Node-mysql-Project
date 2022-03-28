@@ -1,9 +1,9 @@
 ###REST CLIENT Extension
-GET http://localhost:3001/api/...
+GET http://localhost:3001/api/admin/vacations
 Authorization:
 
 ###
-GET http://localhost:3001/api/...  /1
+GET http://localhost:3001/api/admin/vacations/1
 Authorization:
 ###
 POST http://localhost:3001/api/...
@@ -45,7 +45,7 @@ DELETE http://localhost:3001/api/products/99
 ###Error checks:
 
 ### 404 ErrorModel   Resource with id ____________ not found.
-GET http://localhost:3001/api/products/123412322432432423
+GET http://localhost:3001/api/admin/vacations/123423423
 ###  400 ErrorModel Bad Request  Joi validation error
 POST http://localhost:3001/api/products
 Content-Type: application/json

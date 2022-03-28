@@ -162,3 +162,115 @@ info	2022-03-28 01:12:23	POST Request to /api/auth/register
 info	2022-03-28 01:12:32	POST Request to /api/auth/login
 info	2022-03-28 01:26:51	POST Request to /api/auth/login
 info	2022-03-28 01:27:13	POST Request to /api/auth/register
+info	2022-03-28 02:01:12	POST Request to /api/auth/login
+info	2022-03-28 02:01:28	POST Request to /api/auth/login
+info	2022-03-28 02:05:33	POST Request to /api/auth/login
+info	2022-03-28 02:05:41	POST Request to /api/auth/login
+info	2022-03-28 02:06:20	POST Request to /api/auth/login
+info	2022-03-28 02:06:49	POST Request to /api/auth/login
+info	2022-03-28 02:07:20	POST Request to /api/auth/login
+info	2022-03-28 02:08:50	POST Request to /api/auth/login
+info	2022-03-28 02:09:14	POST Request to /api/auth/login
+info	2022-03-28 03:17:36	GET Request to /api/admin/vacations
+info	2022-03-28 03:17:36	Route not found
+info	2022-03-28 03:18:08	GET Request to /api/admin/vacations
+info	2022-03-28 03:18:27	GET Request to /api/admin/vacationss
+info	2022-03-28 03:18:27	Route not found
+info	2022-03-28 03:19:58	GET Request to /api/admin/vacations
+info	2022-03-28 03:28:12	GET Request to /api/admin/vacations/1
+error	2022-03-28 03:28:12	ER_BAD_FIELD_ERROR: Unknown column 'NaN' in 'where clause'
+info	2022-03-28 03:28:40	GET Request to /api/admin/vacations/1
+error	2022-03-28 03:28:40	ER_BAD_FIELD_ERROR: Unknown column 'NaN' in 'where clause'
+info	2022-03-28 03:29:33	GET Request to /api/admin/vacations/1
+error	2022-03-28 03:29:34	ER_BAD_FIELD_ERROR: Unknown column 'NaN' in 'where clause'
+info	2022-03-28 03:29:37	GET Request to /api/admin/vacations/1
+error	2022-03-28 03:29:37	ER_BAD_FIELD_ERROR: Unknown column 'NaN' in 'where clause'
+info	2022-03-28 03:30:11	GET Request to /api/admin/vacations/1
+error	2022-03-28 03:30:11	ER_BAD_FIELD_ERROR: Unknown column 'NaN' in 'where clause'
+info	2022-03-28 03:31:22	GET Request to /api/admin/vacations/1
+error	2022-03-28 03:31:22	ER_BAD_FIELD_ERROR: Unknown column 'NaN' in 'where clause'
+info	2022-03-28 03:32:10	GET Request to /api/admin/vacations/1
+error	2022-03-28 03:32:10	ER_BAD_FIELD_ERROR: Unknown column 'NaN' in 'where clause'
+info	2022-03-28 03:32:32	GET Request to /api/admin/vacations/1
+info	2022-03-28 03:33:31	GET Request to /api/admin/vacations/1
+error	2022-03-28 03:33:31	ER_BAD_FIELD_ERROR: Unknown column 'NaN' in 'where clause'
+info	2022-03-28 03:34:03	GET Request to /api/admin/vacations/123434234
+info	2022-03-28 03:34:03	Resource with id 123434234 not found.
+info	2022-03-28 03:34:07	GET Request to /api/admin/vacations/1
+info	2022-03-28 03:34:45	GET Request to /api/admin/vacations/1
+info	2022-03-28 03:35:47	GET Request to /api/admin/vacations/1
+info	2022-03-28 03:36:05	GET Request to /api/admin/vacations/1
+info	2022-03-28 03:36:08	GET Request to /api/admin/vacations/1
+info	2022-03-28 03:36:14	GET Request to /api/admin/vacations/123423423
+info	2022-03-28 03:36:14	Resource with id 123423423 not found.
+info	2022-03-28 03:52:05	POST Request to /api/admin/vacations/
+info	2022-03-28 03:52:05	Route not found
+info	2022-03-28 03:53:01	POST Request to /api/admin/vacations/
+info	2022-03-28 03:53:01	Route not found
+info	2022-03-28 03:53:26	POST Request to /api/admin/vacations/
+info	2022-03-28 03:55:39	POST Request to /api/products/
+info	2022-03-28 03:55:39	Route not found
+info	2022-03-28 03:55:52	POST Request to /api/admin/vacations/
+info	2022-03-28 03:55:52	"destination" must be a string. "fromDate" must be a valid date
+info	2022-03-28 03:57:32	POST Request to /api/admin/vacations/
+info	2022-03-28 04:08:47	POST Request to /api/admin/vacations/
+info	2022-03-28 04:08:47	"destination" must be a string. "fromDate" must be a valid date
+info	2022-03-28 04:10:10	POST Request to /api/admin/vacations/
+info	2022-03-28 04:10:10	"destination" must be a string. "fromDate" must be a valid date. "price" must be an integer
+info	2022-03-28 04:10:44	POST Request to /api/admin/vacations/
+info	2022-03-28 04:10:44	"destination" must be a string. "fromDate" must be a valid date
+info	2022-03-28 04:11:00	POST Request to /api/admin/vacations/
+info	2022-03-28 04:11:00	"destination" must be a string. "fromDate" must be a valid date. "price" must be less than or equal to 100
+info	2022-03-28 04:11:23	POST Request to /api/admin/vacations/
+info	2022-03-28 04:11:23	"destination" must be a string. "fromDate" must be a valid date
+info	2022-03-28 04:12:04	POST Request to /api/admin/vacations/
+info	2022-03-28 04:12:05	"destination" must be a string. "fromDate" must be a valid date
+info	2022-03-28 04:34:27	GET Request to /api/admin/vacations
+info	2022-03-28 04:35:28	PUT Request to /api/admin/vacations/4
+info	2022-03-28 04:35:28	Route not found
+info	2022-03-28 04:35:50	PUT Request to /api/admin/vacations/4
+info	2022-03-28 04:35:50	Route not found
+info	2022-03-28 04:35:53	PUT Request to /api/admin/vacations/4
+info	2022-03-28 04:35:53	Route not found
+info	2022-03-28 04:36:16	PUT Request to /api/admin/vacations/4
+error	2022-03-28 04:36:16	ER_BAD_FIELD_ERROR: Unknown column 'imageName' in 'field list'
+info	2022-03-28 04:37:01	PUT Request to /api/admin/vacations/4
+info	2022-03-28 04:40:06	PUT Request to /api/admin/vacations/523423423
+info	2022-03-28 04:40:06	Resource with id 523423423 not found
+info	2022-03-28 04:41:26	PUT Request to /api/products/84
+info	2022-03-28 04:41:26	Route not found
+info	2022-03-28 04:41:51	PUT Request to /api/admin/vacations/5
+info	2022-03-28 04:41:51	"destination" must be a string. "description" length must be at least 2 characters long. "fromDate" must be a valid date
+info	2022-03-28 04:42:11	PUT Request to /api/admin/vacations/5
+info	2022-03-28 04:42:11	"destination" must be a string. "description" length must be at least 2 characters long. "fromDate" must be a valid date. "price" must be a number
+info	2022-03-28 04:42:39	POST Request to /api/admin/vacations/
+info	2022-03-28 04:42:39	"destination" must be a string. "fromDate" must be a valid date. "price" must be a number
+info	2022-03-28 04:52:53	GET Request to /api/admin/vacations
+info	2022-03-28 04:53:01	DELETE Request to /api/admin/vacations/5
+info	2022-03-28 04:53:05	GET Request to /api/admin/vacations
+info	2022-03-28 04:53:29	DELETE Request to /api/admin/vacations/534543534
+info	2022-03-28 04:53:29	Resource with id 534543534 not found
+info	2022-03-28 05:08:14	GET Request to /api/admin/vacations/images/djkfjie3j9dsfsk/%0A
+info	2022-03-28 05:08:14	Route not found
+info	2022-03-28 05:08:33	GET Request to /api/admin/vacations/images/123123%0A
+error	2022-03-28 05:08:33	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\.assets\images\123123
+'
+info	2022-03-28 05:08:39	GET Request to /api/admin/vacations/images/123123
+error	2022-03-28 05:08:39	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\.assets\images\123123'
+info	2022-03-28 05:08:55	GET Request to /api/admin/vacations/images/123123/
+error	2022-03-28 05:08:55	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\.assets\images\123123'
+info	2022-03-28 05:09:17	GET Request to /api/admin/vacations/images/123123
+info	2022-03-28 05:13:41	GET Request to /api/admin/vacations/images/123123
+error	2022-03-28 05:13:41	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\123123'
+info	2022-03-28 05:13:50	GET Request to /api/admin/vacations/1
+info	2022-03-28 05:13:53	GET Request to /api/admin/vacations
+info	2022-03-28 05:13:53	You are not logged-in
+info	2022-03-28 05:14:06	POST Request to /api/auth/login
+info	2022-03-28 05:14:30	GET Request to /api/admin/vacations
+info	2022-03-28 05:15:02	GET Request to /api/admin/vacations
+info	2022-03-28 05:15:02	Forbidden: You are not authorized
+info	2022-03-28 05:15:39	GET Request to /api/admin/vacations
+info	2022-03-28 05:15:39	You are not logged-in
+info	2022-03-28 05:15:57	POST Request to /api/auth/login
+info	2022-03-28 05:16:18	GET Request to /api/admin/vacations
+info	2022-03-28 05:16:40	GET Request to /api/admin/vacations

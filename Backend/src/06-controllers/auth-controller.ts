@@ -30,5 +30,4 @@ router.post('/auth/login', async (request: Request, response: Response, next: Ne
 })
 
 
-
 export default router 
