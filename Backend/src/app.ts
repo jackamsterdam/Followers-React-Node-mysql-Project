@@ -10,9 +10,10 @@ import errorsHandler from './02-middleware/errors-handler'
 import logRequests from './02-middleware/log-request'
 import sanitize from './02-middleware/sanitize'
 import ErrorModel from './03-models/error-model'
-import authController from './06-controllers/auth-controller'
-import vacationsController from './06-controllers/vacations-controller'
 import helmet from 'helmet'
+import authController from './06-controllers/auth-controller'
+import vacationsConroller from './06-controllers/vacations-controller'
+import userVacationsController from './06-controllers/users-vacations-controller'
 // import path from 'path'
 
 const server = express() 
@@ -33,7 +34,8 @@ server.use(logRequests)
 // server.use(express.static(frontEndDir))
 
 server.use('/api', authController)
-server.use('/api/admin', vacationsController)
+server.use('/api/admin',  vacationsConroller)
+server.use('/api', userVacationsController)
 
 server.use('*', (request: Request, response: Response, next: NextFunction) => {
     if(config.isDevelopment){

@@ -274,3 +274,164 @@ info	2022-03-28 05:15:39	You are not logged-in
 info	2022-03-28 05:15:57	POST Request to /api/auth/login
 info	2022-03-28 05:16:18	GET Request to /api/admin/vacations
 info	2022-03-28 05:16:40	GET Request to /api/admin/vacations
+info	2022-03-28 05:20:23	GET Request to /api/admin/vacations
+info	2022-03-28 05:20:23	You are not logged-in
+info	2022-03-28 05:20:33	GET Request to /api/admin/vacations/images/123123
+info	2022-03-28 05:20:33	You are not logged-in
+info	2022-03-28 05:20:36	GET Request to /api/admin/vacations/1
+info	2022-03-28 05:20:36	You are not logged-in
+info	2022-03-28 05:20:40	POST Request to /api/admin/vacations/
+info	2022-03-28 05:20:40	You are not logged-in
+info	2022-03-28 05:20:44	PUT Request to /api/admin/vacations/5
+info	2022-03-28 05:20:44	You are not logged-in
+info	2022-03-28 05:20:49	DELETE Request to /api/admin/vacations/5
+info	2022-03-28 05:20:49	You are not logged-in
+info	2022-03-28 05:20:58	POST Request to /api/auth/login
+info	2022-03-28 05:21:21	GET Request to /api/admin/vacations
+info	2022-03-28 05:21:21	Forbidden: You are not authorized
+info	2022-03-28 05:21:26	GET Request to /api/admin/vacations/images/123123
+info	2022-03-28 05:21:26	Forbidden: You are not authorized
+info	2022-03-28 05:21:33	GET Request to /api/admin/vacations/1
+info	2022-03-28 05:21:33	Forbidden: You are not authorized
+info	2022-03-28 05:21:35	POST Request to /api/admin/vacations/
+info	2022-03-28 05:21:35	Forbidden: You are not authorized
+info	2022-03-28 05:21:38	PUT Request to /api/admin/vacations/5
+info	2022-03-28 05:21:38	Forbidden: You are not authorized
+info	2022-03-28 05:21:43	DELETE Request to /api/admin/vacations/5
+info	2022-03-28 05:21:43	Forbidden: You are not authorized
+info	2022-03-28 02:26:07	GET Request to /api/admin/vacations
+info	2022-03-28 02:26:07	You are not logged-in
+info	2022-03-28 02:26:50	POST Request to /api/auth/login
+info	2022-03-28 02:27:08	GET Request to /api/admin/vacations
+info	2022-03-28 02:27:14	GET Request to /api/admin/vacations/images/123123
+error	2022-03-28 02:27:14	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\123123'
+info	2022-03-28 02:47:25	GET Request to /api/admin/vacations
+info	2022-03-28 02:47:35	GET Request to /api/admin/vacations/1
+info	2022-03-28 02:55:05	POST Request to /api/admin/vacations/
+info	2022-03-28 02:55:47	POST Request to /api/admin/vacations/
+info	2022-03-28 03:00:46	POST Request to /api/admin/vacations/
+info	2022-03-28 06:24:56	POST Request to /api/admin/vacations/
+info	2022-03-28 06:47:08	POST Request to /api/admin/vacations/
+info	2022-03-28 06:55:55	POST Request to /api/admin/vacations/
+info	2022-03-28 06:58:38	POST Request to /api/admin/vacations/
+info	2022-03-28 06:59:31	POST Request to /api/admin/vacations/
+error	2022-03-28 06:59:32	ER_BAD_NULL_ERROR: Column 'imageName' cannot be null
+info	2022-03-28 07:01:07	POST Request to /api/admin/vacations/
+info	2022-03-28 07:04:34	POST Request to /api/admin/vacations/
+info	2022-03-28 07:06:08	POST Request to /api/admin/vacations/
+info	2022-03-28 07:09:18	POST Request to /api/admin/vacations/
+info	2022-03-28 07:18:48	GET Request to /api/admin/vacations/images/0343da4d-681b-408f-b050-11f1cdfe5ccc
+error	2022-03-28 07:18:48	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\0343da4d-681b-408f-b050-11f1cdfe5ccc'
+info	2022-03-28 07:18:57	GET Request to /api/admin/vacations/images/0343da4d-681b-408f-b050-11f1cdfe5ccc.JPG
+info	2022-03-28 08:08:11	GET Request to /api/admin/vacations
+info	2022-03-28 08:08:11	You are not logged-in
+info	2022-03-28 08:08:21	POST Request to /api/auth/login
+info	2022-03-28 08:08:41	GET Request to /api/admin/vacations
+info	2022-03-28 08:09:02	POST Request to /api/admin/vacations/
+info	2022-03-28 08:09:02	"description" length must be at least 2 characters long
+info	2022-03-28 08:09:20	PUT Request to /api/admin/vacations/16
+info	2022-03-28 08:09:20	Resource with id 16 not found.
+info	2022-03-28 08:09:38	PUT Request to /api/admin/vacations/15
+info	2022-03-28 08:13:10	PUT Request to /api/admin/vacations/17
+info	2022-03-28 08:13:36	PUT Request to /api/admin/vacations/13
+info	2022-03-28 08:14:13	PUT Request to /api/admin/vacations/13
+info	2022-03-28 08:14:48	POST Request to /api/admin/vacations/
+info	2022-03-28 08:15:08	PUT Request to /api/admin/vacations/18
+info	2022-03-28 08:15:11	PUT Request to /api/admin/vacations/18
+info	2022-03-28 08:15:13	PUT Request to /api/admin/vacations/18
+info	2022-03-28 08:15:27	GET Request to /api/admin/vacations/images/0343da4d-681b-408f-b050-11f1cdfe5ccc.JPG
+error	2022-03-28 08:15:27	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\0343da4d-681b-408f-b050-11f1cdfe5ccc.JPG'
+info	2022-03-28 08:16:08	GET Request to /api/admin/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+info	2022-03-28 08:38:28	POST Request to /api/admin/vacations/
+error	2022-03-28 08:38:28	ER_BAD_NULL_ERROR: Column 'imageName' cannot be null
+info	2022-03-28 08:39:02	POST Request to /api/admin/vacations/
+error	2022-03-28 08:39:02	ER_BAD_NULL_ERROR: Column 'imageName' cannot be null
+info	2022-03-28 08:41:24	POST Request to /api/admin/vacations/
+info	2022-03-28 08:41:51	POST Request to /api/admin/vacations/
+error	2022-03-28 08:41:52	ER_BAD_NULL_ERROR: Column 'imageName' cannot be null
+info	2022-03-28 08:42:19	POST Request to /api/admin/vacations/
+error	2022-03-28 08:42:19	ER_BAD_NULL_ERROR: Column 'imageName' cannot be null
+info	2022-03-28 08:42:26	POST Request to /api/admin/vacations/
+info	2022-03-28 09:11:53	POST Request to /api/auth/login
+info	2022-03-28 09:12:06	POST Request to /api/auth/login
+info	2022-03-28 09:23:04	POST Request to /api/auth/login
+info	2022-03-28 09:23:31	POST Request to /api/auth/login
+info	2022-03-28 09:23:56	POST Request to /api/auth/login
+info	2022-03-28 10:21:03	GET Request to /api/uservacations/1%0A
+info	2022-03-28 10:21:38	GET Request to /api/uservacations/013e34b0-355c-45ec-a69d-5290397f13bd
+info	2022-03-28 10:29:49	GET Request to /api/uservacations/013e34b0-355c-45ec-a69d-5290397f13bd
+info	2022-03-28 10:31:07	GET Request to /api/uservacations/013e34b0-355c-45ec-a69d-5290397f13bd
+info	2022-03-28 10:48:49	GET Request to /api/uservacations/013e34b0-355c-45ec-a69d-5290397f13bd
+info	2022-03-28 10:49:39	GET Request to /api/uservacations/013e34b0-355c-45ec-a69d-5290397f13bd
+info	2022-03-29 12:23:16	GET Request to /api/uservacations/013e34b0-355c-45ec-a69d-5290397f13bd
+info	2022-03-29 12:23:55	GET Request to /api/uservacations/013e34b0-355c-45ec-a69d-5290397f13bd
+info	2022-03-29 12:27:34	GET Request to /api/uservacations/013e34b0-355c-45ec-a69d-5290397f13bd
+info	2022-03-29 01:14:51	POST Request to /api/followers/
+info	2022-03-29 01:14:51	Route not found
+info	2022-03-29 01:18:30	POST Request to /api/followers/
+info	2022-03-29 01:18:30	You are not logged-in
+info	2022-03-29 01:18:41	POST Request to /api/auth/login
+info	2022-03-29 01:19:03	POST Request to /api/followers/
+error	2022-03-29 01:19:04	ER_DUP_ENTRY: Duplicate entry '4218db19-3ecf-41fc-82c3-41fedf250a49-1' for key 'PRIMARY'
+info	2022-03-29 01:22:52	POST Request to /api/followers/
+info	2022-03-29 01:45:15	POST Request to /api/followers/
+info	2022-03-29 01:48:04	DELETE Request to /api/followers/2d90f1bc-7c36-411c-96ad-f3a2c9102ca0/1
+info	2022-03-29 01:51:16	DELETE Request to /api/followers/2d90f1bc-7c36-411c-96ad-f3a2c9102ca0/1
+info	2022-03-29 02:02:20	DELETE Request to /api/followers/2d90f1bc-7c36-411c-96ad-f3a2c9102ca0/1
+error	2022-03-29 02:02:20	ER_BAD_FIELD_ERROR: Unknown column 'vacatoinId' in 'where clause'
+info	2022-03-29 02:03:07	DELETE Request to /api/followers/2d90f1bc-7c36-411c-96ad-f3a2c9102ca0/1
+info	2022-03-29 02:03:36	DELETE Request to /api/followers/2d90f1bc-7c36-411c-96ad-f3a2c9102ca0/1
+info	2022-03-29 02:03:36	Resource with id 2d90f1bc-7c36-411c-96ad-f3a2c9102ca0 or vacation with id 1 not found
+info	2022-03-29 02:05:31	DELETE Request to /api/followers/2d90f1bc-7c36-411c-96ad-f3a2c9102ca0/1
+info	2022-03-29 02:05:31	Resource with userId or vacationId not found
+info	2022-03-29 02:05:47	POST Request to /api/followers/
+info	2022-03-29 02:05:49	POST Request to /api/followers/
+error	2022-03-29 02:05:49	ER_DUP_ENTRY: Duplicate entry '2d90f1bc-7c36-411c-96ad-f3a2c9102ca0-1' for key 'PRIMARY'
+info	2022-03-29 02:06:33	POST Request to /api/followers/
+error	2022-03-29 02:06:33	ER_NO_REFERENCED_ROW_2: Cannot add or update a child row: a foreign key constraint fails (`vacationsdb`.`followers`, CONSTRAINT `followers_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `users` (`userId`) ON DELETE CASCADE ON UPDATE CASCADE)
+info	2022-03-29 02:07:04	POST Request to /api/followers/
+error	2022-03-29 02:07:04	ER_DUP_ENTRY: Duplicate entry '2d90f1bc-7c36-411c-96ad-f3a2c9102ca0-1' for key 'PRIMARY'
+info	2022-03-29 02:14:31	POST Request to /api/followers/
+error	2022-03-29 02:14:31	ER_NO_REFERENCED_ROW_2: Cannot add or update a child row: a foreign key constraint fails (`vacationsdb`.`followers`, CONSTRAINT `followers_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `users` (`userId`) ON DELETE CASCADE ON UPDATE CASCADE)
+info	2022-03-29 02:15:41	POST Request to /api/followers/
+error	2022-03-29 02:15:41	ER_NO_REFERENCED_ROW_2: Cannot add or update a child row: a foreign key constraint fails (`vacationsdb`.`followers`, CONSTRAINT `followers_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `users` (`userId`) ON DELETE CASCADE ON UPDATE CASCADE)
+info	2022-03-29 02:16:59	POST Request to /api/followers/
+error	2022-03-29 02:16:59	ER_DUP_ENTRY: Duplicate entry '2d90f1bc-7c36-411c-96ad-f3a2c9102ca0-1' for key 'PRIMARY'
+info	2022-03-29 02:18:19	POST Request to /api/followers/
+info	2022-03-29 02:18:19	UserId 9d90f1bc-7c36-411c-96ad-f3a2c9102ca0 does not exist.
+info	2022-03-29 02:19:10	POST Request to /api/followers/
+info	2022-03-29 02:19:10	UserId 9d90f1bc-7c36-411c-96ad-f3a2c9102ca0 does not exist.
+info	2022-03-29 02:19:12	POST Request to /api/followers/
+info	2022-03-29 02:19:12	UserId 9d90f1bc-7c36-411c-96ad-f3a2c9102ca0 does not exist.
+info	2022-03-29 02:19:13	POST Request to /api/followers/
+info	2022-03-29 02:19:13	UserId 9d90f1bc-7c36-411c-96ad-f3a2c9102ca0 does not exist.
+info	2022-03-29 02:19:14	POST Request to /api/followers/
+info	2022-03-29 02:19:14	UserId 9d90f1bc-7c36-411c-96ad-f3a2c9102ca0 does not exist.
+info	2022-03-29 02:19:18	POST Request to /api/followers/
+info	2022-03-29 02:19:18	UserId 9d90f1bc-7c36-411c-96ad-f3a2c9102ca0 does not exist.
+info	2022-03-29 02:19:24	POST Request to /api/followers/
+error	2022-03-29 02:19:24	ER_DUP_ENTRY: Duplicate entry '2d90f1bc-7c36-411c-96ad-f3a2c9102ca0-1' for key 'PRIMARY'
+info	2022-03-29 02:19:45	POST Request to /api/followers/
+info	2022-03-29 02:26:00	POST Request to /api/followers/
+error	2022-03-29 02:26:00	ER_BAD_FIELD_ERROR: Unknown column 'vacationId' in 'where clause'
+info	2022-03-29 02:27:02	POST Request to /api/followers/
+error	2022-03-29 02:27:03	ER_DUP_ENTRY: Duplicate entry '2d90f1bc-7c36-411c-96ad-f3a2c9102ca0-1' for key 'PRIMARY'
+info	2022-03-29 02:27:58	POST Request to /api/followers/
+error	2022-03-29 02:27:58	ER_BAD_FIELD_ERROR: Unknown column 'vacationId' in 'where clause'
+info	2022-03-29 02:28:43	POST Request to /api/followers/
+error	2022-03-29 02:28:43	ER_DUP_ENTRY: Duplicate entry '2d90f1bc-7c36-411c-96ad-f3a2c9102ca0-1' for key 'PRIMARY'
+info	2022-03-29 02:29:11	POST Request to /api/followers/
+info	2022-03-29 02:29:11	User is already following that vacation
+info	2022-03-29 02:29:15	POST Request to /api/followers/
+info	2022-03-29 02:29:15	User is already following that vacation
+info	2022-03-29 02:29:30	POST Request to /api/followers/
+info	2022-03-29 02:29:38	POST Request to /api/followers/
+info	2022-03-29 02:29:38	User is already following that vacation
+info	2022-03-29 02:30:08	POST Request to /api/followers/
+error	2022-03-29 02:30:08	ER_DUP_ENTRY: Duplicate entry '2d90f1bc-7c36-411c-96ad-f3a2c9102ca0-1' for key 'PRIMARY'
+info	2022-03-29 02:30:30	POST Request to /api/followers/
+info	2022-03-29 02:30:41	POST Request to /api/followers/
+error	2022-03-29 02:30:41	ER_DUP_ENTRY: Duplicate entry '2d90f1bc-7c36-411c-96ad-f3a2c9102ca0-1' for key 'PRIMARY'
+info	2022-03-29 02:30:44	POST Request to /api/followers/
+error	2022-03-29 02:30:44	ER_DUP_ENTRY: Duplicate entry '2d90f1bc-7c36-411c-96ad-f3a2c9102ca0-1' for key 'PRIMARY'
+info	2022-03-29 02:32:45	DELETE Request to /api/followers/2d90f1bc-7c36-411c-96ad-f3a2c9102ca0/1

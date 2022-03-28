@@ -1,6 +1,7 @@
 import  Joi from 'joi';
 import { UploadedFile } from "express-fileupload"
-
+//This parent class will be used with userVacationModel extended
+//This parent class is used by Admin for vacations and when user follows or unfollows a vacation
 class VacationModel {
   vacationId: number 
   destination: string 

@@ -183,3 +183,21 @@ WHERE userId = '013e34b0-355c-45ec-a69d-5290397f13bd') AS B
 
 ON A.vacationId = B.vacationId;
 
+
+
+this we need!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+SELECT  v.*, COUNT(f.vacationId) AS vacationCount
+FROM vacations AS v
+ LEFT JOIN followers as f
+ on v.vacationId = f.vacationId
+GROUP BY f.vacationId;
+
+this we need!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+SELECT u.userId, u.firstName, v.vacationId, v.destination
+from users as u
+inner join followers as f
+ on u.userId = f.userId
+inner Join vacations as v 
+  on f.vacationId = v.vacationId
+WHERE u.userId = '013e34b0-355c-45ec-a69d-5290397f13bd';

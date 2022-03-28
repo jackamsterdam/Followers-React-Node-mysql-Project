@@ -1,7 +1,6 @@
 import express, { NextFunction, Request, Response } from 'express'
 import VacationModel from '../03-models/vacation-model'
 import vacationsLogic from '../05-logic/vacations-logic'
-//!תודיףףףףףףףףףףףףףףףףףףףףףףףףףףףףףףף חסימות תראה עם עובד!! 
 import path from 'path'
 import verifyAdmin from '../02-middleware/verify-admin'
 
@@ -34,6 +33,9 @@ router.get('/vacations/:vacationId', verifyAdmin, async (request: Request, respo
 // http://localhost:3001/api/admin/vacations/
 router.post('/vacations',verifyAdmin, async (request: Request, response: Response, next: NextFunction) => {
   try {
+
+      request.body.image = request.files?.pic
+
       const vacation = new VacationModel(request.body)
       const addedVacation = await vacationsLogic.addVacation(vacation)
       response.status(201).json(addedVacation)
@@ -46,6 +48,9 @@ router.post('/vacations',verifyAdmin, async (request: Request, response: Respons
 // http://localhost:3001/api/admin/vacations/4
 router.put('/vacations/:vacationId',verifyAdmin, async (request: Request, response: Response, next: NextFunction) => {
   try {
+
+    request.body.image = request.files?.pic 
+
     const vacationId = +request.params.vacationId
     request.body.vacationId = vacationId 
     const vacation = new VacationModel(request.body)

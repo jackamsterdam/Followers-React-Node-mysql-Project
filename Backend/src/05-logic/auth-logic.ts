@@ -15,6 +15,7 @@ async function register(user: UserModel):Promise<string>{
     const errors = user.validatePost()
     if (errors) throw new ErrorModel(400, errors)
 
+    //Prevent duplicate usernames
     const isTaken = await isUsernameTaken(user.username)
     if (isTaken) throw new ErrorModel(400, `Username ${user.username} is already taken. Please choose a different username.`)
 
