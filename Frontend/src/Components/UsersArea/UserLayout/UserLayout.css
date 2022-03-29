@@ -1,0 +1,25 @@
+.UserLayout {
+	height: 100%;
+    display: grid;
+    box-sizing: border-box; 
+    grid-template-columns:1fr;
+    grid-template-rows: 50% 50%;
+}
+
+.UserLayout {
+    border: 1px solid black;
+
+}
+.UserLayout > * {
+    border: 1px solid black;
+
+}
+
+
+/* .UserLayout .divider {
+	height: 2px;
+    width: 100%;
+    border: 1px solid black;
+    background-color: black;
+    box-sizing: border-box;
+} */

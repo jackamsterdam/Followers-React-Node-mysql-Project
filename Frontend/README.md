@@ -3,10 +3,11 @@
 www.linkedin.com/in/jack-amsterdam
 https://github.com/jackamsterdam
 
+    
 
+Thank you:
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+https://codesandbox.io/s/pensive-dew-jqif9?fontsize=14&hidenavigation=1&module=/src/Main.js&theme=dark&file=/src/Main.js:235-542
 
 ### `npm test`
 
