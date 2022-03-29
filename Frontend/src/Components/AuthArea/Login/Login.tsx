@@ -27,7 +27,7 @@ async function submit(credentials: CredentialsModel): Promise<void> {
 
             //Check if user role in token is admin and if so navigate to admins portal
             if(store.getState().authState.user.roleId === 2) {
-                navigate('/admin/child1')
+                navigate('/admin/home')
                 return
             }
             console.log("store.getState().authState.user.roleId", store.getState().authState.user.roleId);

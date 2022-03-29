@@ -1,3 +1,17 @@
-/* .AdminMenu {
-	
-} */
+.AdminMenu {
+    height: 100%;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AdminMenu > a {
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+
+.AdminMenu > .active {
+    color: darkcyan;
+    font-weight: bold;
+}

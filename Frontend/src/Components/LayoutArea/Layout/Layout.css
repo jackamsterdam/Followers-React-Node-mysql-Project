@@ -11,11 +11,11 @@
 }
 
 
-header, footer {
+.Layout header, .Layout footer {
     grid-column: span 6;
 }
 
-main {
+.Layout main {
     grid-column: span 6;
     /* grid-column: span 5; */
     overflow: auto;
