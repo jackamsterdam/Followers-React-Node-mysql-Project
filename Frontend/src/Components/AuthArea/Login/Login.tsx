@@ -1,28 +1,29 @@
-import { NavLink } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink  } from "react-router-dom";
 import CredentialsModel from "../../../Models/CredentialsModel";
 import "./Login.css";
 import { useForm } from 'react-hook-form'
 import notify from "../../../Services/NotifyService";
 import authService from "../../../Services/AuthService";
 import store from "../../../Redux/Store";
-// import { RefObject, useRef } from "react";
+import {useEffect} from "react";
 
 function Login(): JSX.Element {
 
-    const { register, handleSubmit, formState } = useForm<CredentialsModel>()
+    const { register, handleSubmit, formState, setFocus } = useForm<CredentialsModel>()
     const navigate = useNavigate()
-//     const textBoxRef: RefObject<HTMLInputElement> = useRef<HTMLInputElement>()
+    // const textBoxRef: RefObject<HTMLInputElement> = useRef<HTMLInputElement>()
 
-// function focusa() {
-//     textBoxRef.current.focus()
-// }
-// focusa()
+
+
+useEffect(() => {
+    setFocus("username");
+  }, [setFocus]);
 
 async function submit(credentials: CredentialsModel): Promise<void> {
         console.log("credentials", credentials);
         try {
             await authService.login(credentials)
+          
 
             //Check if user role in token is admin and if so navigate to admins portal
             if(store.getState().authState.user.roleId === 2) {
@@ -42,11 +43,9 @@ async function submit(credentials: CredentialsModel): Promise<void> {
         }
     }
 
-
-
-
     return (
         <div className="Login Box">
+            {/* <input type="text" ref={textBoxRef}/> */}
             <form onSubmit={handleSubmit(submit)}>
                 <h1>Login</h1>
 
