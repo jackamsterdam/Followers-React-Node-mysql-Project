@@ -1,4 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
+import AdminLayout from '../../AdminsArea/AdminLayoutArea/AdminLayout/AdminLayout';
 import Login from '../../AuthArea/Login/Login';
 import Logout from '../../AuthArea/Logout/Logout';
 import Register from '../../AuthArea/Register/Register';
@@ -16,6 +17,7 @@ function Routing(): JSX.Element {
 
           
           <Route path="/home" element={<Home/>}/>
+          <Route path="/admin/*" element={<AdminLayout/>}/>
 
 
 
