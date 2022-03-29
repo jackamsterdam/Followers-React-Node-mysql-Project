@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -8,10 +9,12 @@ import "./Register.css";
 
 function Register(): JSX.Element {
 
-   const {register, handleSubmit, formState} = useForm<UserModel>()
+   const {register, handleSubmit, formState, setFocus} = useForm<UserModel>()
    const navigate = useNavigate() 
 
-
+   useEffect(() => {
+    setFocus("firstName");
+  }, [setFocus]);
 
 async function submit(user: UserModel):Promise<void> {
  console.log("user", user);
