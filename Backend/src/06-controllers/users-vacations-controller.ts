@@ -10,7 +10,7 @@ const router = express.Router()
 router.get('/uservacations/:userId',verifyLoggedIn, async (request: Request, response: Response, next: NextFunction) => {
   try {
       const userId = request.params.userId
-      const userVacations = await followLogic.getAllUsersVacationsExtended(userId)
+      const userVacations = await followLogic.getAllUserVacationsData(userId)
       response.json(userVacations)
     
   } catch (err: any) {

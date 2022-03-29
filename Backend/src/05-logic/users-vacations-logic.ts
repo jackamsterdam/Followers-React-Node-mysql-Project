@@ -28,17 +28,32 @@ async function getAllfollowedVacationsByUser(userId: string):Promise<UserVacatio
 
 }
 
-async function getAllUsersVacationsExtended(userId: string):Promise<UserVacationModel[]> {
-    const allVacationsWithFollowersCount = await getAllVacationsWithFollowersCount()
+async function getAllUserVacationsData(userId: string):Promise<UserVacationModel[]> {
+    const allVacations = await getAllVacationsWithFollowersCount()
+    console.log("allVacationsWithFollowersCount", allVacations);
     const allfollowedVacationsByUser = await getAllfollowedVacationsByUser(userId)
+    console.log("allfollowedVacationsByUser", allfollowedVacationsByUser);
 
+// find all users followeeed vacations and set property to be true 
+    for (const follow of allfollowedVacationsByUser) {
+        for (const vacation of allVacations) {
+            if (follow.vacationId === vacation.vacationId) {
+                vacation.isFollowing = true
+            }
+        }
+    }
+//If the current user doesnt follow vacation , set the property isFollowing false
+    for (const vacation of allVacations) {
+        if (!vacation.isFollowing) {
+            vacation.isFollowing = false 
+        }
+    }
      
 
 
 
     
-  return allVacationsWithFollowersCount
-//   return allfollowedVacationsByUser
+  return allVacations
     
 
 
@@ -121,7 +136,7 @@ async function preventDuplicate(userId: string, vacationId: number): Promise<boo
 
 export default {
 
-    getAllUsersVacationsExtended,
+    getAllUserVacationsData,
     addFollow,
     deleteFollow
 }
