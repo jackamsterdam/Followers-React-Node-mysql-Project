@@ -73,19 +73,19 @@ router.delete('/vacations/:vacationId',verifyAdmin, async (request: Request, res
       next(err)
   }
 })
-//!put back verifyAdmin !!!!!!! and see if pictures come in front end 
-// http://localhost:3001/api/admin/vacations/images/djkfjie3j9dsfsk/
-router.get('/vacations/images/:imageName', async (request: Request, response: Response, next: NextFunction) => {
-  try {
-    const imageName = request.params.imageName
-        const absolutePath = path.join(__dirname, '..', 'upload','images', imageName)
-        response.sendFile(absolutePath)
+// //!put back verifyAdmin !!!!!!! and see if pictures come in front end 
+// // http://localhost:3001/api/vacations/images/djkfjie3j9dsfsk/
+// router.get('/vacations/images/:imageName', async (request: Request, response: Response, next: NextFunction) => {
+//   try {
+//     const imageName = request.params.imageName
+//         const absolutePath = path.join(__dirname, '..', 'upload','images', imageName)
+//         response.sendFile(absolutePath)
 
 
-  } catch (err: any) {
-    next(err)
-  }
-})
+//   } catch (err: any) {
+//     next(err)
+//   }
+// })
 
 
 

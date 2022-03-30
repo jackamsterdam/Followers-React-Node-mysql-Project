@@ -3,6 +3,7 @@ import UserVacationModel from "../../../Models/UserVacationModel";
 import store from "../../../Redux/Store";
 import userVacationsService from "../../../Services/UserVacationsService";
 import Loading from "../../SharedArea/Loading/Loading";
+import UnFollowingCard from "../UnFollowingCard/UnFollowingCard";
 import "./UnFollowing.css";
 
 function UnFollowing(): JSX.Element {
@@ -20,14 +21,14 @@ function UnFollowing(): JSX.Element {
         (async function () {
             try {
 
-             const userVacationsData = await userVacationsService.getAllUserVacationsData(userId)
-             console.log("userVacationsData", userVacationsData);
+                const userVacationsData = await userVacationsService.getAllUserVacationsData(userId)
+                console.log("userVacationsData", userVacationsData);
 
 
-             const userNotFollowing = userVacationsData.filter(f => !f.isFollowing)
-             console.log("userNotFollowing", userNotFollowing);
+                const userNotFollowing = userVacationsData.filter(f => !f.isFollowing)
+                console.log("userNotFollowing", userNotFollowing);
 
-             setUserVacations(userNotFollowing)
+                setUserVacations(userNotFollowing)
 
 
 
@@ -45,8 +46,11 @@ function UnFollowing(): JSX.Element {
         <div className="UnFollowing">
             {userVacations.length === 0 && <Loading />}
 
-            {userVacations.map(u => u.destination)}
+            <div className="container">
 
+                {/* {userVacations.map(uv => <UnFollowingCard key={uv.vacationId} userVacationData={uv} userId={userId} />)} */}
+                {userVacations.map(uv => <UnFollowingCard key={uv.vacationId} userVacationData={uv} />)}
+            </div>
         </div>
     );
 }

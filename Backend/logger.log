@@ -2321,3 +2321,466 @@ info	2022-03-30 08:54:31	GET Request to /api/user-vacations/4218db19-3ecf-41fc-8
 info	2022-03-30 08:54:35	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
 info	2022-03-30 08:54:56	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
 info	2022-03-30 08:55:46	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:03:13	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:03:49	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:03:58	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:04:18	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:04:20	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:04:21	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:04:48	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:05:02	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:05:06	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:09:32	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:09:40	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:09:46	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:10:06	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:10:10	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:10:14	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:10:30	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:10:42	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:10:43	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:10:58	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:11:05	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:11:14	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:11:14	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:13:46	POST Request to /api/auth/login/
+info	2022-03-30 09:13:46	GET Request to /api/user-vacations/28cf8ef5-4341-4f9f-be93-f974f4a5a5e3
+info	2022-03-30 09:13:46	GET Request to /api/user-vacations/28cf8ef5-4341-4f9f-be93-f974f4a5a5e3
+info	2022-03-30 09:14:05	POST Request to /api/auth/login/
+info	2022-03-30 09:14:05	GET Request to /api/admin/vacations/
+info	2022-03-30 09:14:05	GET Request to /api/admin/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+info	2022-03-30 09:14:06	GET Request to /api/admin/vacations/images/91542723-a0fe-40de-8d99-510a431a1396.jpg
+info	2022-03-30 09:14:06	GET Request to /api/admin/vacations/images/7cfa1646-157d-4cd6-9cd3-67c6fe2ed1ea.JPG
+info	2022-03-30 09:14:06	GET Request to /api/admin/vacations/images/22ccfac3-525f-4c18-b5ff-b63c71c01a93.JPG
+info	2022-03-30 09:14:06	GET Request to /api/admin/vacations/images/cfa84c3d-fa67-4248-a393-2fc28482123f.JPG
+info	2022-03-30 09:14:06	GET Request to /api/admin/vacations/images/2b105703-0415-43ee-9b59-c94385a8f0b8.JPG
+error	2022-03-30 09:14:06	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 09:14:06	GET Request to /api/admin/vacations/images/b6ae93ac-e59a-4f37-97d1-abce3f626d23.jpg
+info	2022-03-30 09:14:06	GET Request to /api/admin/vacations/images/d7312870-d445-442a-9f07-b2018e22014d.jpg
+info	2022-03-30 09:14:06	GET Request to /api/admin/vacations/images/07a8b49a-d0f0-4969-8520-0d225823df92.JPG
+info	2022-03-30 09:14:06	GET Request to /api/admin/vacations/images/2d52e440-0d8e-48fc-b891-42ddb123e20d.JPG
+info	2022-03-30 09:14:15	GET Request to /api/user-vacations/013e34b0-355c-45ec-a69d-5290397f13bd
+info	2022-03-30 09:14:15	GET Request to /api/user-vacations/013e34b0-355c-45ec-a69d-5290397f13bd
+info	2022-03-30 09:14:15	GET Request to /api/admin/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+info	2022-03-30 09:14:15	GET Request to /api/admin/vacations/images/91542723-a0fe-40de-8d99-510a431a1396.jpg
+error	2022-03-30 09:14:15	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 09:14:15	GET Request to /api/admin/vacations/images/22ccfac3-525f-4c18-b5ff-b63c71c01a93.JPG
+info	2022-03-30 09:14:15	GET Request to /api/admin/vacations/images/7cfa1646-157d-4cd6-9cd3-67c6fe2ed1ea.JPG
+info	2022-03-30 09:14:15	GET Request to /api/admin/vacations/images/cfa84c3d-fa67-4248-a393-2fc28482123f.JPG
+info	2022-03-30 09:14:15	GET Request to /api/admin/vacations/images/2b105703-0415-43ee-9b59-c94385a8f0b8.JPG
+info	2022-03-30 09:14:16	GET Request to /api/admin/vacations/images/2d52e440-0d8e-48fc-b891-42ddb123e20d.JPG
+info	2022-03-30 09:14:16	GET Request to /api/admin/vacations/images/b6ae93ac-e59a-4f37-97d1-abce3f626d23.jpg
+info	2022-03-30 09:14:16	GET Request to /api/admin/vacations/images/07a8b49a-d0f0-4969-8520-0d225823df92.JPG
+info	2022-03-30 09:14:16	GET Request to /api/admin/vacations/images/d7312870-d445-442a-9f07-b2018e22014d.jpg
+info	2022-03-30 09:14:38	GET Request to /api/admin/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+info	2022-03-30 09:14:38	GET Request to /api/admin/vacations/images/91542723-a0fe-40de-8d99-510a431a1396.jpg
+error	2022-03-30 09:14:38	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 09:14:38	GET Request to /api/admin/vacations/images/22ccfac3-525f-4c18-b5ff-b63c71c01a93.JPG
+info	2022-03-30 09:14:38	GET Request to /api/admin/vacations/images/7cfa1646-157d-4cd6-9cd3-67c6fe2ed1ea.JPG
+info	2022-03-30 09:14:38	GET Request to /api/admin/vacations/images/cfa84c3d-fa67-4248-a393-2fc28482123f.JPG
+info	2022-03-30 09:14:38	GET Request to /api/admin/vacations/images/2b105703-0415-43ee-9b59-c94385a8f0b8.JPG
+info	2022-03-30 09:14:38	GET Request to /api/admin/vacations/images/07a8b49a-d0f0-4969-8520-0d225823df92.JPG
+info	2022-03-30 09:14:38	GET Request to /api/admin/vacations/images/2d52e440-0d8e-48fc-b891-42ddb123e20d.JPG
+info	2022-03-30 09:14:38	GET Request to /api/admin/vacations/images/b6ae93ac-e59a-4f37-97d1-abce3f626d23.jpg
+info	2022-03-30 09:14:39	GET Request to /api/admin/vacations/images/d7312870-d445-442a-9f07-b2018e22014d.jpg
+info	2022-03-30 09:14:57	GET Request to /api/user-vacations/013e34b0-355c-45ec-a69d-5290397f13bd
+info	2022-03-30 09:14:57	GET Request to /api/user-vacations/013e34b0-355c-45ec-a69d-5290397f13bd
+info	2022-03-30 09:14:57	GET Request to /api/admin/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+info	2022-03-30 09:14:57	GET Request to /api/admin/vacations/images/91542723-a0fe-40de-8d99-510a431a1396.jpg
+info	2022-03-30 09:14:57	GET Request to /api/admin/vacations/images/22ccfac3-525f-4c18-b5ff-b63c71c01a93.JPG
+info	2022-03-30 09:14:57	GET Request to /api/admin/vacations/images/7cfa1646-157d-4cd6-9cd3-67c6fe2ed1ea.JPG
+info	2022-03-30 09:14:57	GET Request to /api/admin/vacations/images/cfa84c3d-fa67-4248-a393-2fc28482123f.JPG
+error	2022-03-30 09:14:57	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 09:14:57	GET Request to /api/admin/vacations/images/07a8b49a-d0f0-4969-8520-0d225823df92.JPG
+info	2022-03-30 09:14:57	GET Request to /api/admin/vacations/images/b6ae93ac-e59a-4f37-97d1-abce3f626d23.jpg
+info	2022-03-30 09:14:57	GET Request to /api/admin/vacations/images/d7312870-d445-442a-9f07-b2018e22014d.jpg
+info	2022-03-30 09:14:57	GET Request to /api/admin/vacations/images/2d52e440-0d8e-48fc-b891-42ddb123e20d.JPG
+info	2022-03-30 09:14:57	GET Request to /api/admin/vacations/images/2b105703-0415-43ee-9b59-c94385a8f0b8.JPG
+info	2022-03-30 09:26:29	POST Request to /api/auth/login/
+info	2022-03-30 09:26:59	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:26:59	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:27:59	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:27:59	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:32:23	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:32:23	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:35:02	GET Request to /api/vacations/images/00c23b6f-3d4c-4bfb-93df-39f7026cb3a6.JPG
+info	2022-03-30 09:35:02	Route not found
+info	2022-03-30 09:35:49	GET Request to /api/vacations/images/0a5434ff-b463-4125-b865-96f38431ed0e.JPG
+info	2022-03-30 09:35:49	Route not found
+info	2022-03-30 09:35:50	GET Request to /api/vacations/images/0a5434ff-b463-4125-b865-96f38431ed0e.JPG
+info	2022-03-30 09:35:50	Route not found
+info	2022-03-30 09:35:52	GET Request to /api/vacations/images/0a5434ff-b463-4125-b865-96f38431ed0e.JPG
+info	2022-03-30 09:35:52	Route not found
+info	2022-03-30 09:38:53	GET Request to /api/vacations/images/0a5434ff-b463-4125-b865-96f38431ed0e.JPG
+info	2022-03-30 09:40:34	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:40:35	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:40:36	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:40:36	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:40:37	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:40:37	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:40:42	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:40:42	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:41:17	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:41:17	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:41:17	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:41:17	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:41:53	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:41:54	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:41:57	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:41:58	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:42:00	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:42:01	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:42:05	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:42:06	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:42:15	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:42:16	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:42:43	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:42:43	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:42:50	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:42:51	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:43:10	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:43:10	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:43:17	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:43:17	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:43:28	GET Request to /api/vacations/images/0a5434ff-b463-4125-b865-96f38431ed0e.JPG
+info	2022-03-30 09:44:05	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:44:05	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:44:39	GET Request to /api/vacations/images/
+info	2022-03-30 09:44:39	Route not found
+info	2022-03-30 09:44:46	GET Request to /api/vacations/images/[object%20Object]
+error	2022-03-30 09:44:46	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\[object Object]'
+info	2022-03-30 09:44:58	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 09:44:58	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 09:45:31	POST Request to /api/auth/login/
+info	2022-03-30 09:45:31	GET Request to /api/admin/vacations/
+info	2022-03-30 09:45:31	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 09:45:31	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 09:45:31	GET Request to /api/vacations/images/91542723-a0fe-40de-8d99-510a431a1396.jpg
+info	2022-03-30 09:45:31	GET Request to /api/vacations/images/22ccfac3-525f-4c18-b5ff-b63c71c01a93.JPG
+info	2022-03-30 09:45:31	GET Request to /api/vacations/images/7cfa1646-157d-4cd6-9cd3-67c6fe2ed1ea.JPG
+info	2022-03-30 09:45:31	GET Request to /api/vacations/images/cfa84c3d-fa67-4248-a393-2fc28482123f.JPG
+info	2022-03-30 09:45:31	GET Request to /api/vacations/images/2b105703-0415-43ee-9b59-c94385a8f0b8.JPG
+info	2022-03-30 09:45:31	GET Request to /api/vacations/images/07a8b49a-d0f0-4969-8520-0d225823df92.JPG
+info	2022-03-30 09:45:31	GET Request to /api/vacations/images/2d52e440-0d8e-48fc-b891-42ddb123e20d.JPG
+info	2022-03-30 09:45:31	GET Request to /api/vacations/images/b6ae93ac-e59a-4f37-97d1-abce3f626d23.jpg
+info	2022-03-30 09:45:31	GET Request to /api/vacations/images/d7312870-d445-442a-9f07-b2018e22014d.jpg
+info	2022-03-30 09:45:47	POST Request to /api/auth/login/
+info	2022-03-30 09:45:48	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:45:48	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:45:48	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 09:45:48	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 09:46:04	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 09:46:04	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 09:46:05	GET Request to /favicon.ico
+info	2022-03-30 09:46:05	Route not found
+info	2022-03-30 09:46:07	GET Request to /favicon.ico
+info	2022-03-30 09:46:07	Route not found
+info	2022-03-30 09:48:41	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 09:48:41	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 09:49:24	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:49:25	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:49:25	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 09:49:25	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 09:52:38	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:52:39	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:52:39	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 09:52:39	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 09:52:47	POST Request to /api/auth/login/
+info	2022-03-30 09:52:47	GET Request to /api/admin/vacations/
+info	2022-03-30 09:52:47	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 09:52:47	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 09:52:47	GET Request to /api/vacations/images/91542723-a0fe-40de-8d99-510a431a1396.jpg
+info	2022-03-30 09:52:47	GET Request to /api/vacations/images/22ccfac3-525f-4c18-b5ff-b63c71c01a93.JPG
+info	2022-03-30 09:52:47	GET Request to /api/vacations/images/cfa84c3d-fa67-4248-a393-2fc28482123f.JPG
+info	2022-03-30 09:52:47	GET Request to /api/vacations/images/7cfa1646-157d-4cd6-9cd3-67c6fe2ed1ea.JPG
+info	2022-03-30 09:52:47	GET Request to /api/vacations/images/2b105703-0415-43ee-9b59-c94385a8f0b8.JPG
+info	2022-03-30 09:52:47	GET Request to /api/vacations/images/07a8b49a-d0f0-4969-8520-0d225823df92.JPG
+info	2022-03-30 09:52:47	GET Request to /api/vacations/images/2d52e440-0d8e-48fc-b891-42ddb123e20d.JPG
+info	2022-03-30 09:52:47	GET Request to /api/vacations/images/b6ae93ac-e59a-4f37-97d1-abce3f626d23.jpg
+info	2022-03-30 09:52:47	GET Request to /api/vacations/images/d7312870-d445-442a-9f07-b2018e22014d.jpg
+info	2022-03-30 09:53:01	POST Request to /api/auth/login/
+info	2022-03-30 09:53:02	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:53:02	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 09:53:02	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 09:53:02	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 10:02:30	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:02:30	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:02:38	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:02:38	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:02:38	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:02:38	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:02:40	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:02:40	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:02:44	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:02:45	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:03:08	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:03:08	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:04:05	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:04:05	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:04:09	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:04:09	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:04:19	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:04:20	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:04:23	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:04:23	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:04:31	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:04:31	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:04:39	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:04:39	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:05:36	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:05:36	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:06:00	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:06:00	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:06:03	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:06:03	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:06:14	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:06:14	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:06:14	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 10:06:14	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 10:06:19	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:06:19	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:06:19	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 10:06:19	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 10:06:25	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:06:25	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:06:25	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 10:06:25	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 10:06:36	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:06:36	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:06:36	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 10:06:36	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 10:06:40	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:06:40	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:06:41	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 10:06:41	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 10:06:51	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:06:51	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:06:51	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 10:06:51	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 10:07:01	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:07:01	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:07:01	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 10:07:01	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 10:07:09	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:07:09	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:07:09	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 10:07:09	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 10:07:15	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:07:15	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:07:15	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 10:07:15	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 10:07:20	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:07:20	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:07:20	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 10:07:20	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 10:07:21	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:07:21	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:07:21	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 10:07:21	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 10:08:31	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:08:31	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:08:31	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 10:08:31	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 10:08:33	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:08:33	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:08:33	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 10:08:33	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 10:08:36	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:08:36	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:08:36	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 10:08:36	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 10:45:25	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:45:25	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 10:45:25	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 10:45:25	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:17:51	POST Request to /api/auth/login/
+info	2022-03-30 11:17:51	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:17:51	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:17:51	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:17:51	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:48:17	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:48:17	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:48:18	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:48:18	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:48:28	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:48:28	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:48:28	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:48:28	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:48:29	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:48:29	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:49:00	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:49:00	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:49:00	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:49:00	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:49:20	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:49:20	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:49:20	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:49:20	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:49:20	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:49:20	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:51:29	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:51:29	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:51:30	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:51:30	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:51:30	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:51:30	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:52:00	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:52:00	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:52:01	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:52:01	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:53:02	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:53:02	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:53:02	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:53:02	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:53:14	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:53:14	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:53:14	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:53:14	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:53:34	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:53:34	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:53:34	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:53:34	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:54:45	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:54:45	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:54:46	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:54:46	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:55:00	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:55:00	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:55:00	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:55:00	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:55:00	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:55:00	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:55:10	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:55:10	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:55:10	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:55:10	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:55:11	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:55:11	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:56:27	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:56:27	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:56:28	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:56:28	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:56:37	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:56:37	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:56:37	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:56:37	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:56:46	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:56:46	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:56:46	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:56:46	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:56:53	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:56:53	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:56:53	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:56:53	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:56:53	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:56:53	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:57:23	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:57:23	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:57:23	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:57:23	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:57:23	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:57:23	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:57:55	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:57:56	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:57:56	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:57:56	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-30 11:58:28	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:58:28	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-30 11:58:28	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-30 11:58:28	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 12:02:24	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 12:02:24	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 12:02:25	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 12:02:25	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 12:03:15	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 12:03:16	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 12:03:16	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 12:03:16	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 12:07:27	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 12:07:27	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 12:07:30	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 12:07:30	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 12:09:33	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 12:09:33	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 12:09:38	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 12:09:38	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 12:09:38	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 12:09:38	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 12:09:49	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 12:09:49	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 12:09:52	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 12:09:52	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 12:10:09	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 12:10:09	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 12:10:09	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 12:10:09	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 12:10:30	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 12:10:30	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 12:10:30	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 12:10:30	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 12:10:42	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 12:10:42	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 12:10:42	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 12:10:42	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 12:10:42	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 12:10:42	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 12:11:41	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 12:11:41	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 12:11:42	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 12:11:42	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 12:11:42	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 12:11:42	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 12:12:10	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 12:12:10	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 12:12:10	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 12:12:10	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 01:27:35	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 01:27:35	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 01:27:35	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 01:27:35	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 01:27:35	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 01:27:35	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 01:27:52	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 01:27:52	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 01:27:52	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 01:27:52	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 01:27:52	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 01:27:52	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 01:28:19	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 01:28:19	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 01:28:19	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 01:28:19	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 01:28:19	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 01:28:19	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 01:28:33	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 01:28:33	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 01:28:33	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 01:28:33	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 01:28:33	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 01:28:33	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 01:36:37	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 01:36:37	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 01:36:39	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 01:36:39	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 01:38:01	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 01:38:02	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 01:38:02	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 01:38:02	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 01:40:45	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 01:40:45	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 01:40:46	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 01:40:46	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 01:41:14	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 01:41:15	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 01:41:15	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 01:41:15	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 01:45:25	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 01:45:25	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 01:45:25	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 01:45:25	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 01:45:25	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 01:45:25	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'
+info	2022-03-31 01:46:35	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 01:46:35	GET Request to /api/user-vacations/4218db19-3ecf-41fc-82c3-41fedf250a49
+info	2022-03-31 01:46:35	GET Request to /api/vacations/images/6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG
+error	2022-03-31 01:46:35	ENOENT: no such file or directory, stat 'C:\Users\Jacka\Desktop\John Bryce\03. March-John Bryce\.Project\Vacation-Jack_Amsterdam\Backend\src\upload\images\6116d7ff-cb73-49f7-ab59-eb3279294a0c.JPG'

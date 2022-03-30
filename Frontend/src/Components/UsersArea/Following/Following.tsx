@@ -3,6 +3,7 @@ import UserVacationModel from "../../../Models/UserVacationModel";
 import store from "../../../Redux/Store";
 import userVacationsService from "../../../Services/UserVacationsService";
 import Loading from "../../SharedArea/Loading/Loading";
+import FollowingCard from "../FollowingCard/FollowingCard";
 import "./Following.css";
 
 function Following(): JSX.Element {
@@ -18,20 +19,17 @@ function Following(): JSX.Element {
 
         const userId = store.getState().authState.user.userId
         console.log("userId", userId);
-
         (async function () {
             try {
 
-             const userVacationsData = await userVacationsService.getAllUserVacationsData(userId)
-             console.log("userVacationsData", userVacationsData);
+                const userVacationsData = await userVacationsService.getAllUserVacationsData(userId)
+                console.log("userVacationsData", userVacationsData);
 
 
-const userIsFollowing = userVacationsData.filter(f => f.isFollowing)
-console.log("userIsFollowing", userIsFollowing);
+                const userIsFollowing = userVacationsData.filter(f => f.isFollowing)
+                console.log("userIsFollowing", userIsFollowing);
 
-setUserVacations(userIsFollowing)
-
-
+                setUserVacations(userIsFollowing)
 
             } catch (err: any) {
 
@@ -41,15 +39,17 @@ setUserVacations(userIsFollowing)
 
     }, [])
 
-
-
     return (
         <div className="Following">
             {userVacations.length === 0 && <Loading />}
 
-            {userVacations.map(u => u.destination)}
+            {/* {userVacations.map(u => u.destination)} */}
 
-            {/* {userVacations.map(uv => <Follo)} */}
+            <div className="container">
+
+                {userVacations.map(uv => <FollowingCard key={uv.vacationId} userVacationData={uv}   />)}
+            </div>
+
         </div>
     );
 }

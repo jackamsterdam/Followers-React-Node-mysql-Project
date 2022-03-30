@@ -3,6 +3,7 @@ import VacationModel from "../../../../Models/VacationModel";
 import notify from "../../../../Services/NotifyService";
 import vacationsService from "../../../../Services/VacationsService";
 import config from "../../../../Utils/Config";
+import formatDate from "../../../../Utils/formatDate";
 import "./VacationCard.css";
 
 interface VacationCardProps {
@@ -14,10 +15,14 @@ function VacationCard(props: VacationCardProps): JSX.Element {
 
     const navigate = useNavigate()
 
-    function formatDate(date: string):string {
-        const d = new Date(date)
-        return d.toLocaleDateString()
-      }
+
+    // this is exported: imported: 
+//     function formatDate(date: string):string {
+//         const d = new Date(date)
+//         return d.toLocaleDateString()
+//       }
+
+
 
       // async function deleteVacation(vacationId: number, destination: string):Promise<void> {
 //    try {
@@ -46,7 +51,7 @@ function VacationCard(props: VacationCardProps): JSX.Element {
             <br />
 			<span>Price: {props.vacation.price}</span>
             <br />
-            <img src={config.vacationsAdminImageUrl + props.vacation.imageName} alt="vacation pic" />
+            <img src={config.vacationsImageUrl + props.vacation.imageName} alt="vacation pic" />
             <br />
 			<span>From: {formatDate(props.vacation.fromDate)}</span>
             <br />

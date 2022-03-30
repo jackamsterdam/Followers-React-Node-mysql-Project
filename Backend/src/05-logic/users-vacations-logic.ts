@@ -49,14 +49,8 @@ async function getAllUserVacationsData(userId: string):Promise<UserVacationModel
         }
     }
      
-
-
-
-    
   return allVacations
     
-
-
 }
 
 

@@ -1,3 +1,14 @@
 .UnFollowing {
+    overflow: auto;
+	
+}
+
+.UnFollowing .container {
+    display: flex;
+    flex-wrap: wrap;
+   /* justify-content: center; */
+    /* align-items: center; */
+    margin: 20px;
+    /* padding: 20px; */
 	
 }
