@@ -26,3 +26,34 @@ a {
  box-shadow: 5px 5px 10px;
  text-align: left;
 }
+
+
+/* scroll bar styling */
+/* 
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: lightblue;
+}
+
+::-webkit-scrollbar-thumb {
+  background: lightblue;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: lightcyan;
+}
+
+::-webkit-scrollbar-button {
+    background-color: lightcyan;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: lightblue;
+} */
+
+
+

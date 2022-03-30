@@ -14,6 +14,7 @@ function AuthMenu(): JSX.Element {
      setUser(store.getState().authState.user) 
 
      const unsubscribe = store.subscribe(() => {
+       console.log('subscription executed in AuthMenu for auth state user')
        setUser(store.getState().authState.user)
      })
 

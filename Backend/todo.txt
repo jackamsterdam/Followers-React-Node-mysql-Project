@@ -7,7 +7,19 @@ const { toNamespacedPath } = require("path");
 //change config  ( enter database )
 //change ssl from CA
 
+put back express rate limit 
 
+
+
+
+
+
+
+
+
+
+
+sql: 
 // query example of triple join  טבלת נרמול and there 2 tables"
 // SELECT j.studentId, s.studentId ,  s.firstName, c.courseId, j.courseId, c.courseName, c.hours
 // FROM students as s

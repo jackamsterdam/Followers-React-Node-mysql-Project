@@ -7,7 +7,7 @@ class VacationModel {
   toDate: string 
   price: number 
   image: FileList
-  imageName: string 
+  imageName: string
 }
 
 export default VacationModel

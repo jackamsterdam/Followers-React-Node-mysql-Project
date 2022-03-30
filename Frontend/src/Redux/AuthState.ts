@@ -53,6 +53,8 @@ export function authReducer(currentState = new AuthState(), action: AuthAction):
       newState.token = null 
       newState.user = null 
       localStorage.removeItem('token')
+      //If user logs out make sure to delete vacations as well.
+      localStorage.removeItem('vacations')
   }
 
   return newState

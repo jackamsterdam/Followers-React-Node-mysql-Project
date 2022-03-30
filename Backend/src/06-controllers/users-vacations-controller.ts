@@ -6,8 +6,8 @@ import followLogic from '../05-logic/users-vacations-logic'
 
 const router = express.Router()
 
-// http://localhost:3001/api/uservacations/1
-router.get('/uservacations/:userId',verifyLoggedIn, async (request: Request, response: Response, next: NextFunction) => {
+// http://localhost:3001/api/user-vacations/013e34b0-355c-45ec-a69d-5290397f13bd
+router.get('/user-vacations/:userId',verifyLoggedIn, async (request: Request, response: Response, next: NextFunction) => {
   try {
       const userId = request.params.userId
       const userVacations = await followLogic.getAllUserVacationsData(userId)

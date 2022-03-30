@@ -34,7 +34,7 @@ async function getAllUserVacationsData(userId: string):Promise<UserVacationModel
     const allfollowedVacationsByUser = await getAllfollowedVacationsByUser(userId)
     console.log("allfollowedVacationsByUser", allfollowedVacationsByUser);
 
-// find all users followeeed vacations and set property to be true 
+// find all user's followeed vacations and set property to be true 
     for (const follow of allfollowedVacationsByUser) {
         for (const vacation of allVacations) {
             if (follow.vacationId === vacation.vacationId) {
@@ -42,7 +42,7 @@ async function getAllUserVacationsData(userId: string):Promise<UserVacationModel
             }
         }
     }
-//If the current user doesnt follow vacation , set the property isFollowing false
+//If the current user does not follow a vacation , set the property isFollowing to false
     for (const vacation of allVacations) {
         if (!vacation.isFollowing) {
             vacation.isFollowing = false 

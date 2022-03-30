@@ -21,7 +21,7 @@ const server = express()
 if (config.isDevelopment) {
     server.use(cors({origin: ['http://localhost:3000', 'http://localhost:4200']}))
 }
-server.use('/',expressRateLimit({windowMs: 1000, max: 10, message: 'Rate exceeded. Please try again soon'}))
+// server.use('/',expressRateLimit({windowMs: 1000, max: 10, message: 'Rate exceeded. Please try again soon'}))
 
 
 server.use(helmet())

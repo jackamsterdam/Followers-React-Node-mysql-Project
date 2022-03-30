@@ -6,7 +6,7 @@ export class VacationsState {
     constructor() {
         const vacationsCollection = localStorage.getItem('vacations')
         if (vacationsCollection) {
-            this.vacations = [...JSON.parse(vacationsCollection)]
+            this.vacations = [...JSON.parse(vacationsCollection)]  //!check if works without spread
         }
     }
 }
@@ -41,6 +41,7 @@ export function deleteVacationAction(vacationId: number): VacationsAction {
 
 export function vacationsReducer(currentState = new VacationsState(), action: VacationsAction):VacationsState {
     const newState = {...currentState}
+    console.log('before',newState)
 
     switch(action.type) {
       case VacationsActionType.FetchVacations:
@@ -64,7 +65,7 @@ export function vacationsReducer(currentState = new VacationsState(), action: Va
             if (indexToDelete >= 0) {
                 newState.vacations.splice(indexToDelete, 1)
                 localStorage.setItem('vacations', JSON.stringify(newState.vacations))
-
+console.log('after',newState)
             }
       break;
     }

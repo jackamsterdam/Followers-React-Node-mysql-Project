@@ -10,7 +10,7 @@ function AdminRouting(): JSX.Element {
         
           <Route path="/home" element={<VacationList/>}/>
           <Route path="/add-vacation" element={<AddVacation/>}/> 
-          <Route path="/update-vacation" element={<UpdateVacation/>}/> 
+          <Route path="/edit-vacation/:vacationId" element={<UpdateVacation/>}/> 
           <Route path="/reports" element={<FollowersReport/>}/> 
 
 

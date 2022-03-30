@@ -8,6 +8,8 @@ class DevelopmentConfig extends Config {
     vacationsAdminImageUrl = 'http://localhost:3001/api/admin/vacations/images/';
     registerUrl = 'http://localhost:3001/api/auth/register/';
     loginUrl = 'http://localhost:3001/api/auth/login/';
+
+    userVacationsUrl = 'http://localhost:3001/api/user-vacations/'  // /:userId
 }
 
 class ProductionConfig extends Config {
@@ -15,6 +17,8 @@ class ProductionConfig extends Config {
     vacationsAdminImageUrl = 'http://localhost:3001/api/admin/vacations/images/';
     registerUrl = 'http://localhost:3001/api/auth/register/';
     loginUrl = 'http://localhost:3001/api/auth/login/';
+
+    userVacationsUrl = 'http://localhost:3001/api/user-vacations/'  // /:userId
 
 }
 

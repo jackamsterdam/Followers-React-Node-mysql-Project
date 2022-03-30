@@ -1,3 +1,53 @@
 .VacationCard {
-	
+	border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 7px gray;
+    text-align: left;
+    width: 300px;
+    height: 150px;
+    padding: 10px;
+    margin: 10px;
+    overflow: auto;
+    font-size: smaller;
+    position: relative;
+}
+.VacationCard .deleteButton {
+   position: absolute;
+   right: 0px;
+   top: 0px;
+   margin: 5px;
+   background-color: transparent;
+   border: none;
+   font-size: small;
+}
+
+.VacationCard .editButton {
+    position: absolute;
+    right: 0px;
+    top: 20px;
+    margin: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: large;
+    transform: rotate(145deg);
+ }
+
+.VacationCard .deleteButton:hover, .VacationCard .editButton:hover {
+   cursor: pointer;
+   transform: scale(0.90);
+}
+
+
+
+
+
+
+.VacationCard .overflow {
+	   display: inline-block;
+        white-space:nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        /* color: white; */
+        width: 280px;
+
 }

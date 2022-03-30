@@ -1,3 +1,27 @@
-.AddVacation {
-	
+.AddVacation > form {
+  width: 450px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.AddVacation span {
+  color: red;
+  position: absolute;
+  margin: 0 60px;
+}
+
+.AddVacation input {
+  width: 100%;
+  margin: 0 0 20px 0;
+  box-sizing: border-box;
+}
+
+.AddVacation button {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.AddVacation button:hover {
+  cursor: pointer;
+  transform: scale(0.98)
 }

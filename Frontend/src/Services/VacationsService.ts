@@ -26,7 +26,7 @@ class VacationsService {
         return vacation
     }
 
-    async  addVacation(vacation: VacationModel):Promise<VacationModel> {
+    async addVacation(vacation: VacationModel):Promise<VacationModel> {
        const formData = new FormData() 
 
        formData.append('destination', vacation.destination)
@@ -35,6 +35,7 @@ class VacationsService {
        formData.append('toDate', vacation.toDate)
        formData.append('price', vacation.price.toString())
        formData.append('image', vacation.image.item(0))
+       console.log("vacation.image.item(0)", vacation.image.item(0));
 
        const response = await axios.post<VacationModel>(config.vacationsAdminUrl, formData)
        const addedVacation = response.data 
