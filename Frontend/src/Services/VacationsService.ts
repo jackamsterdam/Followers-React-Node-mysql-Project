@@ -1,5 +1,6 @@
 import axios from "axios"
 import VacationModel from "../Models/VacationModel"
+import VictoryFollowModel from "../Models/VictoryFollowModel"
 import store from "../Redux/Store"
 import { addVacationAction, deleteVacationAction, fetchVacationsAction, updateVacationAction } from "../Redux/VacationsState"
 import config from "../Utils/Config"
@@ -66,6 +67,14 @@ class VacationsService {
     store.dispatch(deleteVacationAction(vacationId))
     }
 
+
+    // for Chart: 
+
+    async getAllFollowersForChart():Promise<VictoryFollowModel[]> {
+        const response = await axios.get<VictoryFollowModel[]>(config.victoryFollowersCount)
+        const followersCount = response.data
+        return followersCount
+    }
 }
 
 const vacationsService = new VacationsService() 

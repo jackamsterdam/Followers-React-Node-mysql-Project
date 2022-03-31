@@ -19,6 +19,9 @@ function Following(): JSX.Element {
 
         const userId = store.getState().authState.user.userId
         console.log("userId", userId);
+
+
+
         (async function () {
             try {
 
@@ -35,6 +38,16 @@ function Following(): JSX.Element {
 
             }
         })()
+
+
+       //Subscribing to store for changes when user follows/unfollows
+        const unsubscribe = store.subscribe(() => {
+            console.log('subscription executed in Following after user followed or unfollowed')
+
+            setUserVacations(store.getState().userVacationsState.userVacations)
+        })
+
+        return () => unsubscribe()
 
 
     }, [])

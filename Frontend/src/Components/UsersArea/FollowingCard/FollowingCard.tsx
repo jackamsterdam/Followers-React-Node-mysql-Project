@@ -1,5 +1,8 @@
+import FollowModel from "../../../Models/FollowModel";
 import UserVacationModel from "../../../Models/UserVacationModel";
 import store from "../../../Redux/Store";
+import notify from "../../../Services/NotifyService";
+import userVacationsService from "../../../Services/UserVacationsService";
 import config from "../../../Utils/Config";
 import formatDate from "../../../Utils/formatDate";
 import "./FollowingCard.css";
@@ -11,12 +14,27 @@ interface FollowingCardProps {
 
 function FollowingCard(props: FollowingCardProps): JSX.Element {
 
-    async function unFollowVacation(vacationId: number): Promise<void> {
+    async function unFollowVacation(vacationId: number, destination: string): Promise<void> {
 
-        const userId = store.getState().authState.user.userId
+        try {
+            const userId = store.getState().authState.user.userId
 
-        console.log("userId of follow", userId);
-        console.log("vacationId of follow", vacationId);
+            console.log("userId of follow", userId);
+            console.log("vacationId of follow", vacationId);
+
+            const unFollow = new FollowModel(userId, vacationId)
+            console.log("follow we are in following card AND WE ARE UNFOLLOING what do i look like??", unFollow);
+
+            await userVacationsService.deleteFollow(unFollow)
+
+            notify.success(`You have unfollowed destination ${destination}`)
+
+
+
+        } catch (err: any) {
+            notify.error(err)
+        }
+
 
     }
 
@@ -35,7 +53,7 @@ function FollowingCard(props: FollowingCardProps): JSX.Element {
             <span>To: {formatDate(props.userVacationData.toDate)}</span>
             <br />
 
-            <button className="followBtn" onClick={() => unFollowVacation(props.userVacationData.vacationId)}>℉</button>
+            <button className="followBtn" onClick={() => unFollowVacation(props.userVacationData.vacationId, props.userVacationData.destination)}>℉</button>
 
             <span className="followersCount">{props.userVacationData.followersCount}</span>
 

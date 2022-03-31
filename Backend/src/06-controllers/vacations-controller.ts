@@ -73,6 +73,22 @@ router.delete('/vacations/:vacationId',verifyAdmin, async (request: Request, res
       next(err)
   }
 })
+
+
+// For Chart 
+// http://localhost:3001/api/admin/followers-count/
+router.get('/followers-count',verifyAdmin, async (request: Request, response: Response, next: NextFunction) => {
+  try {
+      const followerCount = await vacationsLogic.getAllFollowersForChart()
+      response.json(followerCount)
+    
+  } catch (err: any) {
+      next(err)
+  }
+})
+
+
+// this was moved somewhere else: 
 // //!put back verifyAdmin !!!!!!! and see if pictures come in front end 
 // // http://localhost:3001/api/vacations/images/djkfjie3j9dsfsk/
 // router.get('/vacations/images/:imageName', async (request: Request, response: Response, next: NextFunction) => {

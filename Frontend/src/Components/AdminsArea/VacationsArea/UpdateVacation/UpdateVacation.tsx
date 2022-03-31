@@ -107,8 +107,10 @@ function UpdateVacation(): JSX.Element {
                 <span>{formState.errors?.price?.message}</span>
 
                 <label>Image:</label>
-                <input type="file" accept="image/*" {...register('image')} />
-                {/* <span>{formState.errors?.image?.message}</span> */}
+                <input type="file" accept="image/*" {...register('image', {
+                    required: {value: true, message: 'Missing photo'}
+                })} />
+                <span>{formState.errors?.image?.message}</span>
 
                 <button>Update</button>
             </form>

@@ -4,6 +4,7 @@ import ErrorModel from "../03-models/error-model";
 import VacationModel from "../03-models/vacation-model";
 import {v4 as uuid} from 'uuid'
 import safeDelete from "../01-utils/safe-delete";
+import VictoryFollowModel from "../03-models/victory-follow-model";
 
 
 
@@ -94,10 +95,28 @@ async function deleteVacation(vacationId: number):Promise<void> {
     if (info.affectedRows === 0) throw new ErrorModel(404, `Resource with id ${vacationId} not found`)
 }
 
+
+// for admin chart: 
+async function getAllFollowersForChart():Promise<VictoryFollowModel[]> {
+    const sql = `SELECT  v.destination, COUNT(f.vacationId)  AS vacationCount 
+                 FROM followers AS f
+                 INNER JOIN vacations as v  
+                 ON v.vacationId = f.vacationId
+                 GROUP BY f.vacationId`
+
+                 const followerCount = await dal.execute(sql)
+                 return followerCount
+}
+
+
+
+//!if you have time add order by highest and order by lowest!!! 
+
 export default {
     getAllVacations,
     getOneVacation,
     addVacation,
     updateVacation,
-    deleteVacation
+    deleteVacation,
+    getAllFollowersForChart
 }

@@ -37,6 +37,16 @@ function UnFollowing(): JSX.Element {
             }
         })()
 
+        
+         //Subscribing to store for changes when user follows/unfollows
+         const unsubscribe = store.subscribe(() => {
+            console.log('subscription executed in Following after user followed or unfollowed')
+
+            setUserVacations(store.getState().userVacationsState.userVacations)
+        })
+
+        return () => unsubscribe()
+
 
     }, [])
 

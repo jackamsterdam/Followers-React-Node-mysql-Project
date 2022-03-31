@@ -1,6 +1,8 @@
-import { useEffect } from "react";
+import FollowModel from "../../../Models/FollowModel";
 import UserVacationModel from "../../../Models/UserVacationModel";
 import store from "../../../Redux/Store";
+import notify from "../../../Services/NotifyService";
+import userVacationsService from "../../../Services/UserVacationsService";
 import config from "../../../Utils/Config";
 import formatDate from "../../../Utils/formatDate";
 import "./UnFollowingCard.css";
@@ -15,16 +17,28 @@ function UnFollowingCard(props: UnFollowingCardProps): JSX.Element {
 
     // },[])
 
-    async function followVacation(vacationId: number): Promise<void> {
+    async function followVacation(vacationId: number, destination: string): Promise<void> {
         // async function followVacation( vacationId: number):Promise<void> {
 
+        try {
+            const userId = store.getState().authState.user.userId
 
 
-        const userId = store.getState().authState.user.userId
+            console.log("userId of unfollow", userId);
+            console.log("vacationId of unfollow", vacationId);
 
 
-        console.log("userId of unfollow", userId);
-        console.log("vacationId of unfollow", vacationId);
+            const follow = new FollowModel(userId, vacationId)
+            console.log("follow we are in UNfollowing card AND WE ARE FOLLOING what do i look like??", follow);
+
+          await userVacationsService.addFollow(follow)
+
+          notify.success(`You are now following destination ${destination}!`)
+
+
+        } catch (err: any) {
+            notify.error(err)
+        }
 
     }
 
@@ -48,7 +62,7 @@ function UnFollowingCard(props: UnFollowingCardProps): JSX.Element {
             <br />
 
             {/* <button onClick={() => followVacation(props.userId, props.userVacationData.vacationId)}>℉</button> */}
-            <button className="followBtn" onClick={() => followVacation(props.userVacationData.vacationId)}>℉</button>
+            <button className="followBtn" onClick={() => followVacation(props.userVacationData.vacationId, props.userVacationData.destination)}>℉</button>
             <span className="followersCount">{props.userVacationData.followersCount}</span>        </div>
     );
 }

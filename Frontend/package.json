@@ -23,6 +23,7 @@
     "redux": "^4.1.2",
     "redux-devtools-extension": "^2.13.9",
     "typescript": "^4.6.2",
+    "victory": "^36.3.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -53,6 +54,7 @@
     "@types/axios": "^0.14.0",
     "@types/jwt-decode": "^3.1.0",
     "@types/notyf": "^3.0.0",
-    "@types/react-router-dom": "^5.3.3"
+    "@types/react-router-dom": "^5.3.3",
+    "@types/victory": "^35.0.0"
   }
 }

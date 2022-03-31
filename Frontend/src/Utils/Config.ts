@@ -12,6 +12,13 @@ class DevelopmentConfig extends Config {
 
     // This is used by both users to get all photos and by admin to get all photos
     vacationsImageUrl = 'http://localhost:3001/api/vacations/images/' 
+    
+    //for follow  /  ids get sent in post
+    //for delete  /:userId/:vacationId
+    followersUrl = 'http://localhost:3001/api/followers/'  
+
+    // for graph: 
+    victoryFollowersCount = 'http://localhost:3001/api/admin/followers-count/'
 }
 
 class ProductionConfig extends Config {
@@ -21,7 +28,13 @@ class ProductionConfig extends Config {
     loginUrl = 'http://localhost:3001/api/auth/login/';
 
     userVacationsUrl = 'http://localhost:3001/api/user-vacations/'  // /:userId
+
     vacationsImageUrl = 'http://localhost:3001/api/vacations/images/' 
+
+    followersUrl = 'http://localhost:3001/api/followers/'
+
+     // for graph: 
+     victoryFollowersCount = 'http://localhost:3001/api/admin/followers-count/'
 
 }
 
