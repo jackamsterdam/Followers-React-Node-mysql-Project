@@ -10,7 +10,7 @@ function UserLayout(): JSX.Element {
 
     const navigate = useNavigate()
 
-    console.log("store.getState().authState.token", store.getState().authState.token);
+    // console.log("store.getState().authState.token", store.getState().authState.token);
     //code: if user is not logged in he gets transfered to login page if user is logged in and is admin he gets transfered to admin area 
     useEffect(() => {
         if (!store.getState().authState.token) {

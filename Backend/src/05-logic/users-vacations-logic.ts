@@ -30,9 +30,9 @@ async function getAllfollowedVacationsByUser(userId: string):Promise<UserVacatio
 
 async function getAllUserVacationsData(userId: string):Promise<UserVacationModel[]> {
     const allVacations = await getAllVacationsWithFollowersCount()
-    console.log("allVacationsWithFollowersCount", allVacations);
+    // console.log("allVacationsWithFollowersCount", allVacations);
     const allfollowedVacationsByUser = await getAllfollowedVacationsByUser(userId)
-    console.log("allfollowedVacationsByUser", allfollowedVacationsByUser);
+    // console.log("allfollowedVacationsByUser", allfollowedVacationsByUser);
 
 // find all user's followeed vacations and set property to be true 
     for (const follow of allfollowedVacationsByUser) {
@@ -61,12 +61,12 @@ async function addFollow(follow: FollowModel):Promise<FollowModel> {
 
     //Prevent unkown user from entering (optional!! check becasue error 500 sql constraint won't let you anwyays.)
     const isExists = await isUserIdExists(follow.userId)
-    console.log("isExists", isExists);
+    // console.log("isExists", isExists);
     if (!isExists) throw new ErrorModel(400, `UserId does not exist.`)
 
     // Prevent duplicate entry: (OPTIONAL function- SQL won't let you anyways)
     const isDuplicate = await preventDuplicate(follow.userId, follow.vacationId)
-    console.log("isDuplicate", isDuplicate);
+    // console.log("isDuplicate", isDuplicate);
     if (isDuplicate) throw new ErrorModel(400, `User is already following that vacation`)
 
      const sql = `INSERT INTO followers VALUES(?,?)`

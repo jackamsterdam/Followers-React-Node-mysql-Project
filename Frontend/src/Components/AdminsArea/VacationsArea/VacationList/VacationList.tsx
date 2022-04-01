@@ -17,7 +17,7 @@ function VacationList(): JSX.Element {
   (async function(){
       try {
           const vacations = await vacationsService.getAllVacations()
-          console.log("vacations", vacations);
+        //   console.log("vacations", vacations);
           setVacations(vacations)
       } catch (err: any) {
           notify.error(err)
@@ -25,9 +25,9 @@ function VacationList(): JSX.Element {
   })()
 
   const unsubscribe = store.subscribe(() => {
-    console.log('subscription executed in vacationslist for vacatationsstate ')
+    // console.log('subscription executed in vacationslist for vacatationsstate ')
 
-    console.log("(store.getState().vacationsState.vacations", store.getState().vacationsState.vacations)
+    // console.log("(store.getState().vacationsState.vacations", store.getState().vacationsState.vacations)
     setVacations(store.getState().vacationsState.vacations)
 
 })

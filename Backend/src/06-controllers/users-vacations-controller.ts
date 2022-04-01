@@ -41,7 +41,7 @@ router.get('/user-vacations/:userId',verifyLoggedIn, async (request: Request, re
 // http://localhost:3001/api/followers/
 router.post('/followers',verifyLoggedIn, async (request: Request, response: Response, next: NextFunction) => {
   try {
-    console.log('request.body', request.body)
+    // console.log('request.body', request.body)
       const follow = new FollowModel(request.body)
       const addedFollow = await usersVacationsLogic.addFollow(follow)
       response.status(201).json(addedFollow)
@@ -55,7 +55,7 @@ router.post('/followers',verifyLoggedIn, async (request: Request, response: Resp
 router.delete('/followers/:userId/:vacationId',verifyLoggedIn, async (request: Request, response: Response, next: NextFunction) => {
   try {
      const userId = request.params.userId
-     console.log("userId", userId);
+    //  console.log("userId", userId);
      const vacationId = +request.params.vacationId
      console.log("vacationId", vacationId);
 

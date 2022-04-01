@@ -6,15 +6,15 @@ import "./AuthMenu.css";
 
 function AuthMenu(): JSX.Element {
 
-   const [user, setUser] = useState<UserModel>(null)
-   console.log("user in Auth menu", user);  //!erase this
+   const [user, setUser] = useState<UserModel>(null);
+  //  console.log("user in Auth menu", user);  //!erase this
 
    useEffect(() => {
 
      setUser(store.getState().authState.user) 
 
      const unsubscribe = store.subscribe(() => {
-       console.log('subscription executed in AuthMenu for auth state user')
+      //  console.log('subscription executed in AuthMenu for auth state user')
        setUser(store.getState().authState.user)
      })
 

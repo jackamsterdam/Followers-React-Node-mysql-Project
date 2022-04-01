@@ -24,16 +24,16 @@ function UnFollowingCard(props: UnFollowingCardProps): JSX.Element {
             const userId = store.getState().authState.user.userId
 
 
-            console.log("userId of unfollow", userId);
-            console.log("vacationId of unfollow", vacationId);
+            // console.log("userId of unfollow", userId);
+            // console.log("vacationId of unfollow", vacationId);
 
 
             const follow = new FollowModel(userId, vacationId)
-            console.log("follow we are in UNfollowing card AND WE ARE FOLLOING what do i look like??", follow);
+            // console.log("follow we are in UNfollowing card AND WE ARE FOLLOING what do i look like??", follow);
 
-          await userVacationsService.addFollow(follow)
+            await userVacationsService.addFollow(follow)
 
-          notify.success(`You are now following destination ${destination}!`)
+            notify.success(`You are now following destination ${destination}!`)
 
 
         } catch (err: any) {
@@ -50,15 +50,25 @@ function UnFollowingCard(props: UnFollowingCardProps): JSX.Element {
 
             <span>Destination: {props.userVacationData.destination}</span>
             <br />
-            <span title={props.userVacationData.description} className="overflow">Description: {props.userVacationData.description}</span>
-            <br />
+           
             <span>Price: {props.userVacationData.price}</span>
             <br />
-            <img src={config.vacationsImageUrl + props.userVacationData.imageName} alt="vacation pic" />
+            <span title={props.userVacationData.description} className="overflow">Description: {props.userVacationData.description}</span>
             <br />
+
+
+            <div className="imageVacation">
+                <img src={config.vacationsImageUrl + props.userVacationData.imageName} alt="vacation pic" />
+
+            </div>
+
+
+{/* 
             <span>From: {formatDate(props.userVacationData.fromDate)}</span>
             <br />
             <span>To: {formatDate(props.userVacationData.toDate)}</span>
+            <br /> */}
+            <span>{formatDate(props.userVacationData.fromDate)} - {formatDate(props.userVacationData.toDate)} </span>
             <br />
 
             {/* <button onClick={() => followVacation(props.userId, props.userVacationData.vacationId)}>℉</button> */}

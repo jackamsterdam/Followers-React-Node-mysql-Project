@@ -9,7 +9,7 @@ import "./UpdateVacation.css";
 function UpdateVacation(): JSX.Element {
 
     const params = useParams()
-    console.log("params", params);
+    // console.log("params", params);
     const vacationId = +params.vacationId
 
     const { register, handleSubmit, formState, setFocus, setValue } = useForm<VacationModel>()
@@ -25,9 +25,9 @@ function UpdateVacation(): JSX.Element {
         (async function () {
             try {
                 const vacation = await vacationsService.getOneVacation(vacationId)
-                console.log("vacation", vacation);
-                console.log(vacation.fromDate)
-                console.log(vacation.toDate)
+                // console.log("vacation", vacation);
+                // console.log(vacation.fromDate)
+                // console.log(vacation.toDate)
 
                 setValue('destination', vacation.destination)
                 setValue('description', vacation.description)

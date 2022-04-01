@@ -4,6 +4,7 @@ import UserVacationModel from "../Models/UserVacationModel";
 export class UserVacationsState {
     userVacations: UserVacationModel[] = []
 }
+//!!!!dont Add local storage
 
 export enum UserVacationsActionType {
     fetchUserVacations="FetchUserVacations",
@@ -52,14 +53,14 @@ export function userVacationsReducer(currentState = new UserVacationsState, acti
         toBeFollowed.followersCount++
 
         // no need for this line: its actually bad becuase it adds another one lol 
-        // newState.userVacations = [...newState.userVacations, toBeFollowed]
-
+        newState.userVacations = [...newState.userVacations, toBeFollowed]
 
         break;
         case UserVacationsActionType.deleteFollow:
             const toBeUnFollowed = newState.userVacations.find(f => f.vacationId === action.payload.vacationId)
             toBeUnFollowed.isFollowing = false 
             toBeUnFollowed.followersCount--
+
         break;
     }
 

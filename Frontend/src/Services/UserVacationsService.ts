@@ -25,7 +25,7 @@ async addFollow(follow: FollowModel):Promise<FollowModel> {
 
   const response = await axios.post<FollowModel>(config.followersUrl, follow) 
   const addedFollow = response.data 
-  console.log("addedFollow  what is here? is this an object with two things??", addedFollow);
+  // console.log("addedFollow  what is here? is this an object with two things??", addedFollow);
   store.dispatch(addFollowAction(addedFollow) )
   return addedFollow
 }

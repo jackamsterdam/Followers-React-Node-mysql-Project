@@ -21,7 +21,7 @@ router.get('/vacations',verifyAdmin, async (request: Request, response: Response
 router.get('/vacations/:vacationId', verifyAdmin, async (request: Request, response: Response, next: NextFunction) => {
   try {
       const vacationId = +request.params.vacationId
-      console.log("vacationId", vacationId);
+      // console.log("vacationId", vacationId);
       const vacation = await vacationsLogic.getOneVacation(vacationId)
       response.json(vacation)
 
@@ -39,7 +39,7 @@ router.post('/vacations',verifyAdmin, async (request: Request, response: Respons
       const vacation = new VacationModel(request.body)
       const addedVacation = await vacationsLogic.addVacation(vacation)
       response.status(201).json(addedVacation)
-
+// console.log('added')
   } catch (err: any) {
       next(err)
   }

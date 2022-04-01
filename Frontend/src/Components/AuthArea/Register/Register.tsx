@@ -17,7 +17,7 @@ function Register(): JSX.Element {
   }, [setFocus]);
 
 async function submit(user: UserModel):Promise<void> {
- console.log("user", user);
+//  console.log("user", user);
  try {
      await authService.register(user)
      notify.success('You are now registered!')

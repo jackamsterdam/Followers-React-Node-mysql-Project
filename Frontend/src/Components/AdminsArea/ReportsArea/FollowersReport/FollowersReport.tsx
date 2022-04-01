@@ -1,4 +1,4 @@
-import { VictoryBar, VictoryChart, VictoryAxis, VictoryTheme } from 'victory';
+import { VictoryBar, VictoryChart, VictoryAxis, VictoryTheme, VictoryContainer } from 'victory';
 import "./FollowersReport.css";
 import { useEffect, useState } from "react";
 import notify from "../../../../Services/NotifyService";
@@ -16,7 +16,7 @@ function FollowersReport(): JSX.Element {
 
             try {
                 const followersCount = await vacationsService.getAllFollowersForChart()
-                console.log("followersCount", followersCount);
+                // console.log("followersCount", followersCount);
                 setFollowersCount(followersCount)
 
 
@@ -41,7 +41,7 @@ function FollowersReport(): JSX.Element {
             {followersCount.length === 0 && <Loading />}
 
 
-            <VictoryChart domainPadding={20} theme={VictoryTheme.material}>
+            <VictoryChart domainPadding={20} theme={VictoryTheme.material}  width={followersCount.length * 100}   containerComponent={<VictoryContainer responsive={false} />}>
 
 
 

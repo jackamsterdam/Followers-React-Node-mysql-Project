@@ -18,7 +18,7 @@ function AddVacation(): JSX.Element {
 
 
 async function submit(vacation:VacationModel):Promise<void>{
-    console.log("vacation", vacation);
+    // console.log("vacation", vacation);
 
     try {
         await vacationsService.addVacation(vacation)

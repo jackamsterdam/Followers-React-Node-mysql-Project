@@ -20,7 +20,7 @@ useEffect(() => {
   }, [setFocus]);
 
 async function submit(credentials: CredentialsModel): Promise<void> {
-        console.log("credentials", credentials);
+        // console.log("credentials", credentials);
         try {
             await authService.login(credentials)
           
@@ -30,7 +30,7 @@ async function submit(credentials: CredentialsModel): Promise<void> {
                 navigate('/admin/home')
                 return
             }
-            console.log("store.getState().authState.user.roleId", store.getState().authState.user.roleId);
+            // console.log("store.getState().authState.user.roleId", store.getState().authState.user.roleId);
 
             notify.success('You are now logged-in!')
             

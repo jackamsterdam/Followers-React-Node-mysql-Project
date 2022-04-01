@@ -47,16 +47,23 @@ function VacationCard(props: VacationCardProps): JSX.Element {
         <div className="VacationCard">
 			<span>Destination: {props.vacation.destination}</span>
             <br />
+            <span>Price:  {'$' + props.vacation.price}</span>
+            <br />
 			<span title={props.vacation.description} className="overflow">Description: {props.vacation.description}</span>
             <br />
-			<span>Price: {props.vacation.price}</span>
-            <br />
+			<div className="imageVacation">
             <img src={config.vacationsImageUrl + props.vacation.imageName} alt="vacation pic" />
-            <br />
-			<span>From: {formatDate(props.vacation.fromDate)}</span>
+            </div>
+			{/* <span>From: {formatDate(props.vacation.fromDate)}</span>
             <br />
 			<span>To: {formatDate(props.vacation.toDate)}</span>
+            <br /> */}
+			<span>{formatDate(props.vacation.fromDate)} - {formatDate(props.vacation.toDate)} </span>
             <br />
+			
+
+
+
             {/* <button onClick={() => deleteVacation(props.vacation.vacationId, props.vacation.destination)}>❌</button> */}
             <button className="deleteButton" onClick={() => props.deleteVacation(props.vacation.vacationId, props.vacation.destination)}>❌</button>
    

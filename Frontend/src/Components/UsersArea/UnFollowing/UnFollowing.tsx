@@ -15,18 +15,18 @@ function UnFollowing(): JSX.Element {
 
         // first we need to get userId from token so we know which user wants his vacations with the vacations he follows/unfollows (plus we get the general count of vacations folllowed along with all the vacation data)
 
-        const userId = store.getState().authState.user.userId
+        const userId = store.getState().authState.user.userId;
         console.log("userId", userId);
 
         (async function () {
             try {
 
-                const userVacationsData = await userVacationsService.getAllUserVacationsData(userId)
-                console.log("userVacationsData", userVacationsData);
+                const userVacationsData = await userVacationsService.getAllUserVacationsData(userId)    
+                // console.log("userVacationsData", userVacationsData);
 
 
                 const userNotFollowing = userVacationsData.filter(f => !f.isFollowing)
-                console.log("userNotFollowing", userNotFollowing);
+                // console.log("userNotFollowing", userNotFollowing);
 
                 setUserVacations(userNotFollowing)
 
@@ -40,9 +40,10 @@ function UnFollowing(): JSX.Element {
         
          //Subscribing to store for changes when user follows/unfollows
          const unsubscribe = store.subscribe(() => {
-            console.log('subscription executed in Following after user followed or unfollowed')
+            // console.log('subscription executed in UN!!!Following after user followed or unfollowed')
 
             setUserVacations(store.getState().userVacationsState.userVacations)
+            // console.log("UNFOOLOWstore.getState().userVacationsState.userVacations", store.getState().userVacationsState.userVacations);
         })
 
         return () => unsubscribe()

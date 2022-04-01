@@ -22,7 +22,7 @@ async function getOneVacation(vacationId: number):Promise<VacationModel>{
                WHERE vacationId = ?`
 
  const vacations = await dal.execute(sql, [vacationId])
- console.log("vacations", vacations);
+//  console.log("vacations", vacations);
  const vacation = vacations[0]
  if (!vacation)  throw new ErrorModel(404, `Resource with id ${vacationId} not found.`)
  return vacation
@@ -31,7 +31,7 @@ async function getOneVacation(vacationId: number):Promise<VacationModel>{
 
 
 async function addVacation(vacation: VacationModel):Promise<VacationModel> {
-    console.log("vacation", vacation);
+    // console.log("vacation", vacation);
     //Validation
     const errors = vacation.validatePost()
     if (errors) throw new ErrorModel(400, errors)
@@ -46,8 +46,8 @@ async function addVacation(vacation: VacationModel):Promise<VacationModel> {
         await vacation.image.mv('./src/upload/images/' + vacation.imageName)
         delete vacation.image 
     }
-    console.log('vacation,imagename',vacation.imageName)
-    console.log("vacation", vacation);
+    // console.log('vacation,imagename',vacation.imageName)
+    // console.log("vacation", vacation);
 
     const sql = `INSERT INTO vacations VALUES(DEFAULT,?,?,?,?,?,?)`
     const info: OkPacket = await dal.execute(sql, [vacation.destination, vacation.description, vacation.fromDate, vacation.toDate, vacation.price, vacation.imageName])
@@ -88,6 +88,12 @@ async function updateVacation(vacation: VacationModel):Promise<VacationModel> {
 }
 
 async function deleteVacation(vacationId: number):Promise<void> {
+    // we need to delete image from disk as well: 
+    const vacation = await getOneVacation(vacationId)
+    // console.log("vacation", vacation);
+
+    safeDelete('./src/upload/images/' + vacation.imageName)
+
      const sql = `DELETE FROM vacations
                   WHERE vacationId = ?`
 

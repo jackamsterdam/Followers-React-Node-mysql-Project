@@ -19,11 +19,11 @@ function FollowingCard(props: FollowingCardProps): JSX.Element {
         try {
             const userId = store.getState().authState.user.userId
 
-            console.log("userId of follow", userId);
-            console.log("vacationId of follow", vacationId);
+            // console.log("userId of follow", userId);
+            // console.log("vacationId of follow", vacationId);
 
             const unFollow = new FollowModel(userId, vacationId)
-            console.log("follow we are in following card AND WE ARE UNFOLLOING what do i look like??", unFollow);
+            // console.log("follow we are in following card AND WE ARE UNFOLLOING what do i look like??", unFollow);
 
             await userVacationsService.deleteFollow(unFollow)
 
@@ -37,22 +37,32 @@ function FollowingCard(props: FollowingCardProps): JSX.Element {
 
 
     }
-
+console.log(config.vacationsImageUrl);  //http://localhost:3001/api/vacations/images/
+console.log(props.userVacationData.imageName); //a295d8d5-02f4-4811-ad1e-1798e48b7f09.jpg
+{/* <img src="http://localhost:3001/api/vacations/images/1e710025-0682-471f-9847-7929ea310e07.jpg" alt="" /> */}
     return (
         <div className="FollowingCard">
             <span>Destination: {props.userVacationData.destination}</span>
             <br />
-            <span title={props.userVacationData.description} className="overflow">Description: {props.userVacationData.description}</span>
-            <br />
             <span>Price: {props.userVacationData.price}</span>
             <br />
-            <img src={config.vacationsImageUrl + props.userVacationData.imageName} alt="vacation pic" />
+            <span title={props.userVacationData.description} className="overflow">Description: {props.userVacationData.description}</span>
             <br />
-            <span>From: {formatDate(props.userVacationData.fromDate)}</span>
+            
+
+
+           <div className="imageVacation">
+                <img src={config.vacationsImageUrl + props.userVacationData.imageName} alt="vacation pic" />
+
+            </div>
+         
+            {/* <span>From: {formatDate(props.userVacationData.fromDate)}</span>
             <br />
             <span>To: {formatDate(props.userVacationData.toDate)}</span>
+            <br /> */}
+            <span>{formatDate(props.userVacationData.fromDate)} - {formatDate(props.userVacationData.toDate)} </span>
             <br />
-
+            <img src="http://localhost:3001/api/vacations/images/1e710025-0682-471f-9847-7929ea310e07.jpg" alt="" />
             <button className="followBtn" onClick={() => unFollowVacation(props.userVacationData.vacationId, props.userVacationData.destination)}>℉</button>
 
             <span className="followersCount">{props.userVacationData.followersCount}</span>
