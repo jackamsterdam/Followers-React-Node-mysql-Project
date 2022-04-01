@@ -11,8 +11,8 @@ async function getAllVacationsWithFollowersCount():Promise<UserVacationModel[]>{
     FROM vacations AS v
      LEFT JOIN followers as f
      on v.vacationId = f.vacationId
-    GROUP BY f.vacationId;`
-
+    GROUP BY v.vacationId;`
+    // v not f !!!!!!!!!!!!!!!!!!!!!
     const vacationsWithFollowersCount = await dal.execute(sql)
     return vacationsWithFollowersCount
 

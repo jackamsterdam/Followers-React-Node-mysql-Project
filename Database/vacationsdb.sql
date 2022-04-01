@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 31, 2022 at 06:42 AM
+-- Generation Time: Apr 01, 2022 at 04:46 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -49,8 +49,10 @@ INSERT INTO `followers` (`userId`, `vacationId`) VALUES
 ('2d90f1bc-7c36-411c-96ad-f3a2c9102ca0', 1),
 ('2d90f1bc-7c36-411c-96ad-f3a2c9102ca0', 2),
 ('2d90f1bc-7c36-411c-96ad-f3a2c9102ca0', 3),
+('2d90f1bc-7c36-411c-96ad-f3a2c9102ca0', 5),
 ('2d90f1bc-7c36-411c-96ad-f3a2c9102ca0', 11),
 ('2d90f1bc-7c36-411c-96ad-f3a2c9102ca0', 16),
+('4218db19-3ecf-41fc-82c3-41fedf250a49', 5),
 ('4218db19-3ecf-41fc-82c3-41fedf250a49', 18),
 ('4218db19-3ecf-41fc-82c3-41fedf250a49', 29),
 ('4218db19-3ecf-41fc-82c3-41fedf250a49', 30),

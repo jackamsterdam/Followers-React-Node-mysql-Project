@@ -22,7 +22,7 @@ function UnFollowing(): JSX.Element {
             try {
 
                 const userVacationsData = await userVacationsService.getAllUserVacationsData(userId)    
-                // console.log("userVacationsData", userVacationsData);
+                console.log("userVacationsData", userVacationsData);
 
 
                 const userNotFollowing = userVacationsData.filter(f => !f.isFollowing)
@@ -40,10 +40,13 @@ function UnFollowing(): JSX.Element {
         
          //Subscribing to store for changes when user follows/unfollows
          const unsubscribe = store.subscribe(() => {
-            // console.log('subscription executed in UN!!!Following after user followed or unfollowed')
-
-            setUserVacations(store.getState().userVacationsState.userVacations)
-            // console.log("UNFOOLOWstore.getState().userVacationsState.userVacations", store.getState().userVacationsState.userVacations);
+         
+            const newState = store.getState().userVacationsState.userVacations
+            console.log("newState", newState);
+            const userNotFollowing = newState.filter(f => !f.isFollowing)
+            console.log("userNotFollowing", userNotFollowing);
+            setUserVacations(userNotFollowing)
+          
         })
 
         return () => unsubscribe()

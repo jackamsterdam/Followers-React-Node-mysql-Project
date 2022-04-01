@@ -53,13 +53,19 @@ export function userVacationsReducer(currentState = new UserVacationsState, acti
         toBeFollowed.followersCount++
 
         // no need for this line: its actually bad becuase it adds another one lol 
-        newState.userVacations = [...newState.userVacations, toBeFollowed]
+        // newState.userVacations = [...newState.userVacations, toBeFollowed]
+
+        // const indexToUpdateForFollow = newState.userVacations.findIndex(f => f.vacationId === toBeFollowed.vacationId)
+        // newState.userVacations[indexToUpdateForFollow] = toBeFollowed
 
         break;
         case UserVacationsActionType.deleteFollow:
             const toBeUnFollowed = newState.userVacations.find(f => f.vacationId === action.payload.vacationId)
             toBeUnFollowed.isFollowing = false 
             toBeUnFollowed.followersCount--
+
+            // const indexToUpdateForUnfollow = newState.userVacations.findIndex(f => f.vacationId === toBeUnFollowed.vacationId)
+            // newState.userVacations[indexToUpdateForUnfollow] = toBeUnFollowed
 
         break;
     }

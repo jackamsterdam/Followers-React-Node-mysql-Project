@@ -30,7 +30,7 @@ function Following(): JSX.Element {
 
 
                 const userIsFollowing = userVacationsData.filter(f => f.isFollowing)
-                // console.log("userIsFollowing", userIsFollowing);
+                console.log("userIsFollowing", userIsFollowing);
 
                 setUserVacations(userIsFollowing)
 
@@ -44,8 +44,12 @@ function Following(): JSX.Element {
         const unsubscribe = store.subscribe(() => {
             // console.log('subscription executed in Following after user followed or unfollowed')
 
-            setUserVacations(store.getState().userVacationsState.userVacations)
-            console.log("FOLLOWstore.getState().userVacationsState.userVacations", store.getState().userVacationsState.userVacations);
+            const newState = store.getState().userVacationsState.userVacations
+            const userIsFollowing = newState.filter(f => f.isFollowing)
+             setUserVacations(userIsFollowing)
+
+            // setUserVacations(store.getState().userVacationsState.userVacations)
+            // console.log("FOLLOWstore.getState().userVacationsState.userVacations", store.getState().userVacationsState.userVacations);
         })
 
         return () => unsubscribe()
