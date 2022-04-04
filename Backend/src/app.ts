@@ -16,6 +16,8 @@ import vacationsConroller from './06-controllers/vacations-controller'
 import userVacationsController from './06-controllers/users-vacations-controller'
 // import path from 'path'
 
+import socketLogic from './05-logic/socket-logic'
+
 const server = express() 
 
 if (config.isDevelopment) {
@@ -50,4 +52,7 @@ server.use('*', (request: Request, response: Response, next: NextFunction) => {
 server.use(errorsHandler)
 
 
-server.listen(process.env.PORT, () => console.log(`Listening on port ${process.env.PORT}...`))
+const httpServer = server.listen(process.env.PORT, () => console.log(`Listening on port ${process.env.PORT}...`))
+
+// Start listening to sockets:
+socketLogic(httpServer)

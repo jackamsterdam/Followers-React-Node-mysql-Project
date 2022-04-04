@@ -14693,3 +14693,9 @@ info	2022-04-04 03:35:24	GET Request to /api/vacations/images/a7376fec-0c9d-448f
 info	2022-04-04 03:35:24	GET Request to /api/vacations/images/f09a0503-467d-4508-88e1-6fb4f418ed5a.jpg
 info	2022-04-04 03:35:24	GET Request to /api/vacations/images/ed177845-d77a-41f5-800d-83ce3b93393e.jpg
 info	2022-04-04 03:35:24	GET Request to /api/vacations/images/04e45a0c-6818-4889-9f89-102a567f04ae.jpg
+info	2022-04-04 04:00:48	GET Request to /api/admin/followers-count/
+info	2022-04-04 04:00:48	You are not logged-in
+info	2022-04-04 04:00:59	POST Request to /api/auth/login
+error	2022-04-04 04:00:59	connect ECONNREFUSED 127.0.0.1:3306
+info	2022-04-04 04:01:15	POST Request to /api/auth/login
+info	2022-04-04 04:01:35	GET Request to /api/admin/followers-count/

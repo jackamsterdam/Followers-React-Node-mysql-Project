@@ -7,10 +7,13 @@ export class UserVacationsState {
 //!!!!dont Add local storage
 
 export enum UserVacationsActionType {
+
     fetchUserVacations="FetchUserVacations",
 
     addFollow = "AddFollow",
-    deleteFollow = "DeleteFollow"
+    deleteFollow = "DeleteFollow",
+
+    socketSend = "socketSend"
 }
 
 export interface UserVacationsAction {
@@ -31,6 +34,10 @@ export function deleteFollowAction(unFollow: FollowModel): UserVacationsAction {
     return {type: UserVacationsActionType.deleteFollow, payload: unFollow}
 }
 
+export function socketSendAction(userVacations: UserVacationModel[]): UserVacationsAction {
+    return {type: UserVacationsActionType.socketSend, payload: userVacations}
+}
+
 
 
 export function userVacationsReducer(currentState = new UserVacationsState, action: UserVacationsAction): UserVacationsState {
@@ -38,6 +45,7 @@ export function userVacationsReducer(currentState = new UserVacationsState, acti
 
     switch (action.type) {
         case UserVacationsActionType.fetchUserVacations:
+        case UserVacationsActionType.socketSend:
         
         newState.userVacations = action.payload
 //???  save to local storge ????
