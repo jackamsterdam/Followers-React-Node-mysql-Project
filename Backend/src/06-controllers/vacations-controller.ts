@@ -38,6 +38,11 @@ router.post('/vacations',verifyAdmin, async (request: Request, response: Respons
 
       const vacation = new VacationModel(request.body)
       const addedVacation = await vacationsLogic.addVacation(vacation)
+
+      // const updatedVacations = await vacationsLogic.getAllVacations()
+      // socketLogic.amitAll(updatedVacations)
+
+      
       response.status(201).json(addedVacation)
 // console.log('added')
   } catch (err: any) {

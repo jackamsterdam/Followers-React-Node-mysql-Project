@@ -42,11 +42,11 @@ function FollowingCard(props: FollowingCardProps): JSX.Element {
 
     return (
         <div className="FollowingCard">
-            <span>Destination: {props.userVacationData.destination}</span>
+            <span>{props.userVacationData.destination}</span>
             <br />
-            <span>Price: {props.userVacationData.price}</span>
+            <span>{'$' + props.userVacationData.price}</span>
             <br />
-            <span title={props.userVacationData.description} className="overflow">Description: {props.userVacationData.description}</span>
+            <span title={props.userVacationData.description} className="overflow">{props.userVacationData.description}</span>
             <br />
 
             <img src="http://localhost:3001/api/vacations/images/1e710025-0682-471f-9847-7929ea310e07.jpg" alt="" />

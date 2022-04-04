@@ -24,16 +24,16 @@ function VacationCard(props: VacationCardProps): JSX.Element {
 
 
 
-      // async function deleteVacation(vacationId: number, destination: string):Promise<void> {
-//    try {
-//        const confirmDelete = window.confirm(`Are you sure you want to delete ${destination}?` )
-//        if (!confirmDelete) return
-//        await vacationsService.deleteVacation(vacationId)
-//        notify.success('Vacation has been deleted')
-//    } catch (err: any) {
-//        notify.error(err)
-//    }
-// }
+      async function deleteVacation(vacationId: number, destination: string):Promise<void> {
+   try {
+       const confirmDelete = window.confirm(`Are you sure you want to delete ${destination}?` )
+       if (!confirmDelete) return
+       await vacationsService.deleteVacation(vacationId)
+       notify.success('Vacation has been deleted')
+   } catch (err: any) {
+       notify.error(err)
+   }
+}
 
 
 
@@ -45,11 +45,11 @@ function VacationCard(props: VacationCardProps): JSX.Element {
 
     return (
         <div className="VacationCard">
-			<span>Destination: {props.vacation.destination}</span>
+			<span>{props.vacation.destination}</span>
             <br />
-            <span>Price:  {'$' + props.vacation.price}</span>
+            <span>{'$' + props.vacation.price}</span>
             <br />
-			<span title={props.vacation.description} className="overflow">Description: {props.vacation.description}</span>
+			<span title={props.vacation.description} className="overflow">{props.vacation.description}</span>
             <br />
 			<div className="imageVacation">
             <img src={config.vacationsImageUrl + props.vacation.imageName} alt="vacation pic" />
@@ -64,8 +64,8 @@ function VacationCard(props: VacationCardProps): JSX.Element {
 
 
 
-            {/* <button onClick={() => deleteVacation(props.vacation.vacationId, props.vacation.destination)}>❌</button> */}
-            <button className="deleteButton" onClick={() => props.deleteVacation(props.vacation.vacationId, props.vacation.destination)}>❌</button>
+            <button className="deleteButton" onClick={() => deleteVacation(props.vacation.vacationId, props.vacation.destination)}>❌</button>
+            {/* <button className="deleteButton" onClick={() => props.deleteVacation(props.vacation.vacationId, props.vacation.destination)}>❌</button> */}
    
             {/* inner route admin/  */}
             <button className="editButton" onClick={() => navigate('/admin/edit-vacation/' + props.vacation.vacationId)}>✏</button>

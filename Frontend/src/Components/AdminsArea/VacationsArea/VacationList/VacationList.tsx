@@ -28,7 +28,11 @@ function VacationList(): JSX.Element {
     // console.log('subscription executed in vacationslist for vacatationsstate ')
 
     // console.log("(store.getState().vacationsState.vacations", store.getState().vacationsState.vacations)
-    setVacations(store.getState().vacationsState.vacations)
+    let newState = store.getState().vacationsState.vacations;
+    // debugger
+    setVacations([...newState])
+    // setVacations([{vacationId: 36, destination: 'test', description: 'testing', fromDate: "2022-04-18T21:00:00.000Z", toDate: "2022-05-18T21:00:00.000Z", price: 87, imageName: "72203bc7-6b7d-4f8b-a5b8-a996686e0d2d.jpg", image: undefined}])
+    console.log("store.getState().vacationsState.vacations", store.getState().vacationsState.vacations);
 
 })
 
@@ -56,6 +60,7 @@ function VacationList(): JSX.Element {
   
             <div className="container">
                 {vacations.map(v => <VacationCard  key={v.vacationId} vacation={v} deleteVacation={deleteVacation} />)}
+                {vacations.length}
             </div>
         </div>
     );

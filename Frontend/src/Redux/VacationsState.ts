@@ -3,12 +3,12 @@ import VacationModel from "../Models/VacationModel";
 export class VacationsState {
     vacations: VacationModel[] = []
 
-    constructor() {
-        const vacationsCollection = localStorage.getItem('vacations')
-        if (vacationsCollection) {
-            this.vacations = [...JSON.parse(vacationsCollection)]  //!check if works without spread
-        }
-    }
+    // constructor() {
+    //     const vacationsCollection = localStorage.getItem('vacations')
+    //     if (vacationsCollection) {
+    //         this.vacations = [...JSON.parse(vacationsCollection)]  //!check if works without spread
+    //     }
+    // }
 }
 
 export enum VacationsActionType {
@@ -46,25 +46,25 @@ export function vacationsReducer(currentState = new VacationsState(), action: Va
     switch(action.type) {
       case VacationsActionType.FetchVacations:
          newState.vacations = action.payload
-         localStorage.setItem('vacations', JSON.stringify(newState.vacations))
+        //  localStorage.setItem('vacations', JSON.stringify(newState.vacations))
       break;
       case VacationsActionType.AddVacation:
          newState.vacations.push(action.payload)
-         localStorage.setItem('vacations', JSON.stringify(newState.vacations))
+        //  localStorage.setItem('vacations', JSON.stringify(newState.vacations))
 
       break;
       case VacationsActionType.UpdateVacation:
           const indexToUpdate = newState.vacations.findIndex(v => v.vacationId === action.payload.vacationId)
           if (indexToUpdate >= 0) {
               newState.vacations[indexToUpdate] = action.payload
-              localStorage.setItem('vacations', JSON.stringify(newState.vacations))
+            //   localStorage.setItem('vacations', JSON.stringify(newState.vacations))
           }
       break;
       case VacationsActionType.DeleteVacation:
             const indexToDelete = newState.vacations.findIndex(v => v.vacationId === action.payload)
             if (indexToDelete >= 0) {
                 newState.vacations.splice(indexToDelete, 1)
-                localStorage.setItem('vacations', JSON.stringify(newState.vacations))
+                // localStorage.setItem('vacations', JSON.stringify(newState.vacations))
 console.log('after',newState)
             }
       break;

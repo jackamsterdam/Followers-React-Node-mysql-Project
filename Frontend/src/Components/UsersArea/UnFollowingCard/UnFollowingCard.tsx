@@ -48,12 +48,12 @@ function UnFollowingCard(props: UnFollowingCardProps): JSX.Element {
     return (
         <div className="UnFollowingCard">
 
-            <span>Destination: {props.userVacationData.destination}</span>
+            <span>{props.userVacationData.destination}</span>
             <br />
            
-            <span>Price: {props.userVacationData.price}</span>
+            <span>{'$' + props.userVacationData.price}</span>
             <br />
-            <span title={props.userVacationData.description} className="overflow">Description: {props.userVacationData.description}</span>
+            <span title={props.userVacationData.description} className="overflow">{props.userVacationData.description}</span>
             <br />
 
 
