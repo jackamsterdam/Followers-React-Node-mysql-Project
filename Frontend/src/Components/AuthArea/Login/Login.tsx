@@ -6,6 +6,8 @@ import notify from "../../../Services/NotifyService";
 import authService from "../../../Services/AuthService";
 import store from "../../../Redux/Store";
 import {useEffect} from "react";
+import { Button, TextField, Typography } from "@material-ui/core";
+import { Send } from "@material-ui/icons";
 
 function Login(): JSX.Element {
 
@@ -46,29 +48,28 @@ async function submit(credentials: CredentialsModel): Promise<void> {
     return (
         <div className="Login Box">
             {/* <input type="text" ref={textBoxRef}/> */}
-            <form onSubmit={handleSubmit(submit)}>
-                <h1>Login</h1>
+            <form onSubmit={handleSubmit(submit)} noValidate>
+                <Typography variant="h4">Login</Typography>
+<br />
 
-
-                <label>Username:</label>
-                <input type="text" {...register('username', {
+                <TextField className="TextBox" variant="outlined" label="Username" type="text" {...register('username', {
                     required: {value: true, message: "Missing username"},
                     minLength: {value: 2, message: "Username must be more than 2 characters"},
                     maxLength: {value: 100, message: "Username must not exceed 100 characters"}
 
                 })} />
-                <span>{formState.errors?.username?.message}</span>
+                <Typography component="span" className="ErrorMsg">{formState.errors?.username?.message}</Typography>
 
-                <label>Password:</label>
-                <input type="text" {...register('password', {
+                <TextField label="Password" variant="outlined" className="TextBox" type="text" {...register('password', {
                     required: {value: true, message: 'Missing password'},
                     minLength: {value: 2, message: "Password must be more than 2 characters"},
                     maxLength: {value: 100, message: "Password must not exceed 100 characters"}
                 })} />
-                <span>{formState.errors?.password?.message}</span>
+                <Typography component="span" className="ErrorMsg">{formState.errors?.password?.message}</Typography>
 
 
-                <button>Login</button>
+                <Button endIcon={<Send/>} type="submit" variant="contained" fullWidth color="primary">Login</Button>
+
                 <p>New user? <NavLink to='/register'>Register</NavLink></p>
                 {/* <button onClick={() => navigate('/register')}>Register</button> */}
             </form>
@@ -77,3 +78,36 @@ async function submit(credentials: CredentialsModel): Promise<void> {
 }
 
 export default Login;
+
+
+// old: 
+
+// <div className="Login Box">
+// {/* <input type="text" ref={textBoxRef}/> */}
+// <form onSubmit={handleSubmit(submit)}>
+//     <h1>Login</h1>
+
+
+//     <label>Username:</label>
+//     <input type="text" {...register('username', {
+//         required: {value: true, message: "Missing username"},
+//         minLength: {value: 2, message: "Username must be more than 2 characters"},
+//         maxLength: {value: 100, message: "Username must not exceed 100 characters"}
+
+//     })} />
+//     <span>{formState.errors?.username?.message}</span>
+
+//     <label>Password:</label>
+//     <input type="text" {...register('password', {
+//         required: {value: true, message: 'Missing password'},
+//         minLength: {value: 2, message: "Password must be more than 2 characters"},
+//         maxLength: {value: 100, message: "Password must not exceed 100 characters"}
+//     })} />
+//     <span>{formState.errors?.password?.message}</span>
+
+
+//     <button>Login</button>
+//     <p>New user? <NavLink to='/register'>Register</NavLink></p>
+//     {/* <button onClick={() => navigate('/register')}>Register</button> */}
+// </form>
+// </div>

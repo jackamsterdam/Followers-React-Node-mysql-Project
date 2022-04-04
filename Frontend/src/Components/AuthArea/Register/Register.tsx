@@ -1,3 +1,5 @@
+import { Button, TextField, Typography } from "@material-ui/core";
+import { Send } from "@material-ui/icons";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { NavLink } from "react-router-dom";
@@ -30,42 +32,39 @@ async function submit(user: UserModel):Promise<void> {
 
     return (
         <div className="Register Box">
-            <form onSubmit={handleSubmit(submit)}>
-                <h1>Register</h1>
-
-                <label>First Name:</label>
-                <input type="text" {...register('firstName', {
+            <form onSubmit={handleSubmit(submit)} noValidate>
+                <Typography variant="h4">Register</Typography>
+<br />
+                <TextField label="First Name" variant="outlined" className="TextBox" type="text" {...register('firstName', {
                     required: {value: true, message: "Missing first name"},
                     minLength: {value: 2, message: "First Name must be more than 2 characters" },
                     maxLength: {value: 100, message: "First Name must not exceed 100 characters" }
                 })}/>
-                <span>{formState.errors?.firstName?.message}</span>
+                <Typography component="span" className="ErrorMsg">{formState.errors?.firstName?.message}</Typography>
 
-                <label>Last Name:</label> 
-                <input type="text" {...register('lastName', {
+                <TextField label="Last Name" variant="outlined" className="TextBox"  type="text" {...register('lastName', {
                     required: {value: true, message: "Missing last name"},
                     minLength: {value: 2, message: "Last Name must be more than 2 characters" },
                     maxLength: {value: 100, message: "Last Name must not exceed 100 characters" }
                 })} />
-                <span>{formState.errors?.lastName?.message}</span>
+                <Typography component="span" className="ErrorMsg">{formState.errors?.lastName?.message}</Typography>
 
-                <label>Username:</label>
-                <input type="text" {...register('username', {
+                <TextField label="Username" variant="outlined" className="TextBox"  type="text" {...register('username', {
                     required: {value: true, message: "Missing username"},
                     minLength: {value: 2, message: "Username must be more than 2 characters" },
                     maxLength: {value: 100, message: "Username must not exceed 100 characters" }
                 })}/>
-                <span>{formState.errors?.username?.message}</span>
+                <Typography component="span" className="ErrorMsg">{formState.errors?.username?.message}</Typography>
 
-                <label>Password:</label>
-                <input type="text" {...register('password', {
+                <TextField label="Password" variant="outlined" className="TextBox"  type="text" {...register('password', {
                     required: {value: true, message: "Missing password"},
                     minLength: {value: 2, message: "Password must be more than 2 characters" },
                     maxLength: {value: 100, message: "Password must not exceed 100 characters" }
                 })}/>
-                <span>{formState.errors?.password?.message}</span>
+                <Typography component="span" className="ErrorMsg">{formState.errors?.password?.message}</Typography>
 
-                <button>Register</button>
+                <Button type="submit" endIcon={<Send/>} fullWidth color="primary" variant="contained" >Register</Button>
+
                 <p>Have an account already? <NavLink to="/login">Log in</NavLink></p>
             </form>
 			
