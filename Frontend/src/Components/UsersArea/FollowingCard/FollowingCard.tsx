@@ -49,7 +49,8 @@ function FollowingCard(props: FollowingCardProps): JSX.Element {
             <span title={props.userVacationData.description} className="overflow">{props.userVacationData.description}</span>
             <br />
 
-            <img src="http://localhost:3001/api/vacations/images/1e710025-0682-471f-9847-7929ea310e07.jpg" alt="" />
+{/* testing only:  */}
+            {/* <img src="http://localhost:3001/api/vacations/images/1e710025-0682-471f-9847-7929ea310e07.jpg" alt="" /> */}
 
             <div className="imageVacation">
                 <img src={config.vacationsImageUrl + props.userVacationData.imageName} alt="vacation pic" />

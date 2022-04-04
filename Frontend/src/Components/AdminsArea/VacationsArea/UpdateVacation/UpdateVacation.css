@@ -5,6 +5,35 @@
     margin: 20px;
   }
   
+  .UpdateVacation .ErrorMsg {
+    color: red;
+    position: absolute;
+    margin: 0 60px;
+  }
+  
+  .UpdateVacation .TextBox {
+    width: 100%;
+    margin: 0 0 20px 0;
+    box-sizing: border-box;
+  }
+  
+  .UpdateVacation button {
+    /* width: 100%; */
+    margin: 10px 0;
+  }
+  
+  .UpdateVacation button:hover {
+    cursor: pointer;
+    transform: scale(0.98)
+  }
+
+  /* old:  */
+/* .UpdateVacation > form {
+    width: 450px;
+    padding: 20px;
+    margin: 20px;
+  }
+  
   .UpdateVacation span {
     color: red;
     position: absolute;
@@ -26,4 +55,4 @@
     cursor: pointer;
     transform: scale(0.98)
   }
-  
+   */
