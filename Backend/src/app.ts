@@ -14,9 +14,9 @@ import helmet from 'helmet'
 import authController from './06-controllers/auth-controller'
 import vacationsConroller from './06-controllers/vacations-controller'
 import userVacationsController from './06-controllers/users-vacations-controller'
+import socketLogic from './05-logic/socket-logic'
 // import path from 'path'
 
-import socketLogic from './05-logic/socket-logic'
 
 const server = express() 
 
@@ -55,4 +55,4 @@ server.use(errorsHandler)
 const httpServer = server.listen(process.env.PORT, () => console.log(`Listening on port ${process.env.PORT}...`))
 
 // Start listening to sockets:
-socketLogic(httpServer)
+socketLogic.initSocket(httpServer)

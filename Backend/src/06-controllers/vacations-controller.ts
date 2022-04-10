@@ -3,6 +3,7 @@ import VacationModel from '../03-models/vacation-model'
 import vacationsLogic from '../05-logic/vacations-logic'
 import path from 'path'
 import verifyAdmin from '../02-middleware/verify-admin'
+import socketLogic from '../05-logic/socket-logic'
 
 const router = express.Router()
 
@@ -38,6 +39,7 @@ router.post('/vacations',verifyAdmin, async (request: Request, response: Respons
 
       const vacation = new VacationModel(request.body)
       const addedVacation = await vacationsLogic.addVacation(vacation)
+      socketLogic.updateAll()
 
       // const updatedVacations = await vacationsLogic.getAllVacations()
       // socketLogic.amitAll(updatedVacations)
@@ -61,6 +63,8 @@ router.put('/vacations/:vacationId',verifyAdmin, async (request: Request, respon
     const vacation = new VacationModel(request.body)
     const addedVacation = await vacationsLogic.updateVacation(vacation)
     response.json(addedVacation)
+    socketLogic.updateAll()
+
 
   } catch (err: any) {
       next(err)
@@ -73,6 +77,8 @@ router.delete('/vacations/:vacationId',verifyAdmin, async (request: Request, res
      const vacationId = +request.params.vacationId
      await vacationsLogic.deleteVacation(vacationId)
      response.sendStatus(204)
+     socketLogic.updateAll()
+
 
   } catch (err: any) {
       next(err)

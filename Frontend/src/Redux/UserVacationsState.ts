@@ -13,7 +13,7 @@ export enum UserVacationsActionType {
     addFollow = "AddFollow",
     deleteFollow = "DeleteFollow",
 
-    socketSend = "socketSend"
+    // socketSend = "socketSend"
 }
 
 export interface UserVacationsAction {
@@ -34,9 +34,9 @@ export function deleteFollowAction(unFollow: FollowModel): UserVacationsAction {
     return {type: UserVacationsActionType.deleteFollow, payload: unFollow}
 }
 
-export function socketSendAction(userVacations: UserVacationModel[]): UserVacationsAction {
-    return {type: UserVacationsActionType.socketSend, payload: userVacations}
-}
+// export function socketSendAction(userVacations: UserVacationModel[]): UserVacationsAction {
+//     return {type: UserVacationsActionType.socketSend, payload: userVacations}
+// }
 
 
 
@@ -45,7 +45,7 @@ export function userVacationsReducer(currentState = new UserVacationsState, acti
 
     switch (action.type) {
         case UserVacationsActionType.fetchUserVacations:
-        case UserVacationsActionType.socketSend:
+        // case UserVacationsActionType.socketSend:
         
         newState.userVacations = action.payload
 //???  save to local storge ????

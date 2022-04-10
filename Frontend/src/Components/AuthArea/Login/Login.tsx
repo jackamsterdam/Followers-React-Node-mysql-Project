@@ -8,6 +8,7 @@ import store from "../../../Redux/Store";
 import {useEffect} from "react";
 import { Button, TextField, Typography } from "@material-ui/core";
 import { Send } from "@material-ui/icons";
+import socketService from "../../../Services/SocketService";
 
 function Login(): JSX.Element {
 
@@ -30,11 +31,15 @@ async function submit(credentials: CredentialsModel): Promise<void> {
             //Check if user role in token is admin and if so navigate to admins portal
             if(store.getState().authState.user.roleId === 2) {
                 navigate('/admin/home')
+                notify.success('You are now logged-in!')
                 return
             }
             // console.log("store.getState().authState.user.roleId", store.getState().authState.user.roleId);
 
             notify.success('You are now logged-in!')
+
+            //Open socket connection
+            socketService.connect()
             
             //if user.roleId = 1 -regular user than navigate to home
             navigate('/home')
@@ -47,6 +52,7 @@ async function submit(credentials: CredentialsModel): Promise<void> {
 
     return (
         <div className="Login Box">
+  
             {/* <input type="text" ref={textBoxRef}/> */}
             <form onSubmit={handleSubmit(submit)} noValidate>
                 <Typography variant="h4">Login</Typography>

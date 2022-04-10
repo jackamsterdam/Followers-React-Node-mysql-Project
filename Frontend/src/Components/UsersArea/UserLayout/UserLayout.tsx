@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import store from "../../../Redux/Store";
-import socketService from "../../../Services/SocketService";
 import Following from "../Following/Following";
 import UnFollowing from "../UnFollowing/UnFollowing";
 import "./UserLayout.css";
