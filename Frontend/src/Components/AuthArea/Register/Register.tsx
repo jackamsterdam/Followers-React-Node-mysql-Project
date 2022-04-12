@@ -1,5 +1,7 @@
-import { Button, TextField, Typography } from "@material-ui/core";
-import { Send } from "@material-ui/icons";
+// import { Button, TextField, Typography } from "@material-ui/core";
+import {Typography, TextField, Button} from '@mui/material/'
+// import { Send } from "@material-ui/icons";
+import SendIcon from '@mui/icons-material/Send';
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { NavLink } from "react-router-dom";
@@ -63,7 +65,7 @@ async function submit(user: UserModel):Promise<void> {
                 })}/>
                 <Typography component="span" className="ErrorMsg">{formState.errors?.password?.message}</Typography>
 
-                <Button type="submit" endIcon={<Send/>} fullWidth color="primary" variant="contained" >Register</Button>
+                <Button type="submit" endIcon={<SendIcon/>} fullWidth color="primary" variant="contained" >Register</Button>
 
                 <p>Have an account already? <NavLink to="/login">Log in</NavLink></p>
             </form>

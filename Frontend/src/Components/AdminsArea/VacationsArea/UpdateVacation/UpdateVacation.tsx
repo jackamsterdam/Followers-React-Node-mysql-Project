@@ -1,5 +1,9 @@
-import { Button, TextField, Typography } from "@material-ui/core";
-import { Send } from "@material-ui/icons";
+// import { Button, TextField, Typography } from "@material-ui/core";
+import {Typography, TextField, Button} from '@mui/material/'
+
+// import { Send } from "@material-ui/icons";
+import SendIcon from '@mui/icons-material/Send';
+
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
@@ -110,7 +114,7 @@ function UpdateVacation(): JSX.Element {
                 })} />
                 <Typography component="span" className="ErrorMsg">{formState.errors?.image?.message}</Typography>
 
-                <Button type="submit" endIcon={<Send/>} fullWidth color="primary" variant="contained">Update</Button>
+                <Button type="submit" endIcon={<SendIcon/>} fullWidth color="primary" variant="contained">Update</Button>
             </form>
         </div>
     );

@@ -6,8 +6,12 @@ import notify from "../../../Services/NotifyService";
 import authService from "../../../Services/AuthService";
 import store from "../../../Redux/Store";
 import {useEffect} from "react";
-import { Button, TextField, Typography } from "@material-ui/core";
-import { Send } from "@material-ui/icons";
+// import { Button, TextField, Typography } from "@material-ui/core";
+import {Typography, TextField, Button} from '@mui/material/'
+
+// import { Send } from "@material-ui/icons";
+import SendIcon from '@mui/icons-material/Send';
+
 import socketService from "../../../Services/SocketService";
 
 function Login(): JSX.Element {
@@ -74,7 +78,7 @@ async function submit(credentials: CredentialsModel): Promise<void> {
                 <Typography component="span" className="ErrorMsg">{formState.errors?.password?.message}</Typography>
 
 
-                <Button endIcon={<Send/>} type="submit" variant="contained" fullWidth color="primary">Login</Button>
+                <Button endIcon={<SendIcon/>} type="submit" variant="contained" fullWidth color="primary">Login</Button>
 
                 <p>New user? <NavLink to='/register'>Register</NavLink></p>
                 {/* <button onClick={() => navigate('/register')}>Register</button> */}

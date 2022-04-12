@@ -5,8 +5,12 @@ import VacationModel from "../../../../Models/VacationModel";
 import notify from "../../../../Services/NotifyService";
 import vacationsService from "../../../../Services/VacationsService";
 import "./AddVacation.css";
-import {Typography, TextField, Button, Fab} from '@material-ui/core'
-import {Send} from '@material-ui/icons'
+// import {Typography, TextField, Button, Fab} from '@material-ui/core'
+import {Typography, TextField, Button} from '@mui/material/'
+
+// import {Send} from '@material-ui/icons'
+import SendIcon from '@mui/icons-material/Send';
+
 
 function AddVacation(): JSX.Element {
 
@@ -113,7 +117,7 @@ async function submit(vacation:VacationModel):Promise<void>{
 
       
 
-                <Button endIcon={<Send/>} fullWidth color="primary" variant="contained" type="submit">Add</Button>
+                <Button endIcon={<SendIcon/>} fullWidth color="primary" variant="contained" type="submit">Add</Button>
             </form>
         </div>
     );

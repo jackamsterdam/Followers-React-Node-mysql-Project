@@ -1,6 +1,8 @@
 import Logo from "../Logo/Logo";
 import "./Header.css";
-import {Typography} from '@material-ui/core'
+// import {Typography} from '@material-ui/core'
+import {Typography} from '@mui/material/'
+
 import AuthMenu from "../../AuthArea/AuthMenu/AuthMenu";
 
 function Header(): JSX.Element {
