@@ -1,73 +1,123 @@
-.UnFollowingCard {
+.UnFollowingCard .Card {
+  position: relative;
   border: 1px solid black;
   border-radius: 10px;
-  box-shadow: 5px 5px 7px grey;
-  text-align: left;
-  width: 280px;
-  /* height: 150px; */
-  height: 280px;
   margin: 10px;
-  padding: 10px;
-  /* overflow: auto; */
-  font-size: smaller;
-  position: relative;
-}
-
-.UnFollowingCard .followBtn {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 5px;
-  border: 1px solid black;
-  border-radius: 50%;
+  /* margin:-10px 10px 10px 10px; */
+  box-shadow: 5px 5px 7px gray;
+  width: 300px;
+  height: 400px;
   background-color: transparent;
-  font-size: larger;
+}
+/* uppercase!  */
+/* .UnFollowingCard .FollowButton { */
+  /* position: absolute;
+  right: 0px;
+   top: 0px;
+   margin: 5px; */
+/* } */
+
+.UnFollowingCard .Overflow {
+  display: inline-block;
+   white-space:nowrap;
+   text-overflow: ellipsis;
+   overflow: hidden; 
+   
+    width: 280px;
+
 }
 
-.UnFollowingCard .followersCount {
+.UnFollowingCard .FollowButton:hover {
+  transform: scale(0.95);
+}
+
+.UnFollowingCard .FollowersCount {
   position: absolute;
   bottom: 0;
   right: 0;
   margin: 10px;
-  border: 2px dotted black;
-  border-radius: 50%;
-  padding: 10px;
-  font-weight: bold;
-  background-color: transparent;
-  font-size: large;
-  background-color: lightgrey;
+  /* border: 2px dotted black; */
+  /* border-radius: 50%; */
+  /* padding: 10px; */
+  /* font-weight: bold; */
+  /* background-color: transparent; */
+  /* font-size: large; */
+  /* background-color: lightgrey; */
 }
 
-.UnFollowingCard .followBtn:hover {
-  cursor: pointer;
-  transform: scale(0.9);
-}
 
-.UnFollowingCard .overflow {
-    display: inline-block;
-     white-space:nowrap;
-     text-overflow: ellipsis;
-     overflow: hidden;
-     /* color: white; */
-     width: 280px;
+  /* old: before material ui */
 
-}
-
-.UnFollowingCard .imageVacation{
-  height: 50%;
-  padding: 10px;
-  margin: 10px;
-  text-align: center;
+  /* .UnFollowingCard {
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 7px grey;
+    text-align: left;
+    width: 280px; */
+    /* height: 150px; */
+    /* height: 280px;
+    margin: 10px;
+    padding: 10px; */
+    /* overflow: auto; */
+    /* font-size: smaller;
+    position: relative;
   }
   
-  .UnFollowingCard .imageVacation > img{
-     border: 1px solid black;
-     border-radius: 10px;;
-  height: 100%;
-  /* width: 100%; */
-  }
-
-  .UnFollowingCard span:first-child {
-    font-weight: bold;
+  .UnFollowingCard .followBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: transparent;
     font-size: larger;
   }
+  
+  .UnFollowingCard .followersCount {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    border: 2px dotted black;
+    border-radius: 50%;
+    padding: 10px;
+    font-weight: bold;
+    background-color: transparent;
+    font-size: large;
+    background-color: lightgrey;
+  }
+  
+  .UnFollowingCard .followBtn:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+  }
+  
+  .UnFollowingCard .overflow {
+      display: inline-block;
+       white-space:nowrap;
+       text-overflow: ellipsis;
+       overflow: hidden; */
+       /* color: white; */
+       /* width: 280px;
+  
+  }
+  
+  .UnFollowingCard .imageVacation{
+    height: 50%;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    }
+    
+    .UnFollowingCard .imageVacation > img{
+       border: 1px solid black;
+       border-radius: 10px;;
+    height: 100%; */
+    /* width: 100%; */
+    /* }
+  
+    .UnFollowingCard span:first-child {
+      font-weight: bold;
+      font-size: larger;
+    } */

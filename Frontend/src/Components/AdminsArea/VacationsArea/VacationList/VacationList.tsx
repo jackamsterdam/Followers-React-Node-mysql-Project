@@ -60,7 +60,7 @@ function VacationList(): JSX.Element {
   
             <div className="container">
                 {vacations.map(v => <VacationCard  key={v.vacationId} vacation={v} deleteVacation={deleteVacation} />)}
-                {vacations.length}
+                {/* {vacations.length} */}
             </div>
         </div>
     );
