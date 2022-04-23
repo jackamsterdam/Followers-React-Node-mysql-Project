@@ -9,6 +9,9 @@ class VacationModel {
   fromDate: string 
   toDate: string 
   price: number 
+  star: number 
+  rating: number 
+  review: number
   image: UploadedFile
   imageName: string 
 
@@ -19,6 +22,9 @@ class VacationModel {
       this.fromDate = vacation.fromDate
       this.toDate = vacation.toDate
       this.price = vacation.price
+      this.star = vacation.star
+      this.rating = vacation.rating 
+      this.review = vacation.review
       this.image = vacation.image
       this.imageName = vacation.imageName
   }
@@ -30,6 +36,9 @@ class VacationModel {
       fromDate: Joi.date().iso().required(),
       toDate: Joi.date().iso().required(),
       price: Joi.number().required().min(0).max(100000),
+      star: Joi.number().required().integer().min(0).max(5),
+      rating: Joi.number().required().min(0).max(10),
+      review: Joi.number().required().integer().min(0),
       image: Joi.object().optional(),
       imageName: Joi.string().optional()
   })
@@ -40,6 +49,9 @@ class VacationModel {
       fromDate: Joi.date().iso().required(),
       toDate: Joi.date().iso().required(),
       price: Joi.number().required().min(0).max(100000),
+      star: Joi.number().required().integer().min(0).max(5),
+      rating: Joi.number().required().min(0).max(10),
+      review: Joi.number().required().integer().min(0),
       image: Joi.object().optional(),
       imageName: Joi.string().optional()
   })

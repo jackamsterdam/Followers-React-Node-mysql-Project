@@ -49,8 +49,8 @@ async function addVacation(vacation: VacationModel):Promise<VacationModel> {
     // console.log('vacation,imagename',vacation.imageName)
     // console.log("vacation", vacation);
 
-    const sql = `INSERT INTO vacations VALUES(DEFAULT,?,?,?,?,?,?)`
-    const info: OkPacket = await dal.execute(sql, [vacation.destination, vacation.description, vacation.fromDate, vacation.toDate, vacation.price, vacation.imageName])
+    const sql = `INSERT INTO vacations VALUES(DEFAULT,?,?,?,?,?,?, ?,?,?)`
+    const info: OkPacket = await dal.execute(sql, [vacation.destination, vacation.description, vacation.fromDate, vacation.toDate, vacation.price,vacation.star, vacation.rating, vacation.review, vacation.imageName])
 
     vacation.vacationId = info.insertId
     return vacation
@@ -77,10 +77,10 @@ async function updateVacation(vacation: VacationModel):Promise<VacationModel> {
 
 
     const sql = `UPDATE vacations
-                 SET destination = ?, description = ?, fromDate = ?, toDate = ?, price = ? , imageName = ?
+                 SET destination = ?, description = ?, fromDate = ?, toDate = ?, price = ? ,star=?, rating= ?, review = ?, imageName = ?
                  WHERE vacationId = ?`
 
-    const info: OkPacket =  await dal.execute(sql, [vacation.destination, vacation.description, vacation.fromDate, vacation.toDate, vacation.price, vacation.imageName, vacation.vacationId])
+    const info: OkPacket =  await dal.execute(sql, [vacation.destination, vacation.description, vacation.fromDate, vacation.toDate, vacation.price, vacation.star, vacation.rating, vacation.review, vacation.imageName, vacation.vacationId])
 
    if (info.affectedRows === 0) throw new ErrorModel(404, `Resource with id ${vacation.vacationId} not found`)
 

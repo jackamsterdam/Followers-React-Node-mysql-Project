@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 01, 2022 at 04:46 AM
+-- Generation Time: Apr 23, 2022 at 06:45 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -125,6 +125,9 @@ CREATE TABLE `vacations` (
   `fromDate` date NOT NULL,
   `toDate` date NOT NULL,
   `price` decimal(10,2) NOT NULL,
+  `star` int(11) NOT NULL,
+  `rating` decimal(10,1) NOT NULL,
+  `review` int(11) NOT NULL,
   `imageName` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -132,46 +135,46 @@ CREATE TABLE `vacations` (
 -- Dumping data for table `vacations`
 --
 
-INSERT INTO `vacations` (`vacationId`, `destination`, `description`, `fromDate`, `toDate`, `price`, `imageName`) VALUES
-(1, 'Paris', 'Enjoy a romantic stay in the capital of France', '2022-04-01', '2022-04-15', '789.99', 'a056bad5-9f3f-45ea-86f0-7bf4ac437ff2.jpg'),
-(2, 'Rome', 'Enjoy exquisite Italian cuisine', '2022-04-01', '2022-04-05', '423.23', '65159be4-d772-4c6b-9947-32e9ce222f60.jpg'),
-(3, 'Barcelona', 'Do not follow where the path may lead. Go instead where there is no path and leave a trail', '2022-04-02', '2022-04-07', '658.69', 'c7e8dc7d-aeba-48bc-8eab-881c56f6e000.jpg'),
-(4, 'Berlin', 'A journey of a thousand miles begins with a single step in Berlin', '2022-04-06', '2022-04-15', '368.00', 'c6907aae-70f5-4630-a986-39e9adc6e069.jpg'),
-(5, 'Sweden', 'Do not follow where the path may lead. Go instead where there is no path and leave a trail in Stockholm', '2022-04-08', '2022-04-14', '698.00', 'ee4cc26a-8a4c-442a-a7e6-650e53bcf08b.jpg'),
-(6, 'Amsterdam', 'The best place on earth!', '2022-04-01', '2022-04-21', '989.99', '34336385-ec28-450f-b8df-c9d57bd964e4.jpg'),
-(7, 'Bucharest', 'Ce Face- Great food and people', '2022-04-08', '2022-04-17', '689.00', '5be34d75-9e72-4ecf-ae22-92da152b791a.jpg'),
-(8, 'Andorra La Vella', 'Great place to invest your money', '2022-04-01', '2022-04-08', '369.00', '89f3683d-f4b6-4b12-b10e-bcd40cccec2d.jpg'),
-(9, 'Prague', 'Beautiful scenery. A must!', '2022-04-04', '2022-04-09', '659.99', '72f3eabd-8577-4bfc-8b15-83f2ad0a8278.jpg'),
-(10, 'Havana', 'Man cannot discover new oceans unless he has the courage to lose sight of the shore in Cuba', '2022-04-12', '2022-04-23', '1089.99', '2ba0d94e-270b-4145-9553-125c290a4c8a.jpg'),
-(11, 'Helsinki', 'Enjoy a quick walking tour around this small city', '2022-04-08', '2022-04-21', '936.00', 'bafaa0a6-fce7-475e-8906-1a2cc0348878.jpg'),
-(12, 'Mexico City', 'Traveling – it leaves you speechless, then turns you into a storyteller. Enjoy Mexico!', '2022-04-20', '2022-05-18', '1699.00', 'a295d8d5-02f4-4811-ad1e-1798e48b7f09.jpg'),
-(13, 'Seoul', 'Wherever you go becomes a part of you somehow, and this is a place you will never forget', '2022-04-07', '2022-04-21', '1688.00', '6eee7e88-cb4a-49e7-bb61-df058adfd35e.jpg'),
-(14, 'Honiara', 'There’s a sunrise and a sunset every single day, and they’re absolutely free. Don’t miss so many of them', '2022-04-17', '2022-04-28', '2039.00', 'cda42bde-763b-45d8-89e8-689472465f0d.jpg'),
-(15, 'Tokyo', 'Travel makes one modest. You see what a tiny place you occupy in the world', '2022-04-25', '2022-05-18', '1659.00', '1e710025-0682-471f-9847-7929ea310e07.jpg'),
-(16, 'Tashkent', 'Take only memories, leave only footprints ', '2022-04-13', '2022-04-29', '1589.00', 'e6a9e7dc-9071-4bf0-9e59-f4e2749ab538.jpg'),
-(17, 'Oslo', 'Fear is only temporary. Regrets last forever. Go to Oslo!', '2022-04-20', '2022-04-29', '587.00', '08a13a43-4502-4d87-ab0d-a17b33f3ba1a.jpg'),
-(18, 'Luxembourg', 'Stop being afraid of what could go wrong, and start being excited of what could go right. Luxembourg is the place for you.', '2022-04-14', '2022-04-27', '1478.00', '31f6558a-492f-4efb-8539-a9e9f9ab49d6.jpg'),
-(19, 'Ottawa', 'If you’re twenty-two, physically fit, hungry to learn and be better, I urge you to travel – as far and as widely as possible. Sleep on floors if you have to. Find out how other people live and eat and cook. Learn from them – wherever you go', '2022-04-17', '2022-04-29', '1899.00', 'a2a4d014-2628-4d78-8bd6-e4ac9cf2e2ad.jpg'),
-(20, 'Vilnius', 'The real voyage of discovery consists not in seeking new landscapes, but in having new eyes', '2022-04-13', '2022-04-27', '1698.99', '98575b54-6d15-4ef6-9920-0b5590b0c3ec.jpg'),
-(21, 'Sofia', 'Traveling allows you to become so many different versions of yourself and Sofia is the place to explore!', '2022-04-18', '2022-04-29', '587.00', 'a7376fec-0c9d-448f-89f9-fc9f25481a60.jpg'),
-(22, 'Zagreb', 'We travel, initially, to lose ourselves; and we travel, next to find ourselves', '2022-04-13', '2022-04-28', '1369.00', 'f09a0503-467d-4508-88e1-6fb4f418ed5a.jpg'),
-(23, 'Reykjavik', 'Wandering re-establishes the original harmony which once existed between man and the universe. See the amazing nature and take a swim in freezing waters', '2022-04-21', '2022-04-29', '1368.00', '6b586ec1-dd33-4533-922e-b3ad10580040.jpg'),
-(24, 'Ouagadougou', 'Yes! We are a real city in Africa! Come visit the capital of Burkina Faso!', '2022-04-29', '2022-05-13', '2699.00', '08f43250-6b6e-44c2-9635-cb8d6ca52cee.jpg'),
-(25, 'Riga', 'The life you have led doesn’t need to be the only life you have', '2022-04-11', '2022-04-22', '459.98', 'ed177845-d77a-41f5-800d-83ce3b93393e.jpg'),
-(26, 'Santiago', 'All we have to decide is what to do with the time that is given us', '2022-04-18', '2022-04-28', '2588.00', '04e45a0c-6818-4889-9f89-102a567f04ae.jpg'),
-(27, 'Yaren', 'Don’t quit your day dream and go to Yaren!', '2022-04-10', '2022-04-29', '796.00', '5d6684b4-f738-4d58-bcf6-2a8329b04114.jpg'),
-(28, 'USA', 'America! That is all That is need to be said', '2022-05-01', '2022-06-01', '1899.99', '15585aed-8c9c-43b3-aa8a-075027736404.jpg'),
-(29, 'Dubai', 'You are missing out! See the tallest building in the world', '2022-04-16', '2022-04-23', '899.00', '528738fc-74f4-4028-9231-bf6a92d9a41c.jpg'),
-(30, 'Bangkok', 'Enjoy  delicious Thai cuisine, and get a massage', '2022-06-01', '2022-06-22', '1458.00', '068e6c4e-2987-4eae-9f8a-e75d670e85a5.jpg'),
-(31, 'Baku', 'It feels good to be lost in the right direction. Go to Baku', '2022-04-07', '2022-04-28', '578.00', 'c9dc2e45-2fbc-4a46-8999-11d63e264893.jpg'),
-(32, 'Doha', 'Don’t listen to what they say, go see', '2022-04-11', '2022-04-28', '1489.00', '5d85857a-6591-427d-812a-d34ad94f637a.jpg'),
-(33, 'Accra', 'People don’t take trips — trips take people', '2022-04-04', '2022-04-28', '1899.00', 'c76d6a21-0aac-4c60-b10b-b63c0b6f0ae1.jpg'),
-(34, 'Tegucigalpa', 'Travel to Tegucigalpa – the best way to be lost and found at the same time', '2022-04-12', '2022-04-28', '2369.00', '1f662067-f074-4dd4-bc18-a00f0b177682.jpg'),
-(35, 'Budapest', 'A journey is best measured in friends, not in miles. Take a friend and travel to Budapest.', '2022-04-13', '2022-04-28', '539.00', 'ca3ce714-de16-4a97-9d9f-fe0679e2c81a.jpg'),
-(36, 'Castries', 'Not all those who wander are lost- Try this place!', '2022-04-08', '2022-04-27', '3788.00', '2b5a893e-8d35-432e-9715-c3982931a8d0.jpg'),
-(37, 'Liechtenstein', 'All journeys have secret destinations of which the traveler is unaware', '2022-04-20', '2022-04-29', '1078.00', '647eb23c-6052-4e80-af2d-bc02f708e37a.jpg'),
-(38, 'London', 'See the Big Ben!', '2022-04-19', '2022-04-29', '897.00', '72203bc7-6b7d-4f8b-a5b8-a996686e0d2d.jpg'),
-(39, 'Jerusalem', 'The holy land', '2022-04-24', '2022-05-11', '350.00', '4c9d3c68-745f-4940-ba6e-14c00f804a02.jpg');
+INSERT INTO `vacations` (`vacationId`, `destination`, `description`, `fromDate`, `toDate`, `price`, `star`, `rating`, `review`, `imageName`) VALUES
+(1, 'Paris', 'Enjoy a romantic stay in the capital of France', '2022-04-01', '2022-04-15', '789.99', 4, '8.6', 1002, 'a056bad5-9f3f-45ea-86f0-7bf4ac437ff2.jpg'),
+(2, 'Rome', 'Enjoy exquisite Italian cuisine', '2022-04-01', '2022-04-05', '423.23', 3, '7.8', 1350, '65159be4-d772-4c6b-9947-32e9ce222f60.jpg'),
+(3, 'Barcelona', 'Do not follow where the path may lead. Go instead where there is no path and leave a trail', '2022-04-02', '2022-04-07', '658.69', 4, '7.6', 1658, 'c7e8dc7d-aeba-48bc-8eab-881c56f6e000.jpg'),
+(4, 'Berlin', 'A journey of a thousand miles begins with a single step in Berlin', '2022-04-06', '2022-04-15', '368.00', 4, '6.8', 1358, 'c6907aae-70f5-4630-a986-39e9adc6e069.jpg'),
+(5, 'Sweden', 'Do not follow where the path may lead. Go instead where there is no path and leave a trail in Stockholm', '2022-04-08', '2022-04-14', '698.00', 5, '9.1', 2005, 'ee4cc26a-8a4c-442a-a7e6-650e53bcf08b.jpg'),
+(6, 'Amsterdam', 'The best place on earth!', '2022-04-01', '2022-04-21', '989.99', 5, '9.8', 3325, '34336385-ec28-450f-b8df-c9d57bd964e4.jpg'),
+(7, 'Bucharest', 'Ce Face- Great food and people', '2022-04-08', '2022-04-17', '689.00', 5, '9.2', 3005, '5be34d75-9e72-4ecf-ae22-92da152b791a.jpg'),
+(8, 'Andorra La Vella', 'Great place to invest your money', '2022-04-01', '2022-04-08', '369.00', 5, '8.9', 2001, '89f3683d-f4b6-4b12-b10e-bcd40cccec2d.jpg'),
+(9, 'Prague', 'Beautiful scenery. A must!', '2022-04-04', '2022-04-09', '659.99', 4, '7.9', 895, '72f3eabd-8577-4bfc-8b15-83f2ad0a8278.jpg'),
+(10, 'Havana', 'Man cannot discover new oceans unless he has the courage to lose sight of the shore in Cuba', '2022-04-12', '2022-04-23', '1089.99', 3, '6.5', 336, '2ba0d94e-270b-4145-9553-125c290a4c8a.jpg'),
+(11, 'Helsinki', 'Enjoy a quick walking tour around this small city', '2022-04-08', '2022-04-21', '936.00', 3, '6.6', 465, 'bafaa0a6-fce7-475e-8906-1a2cc0348878.jpg'),
+(12, 'Mexico City', 'Traveling – it leaves you speechless, then turns you into a storyteller. Enjoy Mexico!', '2022-04-20', '2022-05-18', '1699.00', 2, '5.6', 235, 'a295d8d5-02f4-4811-ad1e-1798e48b7f09.jpg'),
+(13, 'Seoul', 'Wherever you go becomes a part of you somehow, and this is a place you will never forget', '2022-04-07', '2022-04-21', '1688.00', 3, '6.8', 658, '6eee7e88-cb4a-49e7-bb61-df058adfd35e.jpg'),
+(14, 'Honiara', 'There’s a sunrise and a sunset every single day, and they’re absolutely free. Don’t miss so many of them', '2022-04-17', '2022-04-28', '2039.00', 4, '7.8', 269, 'cda42bde-763b-45d8-89e8-689472465f0d.jpg'),
+(15, 'Tokyo', 'Travel makes one modest. You see what a tiny place you occupy in the world', '2022-04-25', '2022-05-18', '1659.00', 4, '8.2', 1658, '1e710025-0682-471f-9847-7929ea310e07.jpg'),
+(16, 'Tashkent', 'Take only memories, leave only footprints ', '2022-04-13', '2022-04-29', '1589.00', 5, '9.6', 180, 'e6a9e7dc-9071-4bf0-9e59-f4e2749ab538.jpg'),
+(17, 'Oslo', 'Fear is only temporary. Regrets last forever. Go to Oslo!', '2022-04-20', '2022-04-29', '587.00', 4, '8.6', 678, '08a13a43-4502-4d87-ab0d-a17b33f3ba1a.jpg'),
+(18, 'Luxembourg', 'Stop being afraid of what could go wrong, and start being excited of what could go right. Luxembourg is the place for you.', '2022-04-14', '2022-04-27', '1478.00', 3, '7.4', 589, '31f6558a-492f-4efb-8539-a9e9f9ab49d6.jpg'),
+(19, 'Ottawa', 'If you’re twenty-two, physically fit, hungry to learn and be better, I urge you to travel – as far and as widely as possible. Sleep on floors if you have to. Find out how other people live and eat and cook. Learn from them – wherever you go', '2022-04-17', '2022-04-29', '1899.00', 2, '6.1', 679, 'a2a4d014-2628-4d78-8bd6-e4ac9cf2e2ad.jpg'),
+(20, 'Vilnius', 'The real voyage of discovery consists not in seeking new landscapes, but in having new eyes', '2022-04-13', '2022-04-27', '1698.99', 3, '6.2', 236, '98575b54-6d15-4ef6-9920-0b5590b0c3ec.jpg'),
+(21, 'Sofia', 'Traveling allows you to become so many different versions of yourself and Sofia is the place to explore!', '2022-04-18', '2022-04-29', '587.00', 5, '8.9', 1236, 'a7376fec-0c9d-448f-89f9-fc9f25481a60.jpg'),
+(22, 'Zagreb', 'We travel, initially, to lose ourselves; and we travel, next to find ourselves', '2022-04-13', '2022-04-28', '1369.00', 4, '7.8', 589, 'f09a0503-467d-4508-88e1-6fb4f418ed5a.jpg'),
+(23, 'Reykjavik', 'Wandering re-establishes the original harmony which once existed between man and the universe. See the amazing nature and take a swim in freezing waters', '2022-04-21', '2022-04-29', '1368.00', 5, '9.1', 1489, '6b586ec1-dd33-4533-922e-b3ad10580040.jpg'),
+(24, 'Ouagadougou', 'Yes! We are a real city in Africa! Come visit the capital of Burkina Faso!', '2022-04-29', '2022-05-13', '2699.00', 2, '5.4', 98, '08f43250-6b6e-44c2-9635-cb8d6ca52cee.jpg'),
+(25, 'Riga', 'The life you have led doesn’t need to be the only life you have', '2022-04-11', '2022-04-22', '459.98', 2, '4.8', 659, 'ed177845-d77a-41f5-800d-83ce3b93393e.jpg'),
+(26, 'Santiago', 'All we have to decide is what to do with the time that is given us', '2022-04-18', '2022-04-28', '2588.00', 3, '6.8', 785, '04e45a0c-6818-4889-9f89-102a567f04ae.jpg'),
+(27, 'Yaren', 'Don’t quit your day dream and go to Yaren!', '2022-04-10', '2022-04-29', '796.00', 2, '4.9', 359, '5d6684b4-f738-4d58-bcf6-2a8329b04114.jpg'),
+(28, 'USA', 'America! That is all That is need to be said', '2022-05-01', '2022-06-01', '1899.99', 5, '9.2', 4569, '15585aed-8c9c-43b3-aa8a-075027736404.jpg'),
+(29, 'Dubai', 'You are missing out! See the tallest building in the world', '2022-04-16', '2022-04-23', '899.00', 5, '9.7', 4300, '528738fc-74f4-4028-9231-bf6a92d9a41c.jpg'),
+(30, 'Bangkok', 'Enjoy  delicious Thai cuisine, and get a massage', '2022-06-01', '2022-06-22', '1458.00', 4, '9.1', 3056, '068e6c4e-2987-4eae-9f8a-e75d670e85a5.jpg'),
+(31, 'Baku', 'It feels good to be lost in the right direction. Go to Baku', '2022-04-07', '2022-04-28', '578.00', 2, '6.5', 489, 'c9dc2e45-2fbc-4a46-8999-11d63e264893.jpg'),
+(32, 'Doha', 'Don’t listen to what they say, go see', '2022-04-11', '2022-04-28', '1489.00', 3, '5.8', 578, '5d85857a-6591-427d-812a-d34ad94f637a.jpg'),
+(33, 'Accra', 'People don’t take trips — trips take people', '2022-04-04', '2022-04-28', '1899.00', 1, '4.3', 64, 'c76d6a21-0aac-4c60-b10b-b63c0b6f0ae1.jpg'),
+(34, 'Tegucigalpa', 'Travel to Tegucigalpa – the best way to be lost and found at the same time', '2022-04-12', '2022-04-28', '2369.00', 1, '4.1', 26, '1f662067-f074-4dd4-bc18-a00f0b177682.jpg'),
+(35, 'Budapest', 'A journey is best measured in friends, not in miles. Take a friend and travel to Budapest.', '2022-04-13', '2022-04-28', '539.00', 4, '8.8', 1698, 'ca3ce714-de16-4a97-9d9f-fe0679e2c81a.jpg'),
+(36, 'Castries', 'Not all those who wander are lost- Try this place!', '2022-04-08', '2022-04-27', '3788.00', 4, '9.1', 256, '2b5a893e-8d35-432e-9715-c3982931a8d0.jpg'),
+(37, 'Liechtenstein', 'All journeys have secret destinations of which the traveler is unaware', '2022-04-20', '2022-04-29', '1078.00', 4, '7.9', 964, '647eb23c-6052-4e80-af2d-bc02f708e37a.jpg'),
+(38, 'London', 'See the Big Ben!', '2022-04-19', '2022-04-29', '897.00', 5, '9.4', 2345, '72203bc7-6b7d-4f8b-a5b8-a996686e0d2d.jpg'),
+(39, 'Jerusalem', 'The holy land', '2022-04-24', '2022-05-11', '350.00', 5, '9.7', 4689, '4c9d3c68-745f-4940-ba6e-14c00f804a02.jpg');
 
 --
 -- Indexes for dumped tables

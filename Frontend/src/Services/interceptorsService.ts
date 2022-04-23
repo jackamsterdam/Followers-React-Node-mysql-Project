@@ -10,6 +10,7 @@ class InterceptorsService {
 
               request.headers = {
                   authorization: `Bearer ${store.getState().authState.token}`
+              
               }
           }
           return request

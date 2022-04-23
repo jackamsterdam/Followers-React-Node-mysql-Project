@@ -35,6 +35,9 @@ class VacationsService {
        formData.append('fromDate', vacation.fromDate)
        formData.append('toDate', vacation.toDate)
        formData.append('price', vacation.price.toString())
+       formData.append('star', vacation.star.toString())
+       formData.append('rating', '0')
+       formData.append('review', '0')
        formData.append('image', vacation.image.item(0))
        console.log("vacation.image.item(0)", vacation.image.item(0));
 
@@ -53,6 +56,9 @@ class VacationsService {
        formData.append('fromDate', vacation.fromDate)
        formData.append('toDate', vacation.toDate)
        formData.append('price', vacation.price.toString())
+       formData.append('star', vacation.star.toString())
+       formData.append('rating', vacation.rating.toString())
+       formData.append('review', vacation.review.toString())
        formData.append('image', vacation.image.item(0))
 
        const response = await axios.put<VacationModel>(config.vacationsAdminUrl + vacation.vacationId, formData)

@@ -100,6 +100,17 @@ async function submit(vacation:VacationModel):Promise<void>{
                 })} />
                 <Typography component="span" className="ErrorMsg">{formState.errors?.price?.message}</Typography>
 
+                <TextField  label="Star" type="number" variant="outlined"  className="TextBox" inputProps={{ max:5, min: 1 }} {...register('star', {
+                    required: {value: true, message: "Missing stars"},
+                    min: {value: 0, message: "Star count can't be negative"},
+                    max: {value: 5, message: "Stars can't exceed 5"}
+
+                })} />
+                <Typography component="span" className="ErrorMsg">{formState.errors?.star?.message}</Typography>
+
+
+              
+
     
 
 

@@ -2,7 +2,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 import config from './01-utils/config'
 
-import express, { NextFunction, Request, Response } from 'express'
+import express, { NextFunction, Request, response, Response } from 'express'
 import expressRateLimit from 'express-rate-limit'
 import cors from 'cors'
 import expressFileUpload from 'express-fileupload'
@@ -21,7 +21,15 @@ import socketLogic from './05-logic/socket-logic'
 const server = express() 
 
 if (config.isDevelopment) {
+    // server.use(cors())
     server.use(cors({origin: ['http://localhost:3000', 'http://localhost:4200']}))
+    // server.use((request: Request, response: Response, next: NextFunction) => {
+    //   response.setHeader("Access-Control-Allow-Origin", '*')
+    //   response.header("Access-Control-Allow-Headers, Content-type", "Origin, X-Requested-With, Content-Type, Accept")
+    //   next()
+
+
+    // })
 }
 // server.use('/',expressRateLimit({windowMs: 1000, max: 10, message: 'Rate exceeded. Please try again soon'}))
 

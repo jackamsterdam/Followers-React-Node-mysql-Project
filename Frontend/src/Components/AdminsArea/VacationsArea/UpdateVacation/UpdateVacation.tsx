@@ -41,6 +41,9 @@ function UpdateVacation(): JSX.Element {
                 setValue('fromDate', vacation.fromDate.slice(0,10))
                 // setValue('fromDate', vacation.fromDate.slice(0,19).replace('T', ' '))
                 setValue('toDate', vacation.toDate.slice(0,10))
+                setValue('star', vacation.star)
+                setValue('rating', vacation.rating)
+                setValue('review', vacation.review)
                 setValue('price', vacation.price)
             } catch (err: any) {
                 if (err.response.status === 401) {
@@ -113,6 +116,14 @@ function UpdateVacation(): JSX.Element {
 
                 })} />
                 <Typography component="span" className="ErrorMsg">{formState.errors?.price?.message}</Typography>
+
+                <TextField  label="Star" type="number" variant="outlined"  className="TextBox" inputProps={{ max:5, min: 1 }}   {...register('star', {
+                    required: {value: true, message: "Missing stars"},
+                    min: {value: 0, message: "Star count can't be negative"},
+                    max: {value: 5, message: "Stars can't exceed 5"}
+
+                })} />
+                <Typography component="span" className="ErrorMsg">{formState.errors?.star?.message}</Typography>
 
                 <label>Image:</label>
                 <input type="file" accept="image/*" className="TextBox" {...register('image', {
