@@ -1,6 +1,9 @@
 import { Notyf } from "notyf";
+import { useNavigate } from "react-router-dom";
+import authService from "./AuthService";
 
 class NotifyService {
+  //   navigate = useNavigate()
     private notification = new Notyf({ duration: 4000, position: { x: 'center', y: 'top' } })
 
     success(message: string): void {
@@ -10,7 +13,16 @@ class NotifyService {
 
     error(err: any): void {
         const message = this.extractErrorMessage(err)
-        this.notification.error(message)
+        // const responseStatus = this.getResponseStatus(err);
+
+        // handle case when the user in not logged in or the token is expaired
+        // if (responseStatus === 401) {
+        //     authService.logout()
+        //     window.location = '/login'
+        //    // this.navigate('/login')
+        // } else {
+              this.notification.error(message)
+        // }
     }
 
     private extractErrorMessage(err: any): string {
@@ -24,6 +36,12 @@ class NotifyService {
 
        return 'Some error occured, please try again...'
     }
+
+    // private getResponseStatus(err: any): number{
+    //     if (err.response?.status){
+    //         return err.response.status;
+    //     }
+    // }
 }
 
 const notify = new NotifyService()

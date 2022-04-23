@@ -3,14 +3,10 @@
     display: grid;
     box-sizing: border-box; 
     grid-template-columns:1fr;
-    grid-template-rows: 50% 50%;
+    /* grid-template-rows: 50% 50%; */
 }
 
 .UserLayout {
-    border: 1px solid black;
-
-}
-.UserLayout > * {
     border: 1px solid black;
 
 }

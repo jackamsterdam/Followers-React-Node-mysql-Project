@@ -20,6 +20,8 @@ import IconButton from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import Avatar from '@mui/material/Avatar';
 import { red } from '@mui/material/colors';
+import authService from "../../../Services/AuthService";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -28,31 +30,48 @@ interface FollowingCardProps {
 
 }
 
+let timeout:any;
 function FollowingCard(props: FollowingCardProps): JSX.Element {
+  const navigate = useNavigate()
 
-    async function unFollowVacation(vacationId: number, destination: string): Promise<void> {
+  //! Variable 'timeout' implicitly has type 'any' in some locations where its type cannot be determined.
+
+// clearTimeout(timeout)
+// timeout = setTimeout(() => {
+
+// }, 500)
+
+//!!!!
+//i erased async here:
+   function unFollowVacation(vacationId: number, destination: string): void{
 
         try {
-            const userId = store.getState().authState.user.userId
-
-            // console.log("userId of follow", userId);
-            // console.log("vacationId of follow", vacationId);
-
-            const unFollow = new FollowModel(userId, vacationId)
-            // console.log("follow we are in following card AND WE ARE UNFOLLOING what do i look like??", unFollow);
-
-            await userVacationsService.deleteFollow(unFollow)
-
-            notify.success(`You have unfollowed destination ${destination}`)
-
-
-
+          clearTimeout(timeout)
+          timeout = setTimeout(() => deleteFollow(vacationId,destination), 500)
         } catch (err: any) {
+          if (err.response.status === 401) {
+            authService.logout()
+            navigate('/login')
+        } else {
             notify.error(err)
+        }
         }
 
 
     }
+async function deleteFollow(vacationId: number, destination: string) {
+    const userId = store.getState().authState.user.userId
+
+    // console.log("userId of follow", userId);
+    // console.log("vacationId of follow", vacationId);
+
+    const unFollow = new FollowModel(userId, vacationId)
+    // console.log("follow we are in following card AND WE ARE UNFOLLOING what do i look like??", unFollow);
+
+    await userVacationsService.deleteFollow(unFollow)
+
+    notify.success(`You have unfollowed destination ${destination}`)
+}
     // console.log(config.vacationsImageUrl);  //http://localhost:3001/api/vacations/images/
     // console.log(props.userVacationData.imageName); //a295d8d5-02f4-4811-ad1e-1798e48b7f09.jpg
 //!addd div for styoling!! 

@@ -1,9 +1,10 @@
 .UnFollowing {
     overflow: auto;
-	
+    min-height: 50%;
+    border: 1px solid black;
 }
 
-.UnFollowing .container {
+.UnFollowing .Container {
     display: flex;
     flex-wrap: wrap;
    /* justify-content: center; */

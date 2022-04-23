@@ -41,7 +41,7 @@ export function deleteVacationAction(vacationId: number): VacationsAction {
 
 export function vacationsReducer(currentState = new VacationsState(), action: VacationsAction):VacationsState {
     const newState = {...currentState}
-    console.log('before',newState)
+    // console.log('before',newState)
 
     switch(action.type) {
       case VacationsActionType.FetchVacations:
@@ -65,7 +65,7 @@ export function vacationsReducer(currentState = new VacationsState(), action: Va
             if (indexToDelete >= 0) {
                 newState.vacations.splice(indexToDelete, 1)
                 // localStorage.setItem('vacations', JSON.stringify(newState.vacations))
-console.log('after',newState)
+// console.log('after',newState)
             }
       break;
     }

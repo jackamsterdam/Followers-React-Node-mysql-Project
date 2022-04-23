@@ -1,12 +1,21 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import UserVacationModel from "../../../Models/UserVacationModel";
 import store from "../../../Redux/Store";
+import authService from "../../../Services/AuthService";
+import notify from "../../../Services/NotifyService";
 import userVacationsService from "../../../Services/UserVacationsService";
 import Loading from "../../SharedArea/Loading/Loading";
 import FollowingCard from "../FollowingCard/FollowingCard";
 import "./Following.css";
 
-function Following(): JSX.Element {
+interface FollowingProps {
+    vacations: UserVacationModel[]
+
+}
+
+function Following(props: FollowingProps): JSX.Element {
+    const navigate = useNavigate()
 
     const [userVacations, setUserVacations] = useState<UserVacationModel[]>([])
 
@@ -17,25 +26,33 @@ function Following(): JSX.Element {
 
         // first we need to get userId from token so we know which user wants his vacations with the vacations he follows/unfollows (plus we get the general count of vacations folllowed along with all the vacation data)
 
-        const userId = store.getState().authState.user.userId;
-        console.log("userId", userId);
+    
 
 
 
         (async function () {
             try {
+                if (store.getState().authState.user) {
+                // const userId = store.getState().authState.user.userId;
+                // console.log("userId", userId);
 
-                const userVacationsData = await userVacationsService.getAllUserVacationsData(userId)
+                // const userVacationsData = await userVacationsService.getAllUserVacationsData(userId)
                 // console.log("userVacationsData", userVacationsData);
 
 
-                const userIsFollowing = userVacationsData.filter(f => f.isFollowing)
+                const userIsFollowing = props.vacations.filter(f => f.isFollowing)
                 console.log("userIsFollowing", userIsFollowing);
 
                 setUserVacations(userIsFollowing)
+                }
 
             } catch (err: any) {
-
+                if (err.response.status === 401) {
+                    authService.logout()
+                    navigate('/login')
+                } else {
+                    notify.error(err)
+                }
             }
         })()
 
@@ -58,12 +75,12 @@ function Following(): JSX.Element {
     }, [])
 
     return (
-        <div className="Following">
-            {userVacations.length === 0 && <Loading />}
+        <div className="Following" style={{display: userVacations.length === 0 ? 'none':'block'}}>
+            {/* {userVacations.length === 0 && <Loading />} */}
 
             {/* {userVacations.map(u => u.destination)} */}
 
-            <div className="container">
+            <div className="Container">
 
                 {userVacations.map(uv => <FollowingCard key={uv.vacationId} userVacationData={uv}   />)}
             </div>

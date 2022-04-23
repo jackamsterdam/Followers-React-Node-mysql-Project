@@ -11,6 +11,7 @@ import VacationModel from "../../../../Models/VacationModel";
 import notify from "../../../../Services/NotifyService";
 import vacationsService from "../../../../Services/VacationsService";
 import "./UpdateVacation.css";
+import authService from '../../../../Services/AuthService';
 
 function UpdateVacation(): JSX.Element {
 
@@ -42,7 +43,12 @@ function UpdateVacation(): JSX.Element {
                 setValue('toDate', vacation.toDate.slice(0,10))
                 setValue('price', vacation.price)
             } catch (err: any) {
-                notify.error(err)
+                if (err.response.status === 401) {
+                    authService.logout()
+                    navigate('/login')
+                } else {
+                    notify.error(err)
+                }
             }
 
         })()

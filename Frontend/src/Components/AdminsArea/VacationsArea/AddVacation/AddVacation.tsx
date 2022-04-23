@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { SyntheticEvent, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import VacationModel from "../../../../Models/VacationModel";
@@ -10,10 +10,13 @@ import {Typography, TextField, Button} from '@mui/material/'
 
 // import {Send} from '@material-ui/icons'
 import SendIcon from '@mui/icons-material/Send';
+import authService from "../../../../Services/AuthService";
 
 
 function AddVacation(): JSX.Element {
 
+    const [minFromDate, setMinFromDate] = useState(new Date().toISOString().split('T')[0])
+    const [minToDate, setMinToDate] = useState(new Date().toISOString().split('T')[0])
 
     const {register, handleSubmit, formState, setFocus} = useForm<VacationModel>()
   const navigate = useNavigate()
@@ -21,6 +24,15 @@ function AddVacation(): JSX.Element {
   useEffect(() => {
     setFocus('destination')
   },[setFocus])
+
+  function changeMinFromDate(e: SyntheticEvent) {
+      const fromSelectedDateValue = (e.target as HTMLInputElement).value;
+      debugger
+      const selectedDate = new Date(fromSelectedDateValue);
+      const dayAfterTommorow = new Date( selectedDate.getTime() + 86400000).toISOString().split('T')[0];
+     
+      setMinToDate(dayAfterTommorow)
+  }
 
 
 async function submit(vacation:VacationModel):Promise<void>{
@@ -31,7 +43,12 @@ async function submit(vacation:VacationModel):Promise<void>{
         notify.success('Vacation has been added.')
         navigate('/admin/home')
     } catch (err: any) {
-        notify.error(err)
+        if (err.response.status === 401) {
+            authService.logout()
+            navigate('/login')
+        } else {
+            notify.error(err)
+        }
     }
 
 }
@@ -60,19 +77,22 @@ async function submit(vacation:VacationModel):Promise<void>{
 
                 })} />
                 <Typography  component="span" className="ErrorMsg">{formState.errors?.description?.message}</Typography>
+                {/* <TextField  InputLabelProps={{ shrink: true}}  inputProps={{ min: minFromDate}}   label="From" type="date"  variant="outlined" className="TextBox" onChange={changeMinFromDate} /> */}
 
-                <TextField   InputLabelProps={{ shrink: true}} label="From" variant="outlined" className="TextBox" type="date" {...register('fromDate', {
+                <TextField   InputLabelProps={{ shrink: true}} label="From" variant="outlined" className="TextBox" type="date"  inputProps={{ min: minFromDate}} {...register('fromDate', {
+                    onChange: changeMinFromDate,
                     required: {value: true, message: "Missing date"}
                 })} />
                 <Typography  component="span" className="ErrorMsg">{formState.errors?.fromDate?.message}</Typography>
 
-                <TextField InputLabelProps={{ shrink: true}} label="To" variant="outlined" className="TextBox"  type="date" {...register('toDate', {
-                    required: {value: true, message: "Missing date"}
+                <TextField InputLabelProps={{ shrink: true}} label="To" variant="outlined" className="TextBox"  type="date" inputProps={{ min: minToDate, format: "YYYY/MM/DD"}}  {...register('toDate', {
+                    required: {value: true, message: "Missing date"},
+                    min: {value: minToDate, message: "Date can't be before other date"}
                 })} />
                 <Typography  component="span" className="ErrorMsg">{formState.errors?.toDate?.message}</Typography>
 
                 {/* step={0.01} */}
-                <TextField inputProps={{ step: 0.01 }} label="Price" type="number" variant="outlined"  className="TextBox" {...register('price', {
+                <TextField inputProps={{ step: 0.01 }} label="Price" type="number" variant="outlined"  className="TextBox"  {...register('price', {
                     required: {value: true, message: "Missing price"},
                     min: {value: 0, message: "Price can't be negative"},
                     max: {value: 100000, message: "Price can't exceed 100,000"}
@@ -80,7 +100,7 @@ async function submit(vacation:VacationModel):Promise<void>{
                 })} />
                 <Typography component="span" className="ErrorMsg">{formState.errors?.price?.message}</Typography>
 
-
+    
 
 
 {/* **************************************************************************************************** */}

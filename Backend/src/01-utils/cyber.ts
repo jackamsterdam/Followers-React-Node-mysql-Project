@@ -54,6 +54,7 @@ function getUserFromToken(authorizationHeader: string):UserModel {
     const payload:any = jwt.decode(token)
     //Extract user
     const user = payload.user
+   
     return user
 }
 

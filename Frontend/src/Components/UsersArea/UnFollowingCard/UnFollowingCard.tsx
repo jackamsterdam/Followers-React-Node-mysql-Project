@@ -20,6 +20,9 @@ import IconButton from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import Avatar from '@mui/material/Avatar';
 import { red } from '@mui/material/colors';
+import { useNavigate } from "react-router-dom";
+import authService from "../../../Services/AuthService";
+import { addFollowAction } from "../../../Redux/UserVacationsState";
 
 
 
@@ -33,8 +36,9 @@ interface UnFollowingCardProps {
     userVacationData: UserVacationModel
     // userId: string
 }
-
+let timeout:any;
 function UnFollowingCard(props: UnFollowingCardProps): JSX.Element {
+  const navigate = useNavigate()
     // useEffect(() => {
 
     // },[])
@@ -43,24 +47,36 @@ function UnFollowingCard(props: UnFollowingCardProps): JSX.Element {
         // async function followVacation( vacationId: number):Promise<void> {
 
         try {
-            const userId = store.getState().authState.user.userId
-
-
-            // console.log("userId of unfollow", userId);
-            // console.log("vacationId of unfollow", vacationId);
-
-
-            const follow = new FollowModel(userId, vacationId)
-            // console.log("follow we are in UNfollowing card AND WE ARE FOLLOING what do i look like??", follow);
-
-            await userVacationsService.addFollow(follow)
-
-            notify.success(`You are now following destination ${destination}!`)
+          clearTimeout(timeout)
+          timeout = setTimeout(() => addFollow(vacationId, destination), 500)
+          
 
 
         } catch (err: any) {
+          if (err.response.status === 401) {
+            authService.logout()
+            navigate('/login')
+        } else {
             notify.error(err)
         }
+        }
+
+    }
+
+    async function addFollow(vacationId: number, destination:string ) {
+      const userId = store.getState().authState.user.userId
+
+
+      // console.log("userId of unfollow", userId);
+      // console.log("vacationId of unfollow", vacationId);
+
+
+      const follow = new FollowModel(userId, vacationId)
+      // console.log("follow we are in UNfollowing card AND WE ARE FOLLOING what do i look like??", follow);
+
+      await userVacationsService.addFollow(follow)
+
+      notify.success(`You are now following destination ${destination}!`)
 
     }
 

@@ -7,9 +7,12 @@ export class AuthState {
 
     constructor() {
         this.token = localStorage.getItem('token')
+        console.log("this.token", this.token);
         if (this.token) {
+            console.log(" inside", this.token);
             const payload:any = jwtDecode(this.token)
             this.user = payload.user
+            console.log("this.user insdie", this.user);
            
         }
     }

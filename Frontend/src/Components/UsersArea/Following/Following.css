@@ -3,10 +3,12 @@
    /* background-image: url('../../../Assets/Images/following-bg.png');
    background-repeat: no-repeat;
    background-size: contain; */
+   min-height: 50%;
+   border: 1px solid black;
   
 
 }
-.Following .container {
+.Following .Container {
 
     display: flex;
     flex-wrap: wrap;
@@ -14,4 +16,11 @@
     /* align-items: center; */
     margin: 20px;
     /* padding: 20px; */
+}
+
+.hideFollowing {
+    display: none;
+}
+.showFollowing {
+    display: block;
 }

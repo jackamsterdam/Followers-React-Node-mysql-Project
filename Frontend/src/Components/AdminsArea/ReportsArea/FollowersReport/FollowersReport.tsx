@@ -5,9 +5,11 @@ import notify from "../../../../Services/NotifyService";
 import VictoryFollowModel from "../../../../Models/VictoryFollowModel";
 import vacationsService from "../../../../Services/VacationsService";
 import Loading from "../../../SharedArea/Loading/Loading";
+import authService from '../../../../Services/AuthService';
+import { useNavigate } from 'react-router-dom';
 
 function FollowersReport(): JSX.Element {
-
+const navigate = useNavigate()
     const [followersCount, setFollowersCount] = useState<VictoryFollowModel[]>([])
 
     useEffect(() => {
@@ -21,7 +23,12 @@ function FollowersReport(): JSX.Element {
 
 
             } catch (err: any) {
-                notify.error(err)
+                if (err.response.status === 401) {
+                    authService.logout()
+                    navigate('/login')
+                } else {
+                    notify.error(err)
+                }
             }
 
         })()

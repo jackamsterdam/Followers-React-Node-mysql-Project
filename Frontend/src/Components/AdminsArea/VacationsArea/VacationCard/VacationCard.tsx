@@ -21,6 +21,7 @@ import Avatar from '@mui/material/Avatar';
 import { red } from '@mui/material/colors';
 import ClearIcon from '@mui/icons-material/Clear';
 import EditIcon from '@mui/icons-material/Edit';
+import authService from "../../../../Services/AuthService";
 
 
 
@@ -49,7 +50,12 @@ function VacationCard(props: VacationCardProps): JSX.Element {
        await vacationsService.deleteVacation(vacationId)
        notify.success('Vacation has been deleted')
    } catch (err: any) {
-       notify.error(err)
+    if (err.response.status === 401) {
+      authService.logout()
+      navigate('/login')
+  } else {
+      notify.error(err)
+  }
    }
 }
 

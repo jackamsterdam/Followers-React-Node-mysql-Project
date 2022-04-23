@@ -11,6 +11,7 @@ function AdminLayout(): JSX.Element {
   const navigate = useNavigate()
 //code:: if user is not logged in he gets transferred to login page if user is logged in but is not admin he gets transferred to /home 
   useEffect(() => {
+    // debugger
     if (!store.getState().authState.token) {
         navigate('/login')
     } else if (store.getState().authState.user.roleId === 1) {

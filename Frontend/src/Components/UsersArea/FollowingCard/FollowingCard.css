@@ -10,12 +10,13 @@
   background-color: transparent;
 }
 /* uppercase!  */
-/* .FollowingCard .UnFollowButton { */
+.FollowingCard .UnFollowButton {
   /* position: absolute;
   right: 0px;
    top: 0px;
    margin: 5px; */
-/* } */
+   color: yellow;
+}
 
 .FollowingCard .Overflow {
   display: inline-block;
