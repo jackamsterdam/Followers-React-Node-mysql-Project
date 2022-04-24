@@ -18,12 +18,17 @@
 /* } */
 
 .UnFollowingCard .Overflow {
-  display: inline-block;
+  /* display: inline-block;
    white-space:nowrap;
    text-overflow: ellipsis;
    overflow: hidden; 
    
-    width: 280px;
+    width: 280px; */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
 }
 

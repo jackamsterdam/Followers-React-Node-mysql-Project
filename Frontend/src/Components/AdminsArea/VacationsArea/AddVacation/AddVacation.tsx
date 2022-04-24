@@ -27,7 +27,7 @@ function AddVacation(): JSX.Element {
 
   function changeMinFromDate(e: SyntheticEvent) {
       const fromSelectedDateValue = (e.target as HTMLInputElement).value;
-      debugger
+    //   debugger
       const selectedDate = new Date(fromSelectedDateValue);
       const dayAfterTommorow = new Date( selectedDate.getTime() + 86400000).toISOString().split('T')[0];
      
@@ -87,7 +87,7 @@ async function submit(vacation:VacationModel):Promise<void>{
 
                 <TextField InputLabelProps={{ shrink: true}} label="To" variant="outlined" className="TextBox"  type="date" inputProps={{ min: minToDate, format: "YYYY/MM/DD"}}  {...register('toDate', {
                     required: {value: true, message: "Missing date"},
-                    min: {value: minToDate, message: "Date can't be before other date"}
+                    min: {value: minToDate, message: "Date can't be before previous date"}
                 })} />
                 <Typography  component="span" className="ErrorMsg">{formState.errors?.toDate?.message}</Typography>
 

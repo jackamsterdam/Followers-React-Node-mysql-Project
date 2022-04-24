@@ -38,9 +38,9 @@ function UserLayout(): JSX.Element {
             try {
                 if (store.getState().authState.user) {
                 const userId = store.getState().authState.user.userId;
-                console.log("userId", userId);
+                // console.log("userId", userId);
                 const userVacationsData = await userVacationsService.getAllUserVacationsData(userId)    
-                console.log("userVacationsData", userVacationsData);
+                // console.log("userVacationsData", userVacationsData);
 
                 setUserVacations(userVacationsData)
 

@@ -1,7 +1,9 @@
 .UnFollowing {
     overflow: auto;
     min-height: 50%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    margin: 16px;
+    background-color: #f5f5f5;
 }
 
 .UnFollowing .Container {

@@ -7,8 +7,11 @@
   
   .UpdateVacation .ErrorMsg {
     color: red;
-    position: absolute;
-    margin: 0 60px;
+    /* position: absolute; */
+    /* margin: 0 60px; */
+    position: relative;
+    float: right;
+    bottom: 101px;
   }
   
   .UpdateVacation .TextBox {

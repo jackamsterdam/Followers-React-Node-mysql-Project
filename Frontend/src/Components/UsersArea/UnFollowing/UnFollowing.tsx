@@ -58,9 +58,9 @@ const navigate = useNavigate()
          const unsubscribe = store.subscribe(() => {
          
             const newState = store.getState().userVacationsState.userVacations
-            console.log("newState", newState);
+            // console.log("newState", newState);
             const userNotFollowing = newState.filter(f => !f.isFollowing)
-            console.log("userNotFollowing", userNotFollowing);
+            // console.log("userNotFollowing", userNotFollowing);
             setUserVacations(userNotFollowing)
           
         })

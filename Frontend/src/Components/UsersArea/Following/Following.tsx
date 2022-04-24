@@ -41,7 +41,7 @@ function Following(props: FollowingProps): JSX.Element {
 
 
                 const userIsFollowing = props.vacations.filter(f => f.isFollowing)
-                console.log("userIsFollowing", userIsFollowing);
+                // console.log("userIsFollowing", userIsFollowing);
 
                 setUserVacations(userIsFollowing)
                 }

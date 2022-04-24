@@ -6,9 +6,9 @@
     grid-template-rows: 15% 80% 5%;
 }
 
-.Layout, .Layout > * {
-  border: 1px solid black;
-}
+/* .Layout, .Layout > * { */
+  /* border: 1px solid black; */
+/* } */
 
 
 .Layout header, .Layout footer {

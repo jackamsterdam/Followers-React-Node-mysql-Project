@@ -7,10 +7,15 @@ html, body, #root {
   padding: 0;
   height: 100%;
   text-align: center;
-  color: darkcyan;
-  background-image: linear-gradient(45deg, lightblue, white);
+  color: #030638;
+  background-image: #ededed;
   font-size: large;
   font-family: 'Poppins', sans-serif;
+}
+
+* {
+  font-family: 'Poppins', sans-serif!important;
+
 }
 
 select, input, button {

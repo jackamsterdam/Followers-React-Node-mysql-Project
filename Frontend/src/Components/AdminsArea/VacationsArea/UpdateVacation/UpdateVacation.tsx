@@ -4,7 +4,7 @@ import {Typography, TextField, Button} from '@mui/material/'
 // import { Send } from "@material-ui/icons";
 import SendIcon from '@mui/icons-material/Send';
 
-import { useEffect } from "react";
+import { SyntheticEvent, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
 import VacationModel from "../../../../Models/VacationModel";
@@ -14,6 +14,8 @@ import "./UpdateVacation.css";
 import authService from '../../../../Services/AuthService';
 
 function UpdateVacation(): JSX.Element {
+    const [minFromDate, setMinFromDate] = useState(new Date().toISOString().split('T')[0])
+    const [minToDate, setMinToDate] = useState(new Date().toISOString().split('T')[0])
 
     const params = useParams()
     // console.log("params", params);
@@ -59,6 +61,22 @@ function UpdateVacation(): JSX.Element {
 
     }, [])
 
+    function changeMinFromDate(e: SyntheticEvent) {
+        // try {  I need this??? still is an error ?????????????????????????????????????????
+   const fromSelectedDateValue = (e.target as HTMLInputElement).value
+        console.log("fromSelectedDateValue", fromSelectedDateValue);
+        const selectedDate = new Date(fromSelectedDateValue)
+        console.log("selectedDate", selectedDate);
+        const dayAfterTommorow = new Date(selectedDate.getTime() + 86400000).toISOString().split('T')[0]
+        console.log("dayAfterTommorow", dayAfterTommorow);
+        setMinToDate(dayAfterTommorow)
+        // }
+        // catch(err: any) {
+        //     console.log(err)
+        // }
+     
+    }
+
     async function submit(vacation: VacationModel) {
 
         try {
@@ -69,7 +87,12 @@ function UpdateVacation(): JSX.Element {
             navigate('/admin/home')
         }
         catch (err: any) {
-            notify.error(err)
+            if (err.response.status === 401) {
+                authService.logout()
+                navigate('/login')
+            } else {
+                notify.error(err)
+            }
         }
 
     }
@@ -99,13 +122,15 @@ function UpdateVacation(): JSX.Element {
                 })} />
                 <Typography component="span" className="ErrorMsg">{formState.errors?.description?.message}</Typography>
 
-                <TextField InputLabelProps={{shrink: true}} variant="outlined" label="From" type="date" className="TextBox" {...register('fromDate', {
+                <TextField InputLabelProps={{shrink: true}} variant="outlined" label="From" type="date" className="TextBox" inputProps={{min: minFromDate}} {...register('fromDate', {
+                    onChange: changeMinFromDate,
                     required: {value: true, message: "Missing date"}
                 })} />
                 <Typography component="span" className="ErrorMsg">{formState.errors?.fromDate?.message}</Typography>
 
-                <TextField InputLabelProps={{shrink: true}} variant="outlined" label="To" type="date" className="TextBox" {...register('toDate', {
-                    required: {value: true, message: "Missing date"}
+                <TextField InputLabelProps={{shrink: true}} variant="outlined" label="To" type="date" inputProps={{min: minToDate, format: 'YYYY/MM/DD'}} className="TextBox" {...register('toDate', {
+                    required: {value: true, message: "Missing date"},
+                    min: {value: minToDate, message: "Date can't be before previous date"}
                 })} />
                 <Typography component="span" className="ErrorMsg">{formState.errors?.toDate?.message}</Typography>
 
@@ -117,7 +142,7 @@ function UpdateVacation(): JSX.Element {
                 })} />
                 <Typography component="span" className="ErrorMsg">{formState.errors?.price?.message}</Typography>
 
-                <TextField  label="Star" type="number" variant="outlined"  className="TextBox" inputProps={{ max:5, min: 1 }}   {...register('star', {
+                <TextField InputLabelProps={{shrink: true}}   label="Star" type="number" variant="outlined"  className="TextBox" inputProps={{ max:5, min: 1 }}   {...register('star', {
                     required: {value: true, message: "Missing stars"},
                     min: {value: 0, message: "Star count can't be negative"},
                     max: {value: 5, message: "Stars can't exceed 5"}

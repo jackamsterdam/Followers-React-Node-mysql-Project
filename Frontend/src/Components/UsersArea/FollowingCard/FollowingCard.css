@@ -1,13 +1,13 @@
 .FollowingCard .Card {
   position: relative;
-  border: 1px solid black;
   border-radius: 10px;
   margin: 10px;
   /* margin:-10px 10px 10px 10px; */
-  box-shadow: 5px 5px 7px gray;
+  box-shadow: 5px 5px 7px #b4b4b4;
   width: 300px;
-  height: 400px;
-  background-color: transparent;
+  height: 314px;
+  background-color: #fff;
+  text-align: left;
 }
 /* uppercase!  */
 .FollowingCard .UnFollowButton {
@@ -15,17 +15,24 @@
   right: 0px;
    top: 0px;
    margin: 5px; */
-   color: yellow;
+   color: #fff;
+   position: absolute;
+    top: 0px;
+    right: 0px;
 }
 
 .FollowingCard .Overflow {
-  display: inline-block;
+  /* display: inline-block;
    white-space:nowrap;
    text-overflow: ellipsis;
    overflow: hidden; 
    
-    width: 280px;
-
+   width: 220px; */
+   display: -webkit-box;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   text-overflow: ellipsis;
 }
 
 .FollowingCard .UnFollowButton:hover {
@@ -44,6 +51,12 @@
   /* background-color: transparent; */
   /* font-size: large; */
   /* background-color: lightgrey; */
+}
+
+.FollowingCard .stars {
+  color: orange;
+  height: 20px;
+  width: 20px;
 }
 
 
