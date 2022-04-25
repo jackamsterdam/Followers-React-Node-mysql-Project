@@ -9,7 +9,9 @@ class InterceptorsService {
       
 
               request.headers = {
-                  authorization: `Bearer ${store.getState().authState.token}`
+                  authorization: `Bearer ${store.getState().authState.token}`,
+                //   withCredentials: true,
+                //   'Content-Type': 'application/json'  
               
               }
           }
