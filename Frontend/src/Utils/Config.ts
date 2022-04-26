@@ -11,7 +11,8 @@ class DevelopmentConfig extends Config {
     userVacationsUrl = 'http://localhost:3001/api/user-vacations/'  // /:userId   get userId from token you know who is logged in by there userId in the token 
 
     // This is used by both users to get all photos and by admin to get all photos
-    vacationsImageUrl = 'http://localhost:3001/api/vacations/images/' 
+    // vacationsImageUrl = 'http://localhost:3001/api/vacations/images/' 
+    vacationsImageUrl = 'http://localhost:3001/vacations/images/' 
     
     //for follow  /  ids get sent in post
     //for delete  /:userId/:vacationId
@@ -31,7 +32,8 @@ class ProductionConfig extends Config {
 
     userVacationsUrl = 'http://localhost:3001/api/user-vacations/'  // /:userId
 
-    vacationsImageUrl = 'http://localhost:3001/api/vacations/images/' 
+    // vacationsImageUrl = 'http://localhost:3001/api/vacations/images/' 
+    vacationsImageUrl = 'http://localhost:3001/vacations/images/' 
 
     followersUrl = 'http://localhost:3001/api/followers/'
 

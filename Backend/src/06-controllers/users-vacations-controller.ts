@@ -11,17 +11,19 @@ const router = express.Router()
 
 //! This Route is used by users to get the photo as well it is used by the admin to get the photos so I transfered this route out of admins vacations controller to here.
 // http://localhost:3001/api/vacations/images/djkfjie3j9dsfsk/
-router.get('/vacations/images/:imageName', async (request: Request, response: Response, next: NextFunction) => {
-  try {
-    const imageName = request.params.imageName
-        const absolutePath = path.join(__dirname, '..', 'upload','images', imageName)
-        response.sendFile(absolutePath)
+// router.get('/vacations/images/:imageName', async (request: Request, response: Response, next: NextFunction) => {
+//   try {
+//     const imageName = request.params.imageName
+//         const absolutePath = path.join(__dirname, '..', 'upload','images', imageName)
+//         response.sendFile(absolutePath)
 
 
-  } catch (err: any) {
-    next(err)
-  }
-})
+//   } catch (err: any) {
+//     next(err)
+//   }
+// })
+
+
 //Route to get joined table data of all vacations by user with vacations count and with information if the user is following that vacation or not.
 // http://localhost:3001/api/user-vacations/013e34b0-355c-45ec-a69d-5290397f13bd
 router.get('/user-vacations/:userId',verifyLoggedIn, async (request: Request, response: Response, next: NextFunction) => {
