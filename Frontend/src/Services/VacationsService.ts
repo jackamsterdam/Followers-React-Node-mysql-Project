@@ -39,7 +39,7 @@ class VacationsService {
        formData.append('rating', '0')
        formData.append('review', '0')
        formData.append('image', vacation.image.item(0))
-       console.log("vacation.image.item(0)", vacation.image.item(0));
+    //    console.log("vacation.image.item(0)", vacation.image.item(0));
 
        const response = await axios.post<VacationModel>(config.vacationsAdminUrl, formData)
        const addedVacation = response.data 

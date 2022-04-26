@@ -2,6 +2,7 @@ import { io, Socket } from "socket.io-client"
 import UserVacationModel from "../Models/UserVacationModel"
 import store from "../Redux/Store"
 import { fetchUserVacationsAction } from "../Redux/UserVacationsState"
+import config from "../Utils/Config"
 
 class SocketService {
     private socket: Socket
@@ -12,7 +13,7 @@ class SocketService {
 
     connect():void {
       
-        this.socket = io('http://localhost:3001')
+        this.socket = io(config.socketUrl)
         this.socket.on('msg-from-server', (userVacations: UserVacationModel[]) => {
             // alert(userVacations.length)
             // store.dispatch(socketSendAction(msg))

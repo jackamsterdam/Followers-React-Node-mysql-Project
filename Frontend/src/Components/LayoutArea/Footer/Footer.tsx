@@ -24,15 +24,19 @@ function Footer(): JSX.Element {
             <IconButton aria-label='http://www.linkedin.com/in/jack-amsterdam' onClick={() => window.open('http://www.linkedin.com/in/jack-amsterdam')}>
                 <LinkedInIcon fontSize="large" />
             </IconButton>
+
+            <a target="_blank" href="https://wakatime.com/@a78fee14-66a3-4481-8db3-b8983c271faf"><img src="https://wakatime.com/badge/user/a78fee14-66a3-4481-8db3-b8983c271faf.svg" alt="Total time coded since Jan 4 2022" /></a>
+
+
             <IconButton aria-label='https://github.com/jackamsterdam ' onClick={() => window.open('https://github.com/jackamsterdam ')}>
                 <GitHubIcon fontSize="large" />
             </IconButton>
             {/* <img alt="Code Time" src="https://img.shields.io/endpoint?style=for-the-badge&url=https://codetime-api.datreks.com/badge/3246?logoColor=white%26project=%26recentMS=0%26showProject=false" /> */}
-            <a href="https://wakatime.com/@a78fee14-66a3-4481-8db3-b8983c271faf"><img src="https://wakatime.com/badge/user/a78fee14-66a3-4481-8db3-b8983c271faf.svg" alt="Total time coded since Jan 4 2022" /></a>
+           
             
             <img alt="Code Time" src="https://img.shields.io/endpoint?style=social&url=https://codetime-api.datreks.com/badge/3246?logoColor=dark%26project=%26recentMS=0%26showProject=false" />
             
-          
+          {/* onclick how do i log the clicks on my linkedin???  */}
       
 
             {/* <a href="https://wakatime.com/@a78fee14-66a3-4481-8db3-b8983c271faf"><img src="https://wakatime.com/badge/user/a78fee14-66a3-4481-8db3-b8983c271faf.svg" alt="Total time coded since Jan 4 2022" /></a>

@@ -5,6 +5,7 @@ import VacationModel from "../03-models/vacation-model";
 import {v4 as uuid} from 'uuid'
 import safeDelete from "../01-utils/safe-delete";
 import VictoryFollowModel from "../03-models/victory-follow-model";
+import path from "path";
 
 
 
@@ -43,7 +44,8 @@ async function addVacation(vacation: VacationModel):Promise<VacationModel> {
         //Now we can create an imageName that will be used to get images by imageName in controller - the controller finds the image on disk by the imageName.
         vacation.imageName = uuid() + extension //74287483274293742.jpg
         //We only need to save the imageName with ext in database so we move the image object to the disk and delete it. So mv the image object to the path I give it on the disk.
-        await vacation.image.mv('./src/upload/images/' + vacation.imageName)
+        // await vacation.image.mv('./src/upload/images/' + vacation.imageName)
+        await vacation.image.mv(path.join(__dirname, '..', 'upload', 'images', vacation.imageName))
         delete vacation.image 
     }
     // console.log('vacation,imagename',vacation.imageName)
@@ -67,11 +69,13 @@ async function updateVacation(vacation: VacationModel):Promise<VacationModel> {
 
     if (vacation.image) {
         // we want to delete the old image from disk 
-        safeDelete('./src/upload/images/' + vacation.imageName)
+        // safeDelete('./src/upload/images/' + vacation.imageName)
+        safeDelete(path.join(__dirname, '..', 'upload', 'images', vacation.imageName))
         //make new imagename
         const extension = vacation.image.name.substring(vacation.image.name.lastIndexOf('.'))
         vacation.imageName = uuid() + extension
-        await vacation.image.mv('./src/upload/images/' + vacation.imageName)
+        // await vacation.image.mv('./src/upload/images/' + vacation.imageName)
+        await vacation.image.mv(path.join(__dirname, '..', 'upload', 'images', vacation.imageName))
         delete vacation.image
     }
 
@@ -92,7 +96,8 @@ async function deleteVacation(vacationId: number):Promise<void> {
     const vacation = await getOneVacation(vacationId)
     // console.log("vacation", vacation);
 
-    safeDelete('./src/upload/images/' + vacation.imageName)
+    // safeDelete('./src/upload/images/' + vacation.imageName)
+    safeDelete(path.join(__dirname, '..', 'upload', 'images', vacation.imageName))
 
      const sql = `DELETE FROM vacations
                   WHERE vacationId = ?`

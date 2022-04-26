@@ -19,6 +19,8 @@ class DevelopmentConfig extends Config {
 
     // for graph: 
     victoryFollowersCount = 'http://localhost:3001/api/admin/followers-count/'
+
+    socketUrl = 'http://localhost:3001/'
 }
 
 class ProductionConfig extends Config {
@@ -35,6 +37,8 @@ class ProductionConfig extends Config {
 
      // for graph: 
      victoryFollowersCount = 'http://localhost:3001/api/admin/followers-count/'
+
+     socketUrl = 'http://localhost:3001/'
 
 }
 

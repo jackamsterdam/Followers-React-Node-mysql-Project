@@ -34,7 +34,7 @@ if (config.isDevelopment) {
 // server.use('/',expressRateLimit({windowMs: 1000, max: 10, message: 'Rate exceeded. Please try again soon'}))
 
 
-// server.use(helmet())  //Cors problem with pictures
+// server.use(helmet())  //Cors problem with pictures - does not work!
 server.use(express.json())
 server.use(expressFileUpload())
 server.use(sanitize)

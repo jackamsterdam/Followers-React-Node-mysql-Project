@@ -149,11 +149,13 @@ function UpdateVacation(): JSX.Element {
 
                 })} />
                 <Typography component="span" className="ErrorMsg">{formState.errors?.star?.message}</Typography>
-
+                
                 <label>Image:</label>
-                <input type="file" accept="image/*" className="TextBox" {...register('image', {
+                {/* Image not required if customer doesnt find the old photo will give him the previous one */}
+                <input type="file" accept="image/*" className="TextBox" {...register('image')} />
+                {/* <input type="file" accept="image/*" className="TextBox" {...register('image', {
                     required: {value: true, message: 'Missing photo'}
-                })} />
+                })} /> */}
                 <Typography component="span" className="ErrorMsg">{formState.errors?.image?.message}</Typography>
 
                 <Button type="submit" endIcon={<SendIcon/>} fullWidth color="primary" variant="contained">Update</Button>
