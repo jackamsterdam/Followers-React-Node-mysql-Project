@@ -28,11 +28,12 @@ function AddVacation(): JSX.Element {
   function changeMinFromDate(e: SyntheticEvent) {
       const fromSelectedDateValue = (e.target as HTMLInputElement).value;
     //   debugger
+    if(fromSelectedDateValue === '') return
       const selectedDate = new Date(fromSelectedDateValue);
       const dayAfterTommorow = new Date( selectedDate.getTime() + 86400000).toISOString().split('T')[0];
      
       setMinToDate(dayAfterTommorow)
-  }
+  } 
 
 
 async function submit(vacation:VacationModel):Promise<void>{

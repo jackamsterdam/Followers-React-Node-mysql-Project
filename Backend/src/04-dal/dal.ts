@@ -16,7 +16,7 @@ function execute(sql: string, values?: any[]):Promise<any> {
        connection.query(sql, values, (err,result) => {
 
            if (err) {
-               reject(err)
+               reject(err)                    
                return 
            }
            resolve(result)

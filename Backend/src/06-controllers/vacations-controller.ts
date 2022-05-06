@@ -61,8 +61,8 @@ router.put('/vacations/:vacationId',verifyAdmin, async (request: Request, respon
     const vacationId = +request.params.vacationId
     request.body.vacationId = vacationId 
     const vacation = new VacationModel(request.body)
-    const addedVacation = await vacationsLogic.updateVacation(vacation)
-    response.json(addedVacation)
+    const updatedVacation = await vacationsLogic.updateVacation(vacation)
+    response.json(updatedVacation)
     socketLogic.updateAll()
 
 

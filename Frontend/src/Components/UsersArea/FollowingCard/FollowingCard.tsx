@@ -18,11 +18,16 @@ import CardHeader from '@mui/material/CardHeader';
 // import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import IconButton from '@mui/material/IconButton';
 // import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+// import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import StarIcon from '@mui/icons-material/Star';import Avatar from '@mui/material/Avatar';
 import { red } from '@mui/material/colors';
 import authService from "../../../Services/AuthService";
 import { useNavigate } from "react-router-dom";
+import FavoriteIcon from '@mui/icons-material/Favorite';
+
+import Box from '@mui/material/Box';
+import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
+import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 
 
 
@@ -47,6 +52,7 @@ function FollowingCard(props: FollowingCardProps): JSX.Element {
   function unFollowVacation(vacationId: number, destination: string): void {
 
     try {
+      //Debounce - User can't click multiple times
       clearTimeout(timeout)
       timeout = setTimeout(() => deleteFollow(vacationId, destination), 500)
     } catch (err: any) {
@@ -78,47 +84,54 @@ function FollowingCard(props: FollowingCardProps): JSX.Element {
   //!addd div for styoling!! 
   return (
     <div className="FollowingCard">
-      <Card className="Card" sx={{ maxWidth: 345, margin: '5px', width: 280 }}>
-  
-
-          
-        <CardMedia
-          component="img"
-          height="140"
-          image={config.vacationsImageUrl + props.userVacationData.imageName}
-          alt="vacation pic"
-        />
-                    <IconButton className="UnFollowButton" aria-label="removeFromFavorites" onClick={() => unFollowVacation(props.userVacationData.vacationId, props.userVacationData.destination)}>
-              <FavoriteBorderIcon />
-            </IconButton>
-        <CardHeader
-
+      <Card className='HorizontalCard' sx={{ display: 'flex'}}>
+          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+            <CardContent sx={{ flex: '1 0 auto'}} className='CardContent'>
+            <Typography className="reviews" variant="body2" color="text.secondary">
+             {props.userVacationData.review} reviews
+              </Typography>
+            <IconButton className='CardStars'>
+                {[...Array(props.userVacationData.star)].map((e, i) =>   <StarIcon key={props.userVacationData.vacationId + i} className="stars"/>)}
+              </IconButton>
+              <Typography component="div" variant="h5" className='CardDestination'>
+                 {props.userVacationData.destination}
+              </Typography>
+              <Typography component="div" variant="h5" className='CardPrice'>
+              {'$' + props.userVacationData.price}
+              </Typography>
+              <Typography variant="subtitle1" color="text.secondary" component="div" className="Overflow" title={props.userVacationData.description}>
+                {props.userVacationData.description}
+              </Typography>
+              <Typography className='FromDate' variant="body2" color="text.secondary">
+                {formatDate(props.userVacationData.fromDate)} - {formatDate(props.userVacationData.toDate)}
+              </Typography>
+              {/* put the color in css after  */}
       
-          title={props.userVacationData.destination}
-          subheader={'$' + props.userVacationData.price}
-          action={
-            <IconButton>
-              {[...Array(props.userVacationData.star)].map((e, i) =>   <StarIcon key={props.userVacationData.vacationId + i} className="stars"/>)}
+              <Typography className="FollowersCount" title='followers' aria-label="followerCount">
+                {props.userVacationData.followersCount}
+              </Typography>
+              <IconButton className="Likes">
+              <ThumbUpAltIcon />
             </IconButton>
-          }
-        />
-
-        <CardContent>
-          <Typography title={props.userVacationData.description} className="Overflow" variant="body2" color="text.secondary">
-            {props.userVacationData.description}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {formatDate(props.userVacationData.fromDate)} - {formatDate(props.userVacationData.toDate)}
-          </Typography>
-          {/* put the color in css after  */}
-          <Avatar className="FollowersCount" sx={{ bgcolor: red[500] }} aria-label="followerCount">
-            {props.userVacationData.followersCount}
-          </Avatar>
-
-        </CardContent>
-
-      </Card>
+            </CardContent>
+          </Box>
+          <div className='imageVacation'>
+               <CardMedia
+                component="img"
+                height="140"
+                image={config.vacationsImageUrl + props.userVacationData.imageName}
+                alt="vacation picture"
+                
+              />
+              <IconButton className="UnFollowButton" aria-label="removeFromFavorites" onClick={() => unFollowVacation(props.userVacationData.vacationId, props.userVacationData.destination)}>
+              <FavoriteIcon />
+            </IconButton>
+          </div>
+       
+        </Card>
     </div>
+
+  
   );
 }
 

@@ -54,7 +54,7 @@ const navigate = useNavigate()
         })()
 
         
-         //Subscribing to store for changes when user follows/unfollows
+         //Subscribing to store for changes when user follows/unfollows   //??????????????????????????????is this also for when socket gives new data?????
          const unsubscribe = store.subscribe(() => {
          
             const newState = store.getState().userVacationsState.userVacations

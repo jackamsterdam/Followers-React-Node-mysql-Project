@@ -14,7 +14,7 @@ import "./UpdateVacation.css";
 import authService from '../../../../Services/AuthService';
 
 function UpdateVacation(): JSX.Element {
-    const [minFromDate, setMinFromDate] = useState(new Date().toISOString().split('T')[0])
+    const [minFromDate, setMinFromDate] = useState('')
     const [minToDate, setMinToDate] = useState(new Date().toISOString().split('T')[0])
 
     const params = useParams()
@@ -35,7 +35,7 @@ function UpdateVacation(): JSX.Element {
             try {
                 const vacation = await vacationsService.getOneVacation(vacationId)
                 // console.log("vacation", vacation);
-                // console.log(vacation.fromDate)
+                console.log(vacation.fromDate)
                 // console.log(vacation.toDate)
 
                 setValue('destination', vacation.destination)
@@ -47,6 +47,8 @@ function UpdateVacation(): JSX.Element {
                 setValue('rating', vacation.rating)
                 setValue('review', vacation.review)
                 setValue('price', vacation.price)
+
+                setMinFromDate(vacation.fromDate.split('T')[0])
             } catch (err: any) {
                 if (err.response.status === 401) {
                     authService.logout()
@@ -64,6 +66,7 @@ function UpdateVacation(): JSX.Element {
     function changeMinFromDate(e: SyntheticEvent) {
         // try {  I need this??? still is an error ?????????????????????????????????????????
    const fromSelectedDateValue = (e.target as HTMLInputElement).value
+   if(fromSelectedDateValue === '') return
         console.log("fromSelectedDateValue", fromSelectedDateValue);
         const selectedDate = new Date(fromSelectedDateValue)
         console.log("selectedDate", selectedDate);

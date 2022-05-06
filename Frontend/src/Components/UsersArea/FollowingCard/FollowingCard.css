@@ -1,68 +1,109 @@
-.FollowingCard .Card {
-  position: relative;
-  border-radius: 10px;
-  margin: 10px;
-  /* margin:-10px 10px 10px 10px; */
-  box-shadow: 5px 5px 7px #b4b4b4;
-  width: 300px;
-  height: 314px;
-  background-color: #fff;
-  text-align: left;
-}
-/* uppercase!  */
-.FollowingCard .UnFollowButton {
-  /* position: absolute;
-  right: 0px;
-   top: 0px;
-   margin: 5px; */
-   color: #fff;
-   position: absolute;
-    top: 0px;
-    right: 0px;
-}
+
 
 .FollowingCard .Overflow {
-  /* display: inline-block;
-   white-space:nowrap;
-   text-overflow: ellipsis;
-   overflow: hidden; 
-   
-   width: 220px; */
    display: -webkit-box;
-   -webkit-line-clamp: 3;
+   -webkit-line-clamp: 2;
    -webkit-box-orient: vertical;
    overflow: hidden;
    text-overflow: ellipsis;
+   font-size: 15px;
+   direction: initial;
+}
+
+.FollowingCard .HorizontalCard {
+  direction: rtl;
+  position: relative;
+  box-shadow: 5px 5px 7px #b4b4b4;
+  margin-right: 30px;
+  margin: 10px;
+}
+
+.FollowingCard .CardDestination {
+  font-size: 25px;
+  font-weight: bold;
+  display: inline;
+}
+
+.FollowingCard .CardPrice {
+  font-size: 18px;
+}
+
+.FollowingCard .CardStars {
+  bottom: 3px;
+  font-size: 20px;
+  color: orange;
+}
+.FollowingCard .CardContent {
+  text-align: left;
+  padding-top: 5px;
+  padding-left: 9px;
+  padding-bottom: 0px!important;
+  width: 360px;
+}
+
+.FollowingCard .UnFollowButton {
+  color: red;
+  position: absolute;
+  left: 146px;
+  top: 0px;
 }
 
 .FollowingCard .UnFollowButton:hover {
   transform: scale(0.95);
 }
 
-.FollowingCard .FollowersCount {
+.FollowingCard .imageVacation{
+  height: 10%;
+}
+  
+.FollowingCard .imageVacation > img{
+  height: 100%;
+  width: 100%;
+}
+
+.FollowingCard .reviews {
+  top: 10px;
   position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 10px;
-  /* border: 2px dotted black; */
-  /* border-radius: 50%; */
-  /* padding: 10px; */
-  /* font-weight: bold; */
-  /* background-color: transparent; */
-  /* font-size: large; */
-  /* background-color: lightgrey; */
+  color: #bdc2cf;
+  font-size: 14px;
 }
 
-.FollowingCard .stars {
-  color: orange;
-  height: 20px;
-  width: 20px;
+.FollowingCard .FromDate{
+  font-size: 14px;
+  top: 1px;
+  position: relative;
+  font-weight: bold;
 }
 
+.FollowingCard .FollowersCount {
 
+  position: absolute;
+  bottom: 0px;
+  right: 40px;
+  font-size: 13px;
+  color: #717070;
+}
+.FollowingCard .FollowersCount:hover {
+  cursor: pointer;
+}
 
+.FollowingCard .FollowersText {
+  color: #bdc2cf;
+  font-size: 14px;
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+}
 
+.FollowingCard .Likes {
+  right: 0px;
+  position: absolute;
+  bottom: -8px;
+}
 
+.stars {
+  font-size: 20px!important;
+}
 
 
 

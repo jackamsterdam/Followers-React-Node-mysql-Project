@@ -47,6 +47,7 @@ function UnFollowingCard(props: UnFollowingCardProps): JSX.Element {
         // async function followVacation( vacationId: number):Promise<void> {
 
         try {
+           //Debounce - User can't click multiple times
           clearTimeout(timeout)
           timeout = setTimeout(() => addFollow(vacationId, destination), 500)
           
