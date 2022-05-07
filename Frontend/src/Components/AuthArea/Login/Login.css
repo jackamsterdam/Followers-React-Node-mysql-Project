@@ -1,3 +1,8 @@
+.Login {
+	text-align: center;
+	display: inline-block;
+	margin-top: 40px;
+}
 .Login > form {
 	width: 450px;
     padding: 20px;
@@ -12,9 +17,12 @@
 }
 
 .Login .ErrorMsg {
-	color: red;
-	position: absolute;
-	margin: 0 60px;
+    color: red;
+    position: relative;
+    font-size: 16px;
+    font-weight: bold;
+    bottom: 21px;
+    float: left;
 }
 
 .Login button {
@@ -30,4 +38,14 @@
 
 .Login p {
 	text-decoration: underline;
+}
+
+.RegisterText {
+    display: inline;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.Login a {
+	color: blue;;
 }

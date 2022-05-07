@@ -7,6 +7,7 @@ import vacationsService from "../../../../Services/VacationsService";
 import Loading from "../../../SharedArea/Loading/Loading";
 import authService from '../../../../Services/AuthService';
 import { useNavigate } from 'react-router-dom';
+import { Typography } from '@mui/material';
 
 function FollowersReport(): JSX.Element {
 const navigate = useNavigate()
@@ -18,7 +19,10 @@ const navigate = useNavigate()
 
             try {
                 const followersCount = await vacationsService.getAllFollowersForChart()
-                // console.log("followersCount", followersCount);
+
+                // followersCount[2].vacationCount = 300
+                //  console.log("followersCount", followersCount);
+                
                 setFollowersCount(followersCount)
 
 
@@ -44,11 +48,11 @@ const navigate = useNavigate()
 
     return (
         <div className="FollowersReport">
-            <h1>Following Report</h1>
+            <Typography>All the followed vacations per quantity of followers</Typography>
             {followersCount.length === 0 && <Loading />}
 
 
-            <VictoryChart domainPadding={20} theme={VictoryTheme.material}  width={followersCount.length * 100}   containerComponent={<VictoryContainer responsive={false} />}>
+            <VictoryChart domainPadding={20} theme={VictoryTheme.material}  width={followersCount.length * 100} containerComponent={<VictoryContainer responsive={false} />}>
 
 
 
@@ -69,17 +73,9 @@ const navigate = useNavigate()
 
                 />
 
-
-
-
-
-
                 <VictoryBar data={followersCount} x="destination" y="vacationCount" />
 
             </VictoryChart>
-
-
-
 
         </div>
     );

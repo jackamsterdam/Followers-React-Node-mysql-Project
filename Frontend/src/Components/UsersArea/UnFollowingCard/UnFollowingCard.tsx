@@ -4,7 +4,7 @@ import store from "../../../Redux/Store";
 import notify from "../../../Services/NotifyService";
 import userVacationsService from "../../../Services/UserVacationsService";
 import config from "../../../Utils/Config";
-import formatDate from "../../../Utils/formatDate";
+import dateFormatter from "../../../Utils/formatDate";
 import "./UnFollowingCard.css";
 
 
@@ -24,12 +24,11 @@ import { useNavigate } from "react-router-dom";
 import authService from "../../../Services/AuthService";
 import { addFollowAction } from "../../../Redux/UserVacationsState";
 
-
-
-
-
-
-
+import Box from '@mui/material/Box';
+import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
+import StarIcon from '@mui/icons-material/Star';
 
 
 interface UnFollowingCardProps {
@@ -87,7 +86,7 @@ function UnFollowingCard(props: UnFollowingCardProps): JSX.Element {
     return (
         <div className="UnFollowingCard">
         {/* <Card className="Card" sx={{ maxWidth: 345, margin: '5px', width: 280}}> */}
-        <Card className="Card">
+        {/* <Card className="Card">
              <CardHeader
        
         action={
@@ -122,7 +121,54 @@ function UnFollowingCard(props: UnFollowingCardProps): JSX.Element {
       
       </CardContent>
     
-    </Card>
+    </Card> */}
+
+    <Card className='HorizontalCard' sx={{ display: 'flex'}}>
+          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+            <CardContent sx={{ flex: '1 0 auto'}} className='CardContent'>
+            <Typography className="Reviews" variant="body2" color="text.secondary">
+             {props.userVacationData.review} reviews
+              </Typography>
+            <IconButton className='CardStars'>
+                {[...Array(props.userVacationData.star)].map((e, i) =>   <StarIcon key={props.userVacationData.vacationId + i} className="Stars"/>)}
+              </IconButton>
+              <Typography component="div" variant="h5" className='CardDestination'>
+                 {props.userVacationData.destination}
+              </Typography>
+              <Typography component="div" variant="h5" className='CardPrice'>
+              {'$' + props.userVacationData.price}
+              </Typography>
+              <Typography variant="subtitle1" color="text.secondary" component="div" className="Overflow" title={props.userVacationData.description}>
+                {props.userVacationData.description}
+              </Typography>
+              <Typography className='FromDate' variant="body2" color="text.secondary">
+                {dateFormatter.formatDate(props.userVacationData.fromDate)} - {dateFormatter.formatDateWithYear(props.userVacationData.toDate)}
+              </Typography>
+              {/* put the color in css after  */}
+      
+              <Typography className="FollowersCount" title='followers' aria-label="followerCount">
+                {props.userVacationData.followersCount}
+              </Typography>
+              <IconButton className="Likes">
+              <ThumbUpAltIcon />
+            </IconButton>
+            </CardContent>
+          </Box>
+          <div className='imageVacation'>
+               <CardMedia
+                component="img"
+                height="140"
+                image={config.vacationsImageUrl + props.userVacationData.imageName}
+                alt="vacation picture"
+                
+              />
+              <IconButton className="FollowButton" aria-label="addToFavorites" onClick={() => followVacation(props.userVacationData.vacationId, props.userVacationData.destination)}>
+              <FavoriteBorderIcon />
+            </IconButton>
+          </div>
+       
+        </Card>
+
     </div>
     );
 }

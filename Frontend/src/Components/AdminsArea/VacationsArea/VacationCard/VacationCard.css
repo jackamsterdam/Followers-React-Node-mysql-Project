@@ -1,170 +1,84 @@
-/* 
-.VacationCard {
- 
-} */
-
 .VacationCard .Card {
    position: relative;
-   border: 1px solid black;
-   border-radius: 10px;
    margin: 10px;
-   box-shadow: 5px 5px 7px gray;
    width: 300px;
-   height: 400px;
-   /* padding: 10px; */
-   background-color: transparent;
+   height: 403px;
+   background: rgb(216 229 234);
+   padding-top: 10px;
 }
 
+.VacationCard .Card:hover {
+   box-shadow: 5px 5px 7px #b4b4b4;
+}
+
+.VacationCard:hover {
+   cursor: pointer;
+}
+
+.VacationCard .CardDestination {
+   font-size: 25px;
+   font-weight: bold;
+   display: inline;
+      padding-left: 10px;
+ }
+ 
+ .VacationCard .CardPrice {
+   font-size: 18px;
+      padding-left: 10px;
+ }
+ 
+ .VacationCard .CardStars {
+   color: orange;
+   padding-left: 10px;
+   display: block;
+   padding-top: 0px;
+   margin-top: -6px;
+ }
+
+ .VacationCard .Stars {
+   font-size: 20px!important;
+ }
+
+ .VacationCard .FromDate{
+   font-size: 14px;
+   font-weight: bold;
+   padding-left: 10px;
+    padding-bottom: 3px;
+ }
 
 .VacationCard .DeleteButton {
-   position: absolute;
-   right: 0px;
-   top: 0px;
    margin: 5px;
    color: red;
 
 }
 
 .VacationCard .EditButton {
-   position: absolute;
-   right: 0px;
-   top: 20px;
-   margin: 20px 5px 0 0;
    color: lightseagreen;
-   /* background-color: transparent; */
-   /* border: none; */
-   /* font-size: large; */
-   /* transform: rotate(145deg); */
 }
 /* erase thisline:  */
 /* https://stackoverflow.com/questions/15909489/text-overflow-ellipsis-on-two-lines */
 .VacationCard .Overflow {
-   /* display: inline-block;
-     white-space:nowrap;
-     text-overflow: ellipsis;
-     overflow: hidden; 
-     width: 280px; */
-     display: -webkit-box;
--webkit-line-clamp: 3;
--webkit-box-orient: vertical;
-overflow: hidden;
-text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   font-size: 15px;
+   direction: initial;
 
 } 
 .VacationCard .DeleteButton:hover, .VacationCard .EditButton:hover {
    transform: scale(0.90);
 }
 
-
-
-
-/* old: before material */
-/* 
-.VacationCard {
-	border: 1px solid black;
-    border-radius: 10px;
-    box-shadow: 5px 5px 7px gray;
-    text-align: left;
-    width: 300px;
-    height: 280px;
-    padding: 10px;
-    margin: 10px; */
-    /* overflow: auto; */
-    /* font-size: smaller;
-    position: relative;
-}
-.VacationCard .deleteButton {
+.OverflowEffect {
+   display: none;
    position: absolute;
-   right: 0px;
-   top: 0px;
-   margin: 5px;
-   background-color: transparent;
-   border: none;
-   font-size: small;
+   bottom: 0px;
+   left: 0px;
+   width: 100%;
 }
 
-.VacationCard .editButton {
-    position: absolute;
-    right: 0px;
-    top: 20px;
-    margin: 5px;
-    background-color: transparent;
-    border: none;
-    font-size: large;
-    transform: rotate(145deg);
- }
-
-.VacationCard .deleteButton:hover, .VacationCard .editButton:hover {
-   cursor: pointer;
-   transform: scale(0.90);
+.VacationCard:hover .OverflowEffect {
+   display: inline-block;
 }
-
-.VacationCard .imageVacation{
-height: 50%;
-padding: 10px;
-margin: 10px;
-text-align: center;
-}
-
-.VacationCard .imageVacation > img{
-   border: 1px solid black;
-   border-radius: 10px;;
-height: 100%; */
-/* width: 100%; */
-/* }
-
-.VacationCard span:first-child {
-  font-weight: bold;
-  font-size: larger;
-}
-
-
-
-.VacationCard .overflow {
-	   display: inline-block;
-        white-space:nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden; */
-        /* color: white; */
-        /* width: 280px;
-
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* originally:  */
-/* 
-.VacationCard {
-	border: 1px solid black;
-    border-radius: 10px;
-    box-shadow: 5px 5px 7px gray;
-    text-align: left;
-    width: 300px;
-    height: 150px;
-    padding: 10px;
-    margin: 10px;
-    overflow: auto;
-    font-size: smaller;
-    position: relative;
-} */

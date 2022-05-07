@@ -6,13 +6,6 @@
     grid-template-rows: 10% 90%;
 }
 
-.AdminLayout, .AdminLayout > * {
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-}
-
-
-
 .AdminLayout .AdminMenu {
     grid-column: span 6;
 }

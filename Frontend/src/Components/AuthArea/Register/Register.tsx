@@ -33,32 +33,31 @@ async function submit(user: UserModel):Promise<void> {
 }
 
     return (
-        <div className="Register Box">
+        <div className="Register">
             <form onSubmit={handleSubmit(submit)} noValidate>
-                <Typography variant="h4">Register</Typography>
-<br />
-                <TextField label="First Name" variant="outlined" className="TextBox" type="text" {...register('firstName', {
+
+                <TextField label="First Name" variant="filled" className="TextBox" type="text" {...register('firstName', {
                     required: {value: true, message: "Missing first name"},
                     minLength: {value: 2, message: "First Name must be more than 2 characters" },
                     maxLength: {value: 100, message: "First Name must not exceed 100 characters" }
                 })}/>
                 <Typography component="span" className="ErrorMsg">{formState.errors?.firstName?.message}</Typography>
 
-                <TextField label="Last Name" variant="outlined" className="TextBox"  type="text" {...register('lastName', {
+                <TextField label="Last Name" variant="filled" className="TextBox"  type="text" {...register('lastName', {
                     required: {value: true, message: "Missing last name"},
                     minLength: {value: 2, message: "Last Name must be more than 2 characters" },
                     maxLength: {value: 100, message: "Last Name must not exceed 100 characters" }
                 })} />
                 <Typography component="span" className="ErrorMsg">{formState.errors?.lastName?.message}</Typography>
 
-                <TextField label="Username" variant="outlined" className="TextBox"  type="text" {...register('username', {
+                <TextField label="Username" variant="filled" className="TextBox"  type="text" {...register('username', {
                     required: {value: true, message: "Missing username"},
                     minLength: {value: 2, message: "Username must be more than 2 characters" },
                     maxLength: {value: 100, message: "Username must not exceed 100 characters" }
                 })}/>
                 <Typography component="span" className="ErrorMsg">{formState.errors?.username?.message}</Typography>
 
-                <TextField label="Password" variant="outlined" className="TextBox"  type="text" {...register('password', {
+                <TextField label="Password" variant="filled" className="TextBox"  type="text" {...register('password', {
                     required: {value: true, message: "Missing password"},
                     minLength: {value: 2, message: "Password must be more than 2 characters" },
                     maxLength: {value: 100, message: "Password must not exceed 100 characters" }
@@ -67,7 +66,7 @@ async function submit(user: UserModel):Promise<void> {
 
                 <Button type="submit" endIcon={<SendIcon/>} fullWidth color="primary" variant="contained" >Register</Button>
 
-                <p>Have an account already? <NavLink to="/login">Log in</NavLink></p>
+                <Typography className='LoginText'>Have an account already? <NavLink to="/login">Log in</NavLink></Typography>
             </form>
 			
         </div>

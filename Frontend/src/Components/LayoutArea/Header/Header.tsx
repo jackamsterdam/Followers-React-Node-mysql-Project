@@ -9,7 +9,7 @@ function Header(): JSX.Element {
     return (
         <div className="Header">
 			<Logo/>
-            <Typography variant="h3">Vacations by Jack</Typography>
+            <Typography className='VacationHeader'>Vacations by Jack</Typography>
             <AuthMenu/>
         </div>
     );

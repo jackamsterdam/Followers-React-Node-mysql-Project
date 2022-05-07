@@ -4,7 +4,7 @@ import store from "../../../Redux/Store";
 import notify from "../../../Services/NotifyService";
 import userVacationsService from "../../../Services/UserVacationsService";
 import config from "../../../Utils/Config";
-import formatDate from "../../../Utils/formatDate";
+import dateFormatter from "../../../Utils/formatDate";
 import "./FollowingCard.css";
 
 
@@ -19,14 +19,14 @@ import CardHeader from '@mui/material/CardHeader';
 import IconButton from '@mui/material/IconButton';
 // import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 // import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import StarIcon from '@mui/icons-material/Star';import Avatar from '@mui/material/Avatar';
+import StarIcon from '@mui/icons-material/Star';
+import Avatar from '@mui/material/Avatar';
 import { red } from '@mui/material/colors';
 import authService from "../../../Services/AuthService";
 import { useNavigate } from "react-router-dom";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 import Box from '@mui/material/Box';
-import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 
 
@@ -91,7 +91,7 @@ function FollowingCard(props: FollowingCardProps): JSX.Element {
              {props.userVacationData.review} reviews
               </Typography>
             <IconButton className='CardStars'>
-                {[...Array(props.userVacationData.star)].map((e, i) =>   <StarIcon key={props.userVacationData.vacationId + i} className="stars"/>)}
+                {[...Array(props.userVacationData.star)].map((e, i) =>   <StarIcon key={props.userVacationData.vacationId + i} className="Stars"/>)}
               </IconButton>
               <Typography component="div" variant="h5" className='CardDestination'>
                  {props.userVacationData.destination}
@@ -103,7 +103,7 @@ function FollowingCard(props: FollowingCardProps): JSX.Element {
                 {props.userVacationData.description}
               </Typography>
               <Typography className='FromDate' variant="body2" color="text.secondary">
-                {formatDate(props.userVacationData.fromDate)} - {formatDate(props.userVacationData.toDate)}
+                {dateFormatter.formatDate(props.userVacationData.fromDate)} - {dateFormatter.formatDateWithYear(props.userVacationData.toDate)}
               </Typography>
               {/* put the color in css after  */}
       
@@ -115,7 +115,7 @@ function FollowingCard(props: FollowingCardProps): JSX.Element {
             </IconButton>
             </CardContent>
           </Box>
-          <div className='imageVacation'>
+          <div className='ImageVacation'>
                <CardMedia
                 component="img"
                 height="140"

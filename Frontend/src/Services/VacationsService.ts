@@ -8,7 +8,7 @@ import config from "../Utils/Config"
 class VacationsService {
   
     async getAllVacations():Promise<VacationModel[]>{
-       if (store.getState().vacationsState.vacations.length === 0) {
+       if (store.getState().vacationsState.vacations.length < 1) {
            const response = await axios.get<VacationModel[]>(config.vacationsAdminUrl)
            const vacations = response.data
            store.dispatch(fetchVacationsAction(vacations))

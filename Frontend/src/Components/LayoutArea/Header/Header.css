@@ -3,5 +3,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    float: left;
+    position: relative;
+    left: 104px;
+}
+
+.VacationHeader {
+    font-family: 'Sacramento', cursive!important;
+    font-size: 39px!important;
+    color: #bbc3cdd1;
 }

@@ -1,3 +1,9 @@
+.Register {
+  text-align: center;
+	display: inline-block;
+	margin-top: 10px;
+}
+
 .Register > form {
   width: 450px;
   padding: 20px;
@@ -12,8 +18,11 @@
 
 .Register .ErrorMsg {
   color: red;
-  position: absolute;
-  margin: 0 60px;
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+  bottom: 21px;
+  float: left;
 }
 
 .Register button {
@@ -24,4 +33,13 @@
 .Register button:hover {
   transform: scale(0.98);
   cursor: pointer;
+}
+
+.LoginText {
+  background: #B2C3CB;
+  display: inline;
+}
+
+.Register a {
+	color: blue;;
 }

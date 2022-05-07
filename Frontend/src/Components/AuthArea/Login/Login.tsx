@@ -9,6 +9,7 @@ import {useEffect} from "react";
 // import { Button, TextField, Typography } from "@material-ui/core";
 import {Typography, TextField, Button} from '@mui/material/'
 
+
 // import { Send } from "@material-ui/icons";
 import SendIcon from '@mui/icons-material/Send';
 
@@ -55,14 +56,12 @@ async function submit(credentials: CredentialsModel): Promise<void> {
     }
 
     return (
-        <div className="Login Box">
-  
+      
+
+<div className="Login">
             {/* <input type="text" ref={textBoxRef}/> */}
             <form onSubmit={handleSubmit(submit)} noValidate>
-                <Typography variant="h4">Login</Typography>
-<br />
-
-                <TextField className="TextBox" variant="outlined" label="Username" type="text" {...register('username', {
+                <TextField className="TextBox" variant="filled" label="Username" type="text" {...register('username', {
                     required: {value: true, message: "Missing username"},
                     minLength: {value: 2, message: "Username must be more than 2 characters"},
                     maxLength: {value: 100, message: "Username must not exceed 100 characters"}
@@ -70,7 +69,7 @@ async function submit(credentials: CredentialsModel): Promise<void> {
                 })} />
                 <Typography component="span" className="ErrorMsg">{formState.errors?.username?.message}</Typography>
 
-                <TextField label="Password" variant="outlined" className="TextBox" type="text" {...register('password', {
+                <TextField label="Password" variant="filled" className="TextBox" type="text" {...register('password', {
                     required: {value: true, message: 'Missing password'},
                     minLength: {value: 2, message: "Password must be more than 2 characters"},
                     maxLength: {value: 100, message: "Password must not exceed 100 characters"}
@@ -80,8 +79,8 @@ async function submit(credentials: CredentialsModel): Promise<void> {
 
                 <Button endIcon={<SendIcon/>} type="submit" variant="contained" fullWidth color="primary">Login</Button>
 
-                <p>New user? <NavLink to='/register'>Register</NavLink></p>
-                {/* <button onClick={() => navigate('/register')}>Register</button> */}
+                <p className='RegisterText'>New user? <NavLink to='/register'>Register</NavLink></p>
+          {/* <button onClick={() => navigate('/register')}>Register</button> */}
             </form>
         </div>
     );

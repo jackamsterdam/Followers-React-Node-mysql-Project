@@ -49,6 +49,7 @@ function UpdateVacation(): JSX.Element {
                 setValue('price', vacation.price)
 
                 setMinFromDate(vacation.fromDate.split('T')[0])
+                setMinToDate(vacation.toDate.split('T')[0])
             } catch (err: any) {
                 if (err.response.status === 401) {
                     authService.logout()
@@ -73,6 +74,7 @@ function UpdateVacation(): JSX.Element {
         const dayAfterTommorow = new Date(selectedDate.getTime() + 86400000).toISOString().split('T')[0]
         console.log("dayAfterTommorow", dayAfterTommorow);
         setMinToDate(dayAfterTommorow)
+        
         // }
         // catch(err: any) {
         //     console.log(err)
@@ -104,12 +106,12 @@ function UpdateVacation(): JSX.Element {
 
 
     return (
-        <div className="UpdateVacation Box">
+        <div className="UpdateVacation">
 			<form onSubmit={handleSubmit(submit)} noValidate>
                 <Typography variant="h4">Edit Vacation</Typography>
                 <br />
 
-                <TextField InputLabelProps={{shrink: true}} label="Destination" variant="outlined" type="text" className="TextBox" {...register('destination', {
+                <TextField InputLabelProps={{shrink: true}} label="Destination" variant="filled" type="text" className="TextBox" {...register('destination', {
                     required: {value: true, message: "Missing destination"},
                     minLength: {value: 2, message: "Destination length is too short"},
                     maxLength: {value: 100, message: "Destination length is too long"}
@@ -117,7 +119,7 @@ function UpdateVacation(): JSX.Element {
                 })} />
                 <Typography component="span" className="ErrorMsg">{formState.errors?.destination?.message}</Typography>
 
-                <TextField InputLabelProps={{shrink: true}}  label="Description" variant="outlined" type="text" className="TextBox" {...register('description', {
+                <TextField InputLabelProps={{shrink: true}}  label="Description" variant="filled" type="text" className="TextBox" {...register('description', {
                     required: {value: true, message: "Missing description"},
                     minLength: {value: 2, message: "Description length is too short"},
                     maxLength: {value: 1000, message: "Description length is too long"}
@@ -125,19 +127,19 @@ function UpdateVacation(): JSX.Element {
                 })} />
                 <Typography component="span" className="ErrorMsg">{formState.errors?.description?.message}</Typography>
 
-                <TextField InputLabelProps={{shrink: true}} variant="outlined" label="From" type="date" className="TextBox" inputProps={{min: minFromDate}} {...register('fromDate', {
+                <TextField InputLabelProps={{shrink: true}} variant="filled" label="From" type="date" className="TextBox" inputProps={{min: minFromDate}} {...register('fromDate', {
                     onChange: changeMinFromDate,
                     required: {value: true, message: "Missing date"}
                 })} />
                 <Typography component="span" className="ErrorMsg">{formState.errors?.fromDate?.message}</Typography>
 
-                <TextField InputLabelProps={{shrink: true}} variant="outlined" label="To" type="date" inputProps={{min: minToDate, format: 'YYYY/MM/DD'}} className="TextBox" {...register('toDate', {
+                <TextField InputLabelProps={{shrink: true}} variant="filled" label="To" type="date" inputProps={{min: minToDate, format: 'YYYY/MM/DD'}} className="TextBox" {...register('toDate', {
                     required: {value: true, message: "Missing date"},
                     min: {value: minToDate, message: "Date can't be before previous date"}
                 })} />
                 <Typography component="span" className="ErrorMsg">{formState.errors?.toDate?.message}</Typography>
 
-                <TextField InputLabelProps={{shrink: true}}  inputProps={{step: 0.01}} variant="outlined" label="Price" type="number" className="TextBox" {...register('price', {
+                <TextField InputLabelProps={{shrink: true}}  inputProps={{step: 0.01}} variant="filled" label="Price" type="number" className="TextBox" {...register('price', {
                     required: {value: true, message: "Missing price"},
                     min: {value: 0, message: "Price can't be negative"},
                     max: {value: 100000, message: "Price can't exceed 100,000"}
@@ -145,7 +147,7 @@ function UpdateVacation(): JSX.Element {
                 })} />
                 <Typography component="span" className="ErrorMsg">{formState.errors?.price?.message}</Typography>
 
-                <TextField InputLabelProps={{shrink: true}}   label="Star" type="number" variant="outlined"  className="TextBox" inputProps={{ max:5, min: 1 }}   {...register('star', {
+                <TextField InputLabelProps={{shrink: true}}   label="Star" type="number" variant="filled"  className="TextBox" inputProps={{ max:5, min: 1 }}   {...register('star', {
                     required: {value: true, message: "Missing stars"},
                     min: {value: 0, message: "Star count can't be negative"},
                     max: {value: 5, message: "Stars can't exceed 5"}
@@ -153,7 +155,7 @@ function UpdateVacation(): JSX.Element {
                 })} />
                 <Typography component="span" className="ErrorMsg">{formState.errors?.star?.message}</Typography>
                 
-                <label>Image:</label>
+                <label className='ImageUploader'>Image:</label>
                 {/* Image not required if customer doesnt find the old photo will give him the previous one */}
                 <input type="file" accept="image/*" className="TextBox" {...register('image')} />
                 {/* <input type="file" accept="image/*" className="TextBox" {...register('image', {

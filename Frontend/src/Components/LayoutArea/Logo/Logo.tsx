@@ -1,5 +1,5 @@
 import "./Logo.css";
-import logoSource from '../../../Assets/Images/logo-vacation.jpg'
+import logoSource from '../../../Assets/Images/logo-vacation.png'
 
 function Logo(): JSX.Element {
     return (

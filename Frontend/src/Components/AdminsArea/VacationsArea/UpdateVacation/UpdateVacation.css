@@ -1,17 +1,21 @@
+.UpdateVacation {
+  text-align: center;
+	display: inline-block;
+}
 
 .UpdateVacation > form {
     width: 450px;
     padding: 20px;
-    margin: 20px;
+    background: rgb(196, 213, 219, 66%);
   }
   
   .UpdateVacation .ErrorMsg {
     color: red;
-    /* position: absolute; */
-    /* margin: 0 60px; */
     position: relative;
-    float: right;
-    bottom: 101px;
+    font-size: 16px;
+    font-weight: bold;
+    bottom: 21px;
+    float: left;
   }
   
   .UpdateVacation .TextBox {
@@ -28,6 +32,11 @@
   .UpdateVacation button:hover {
     cursor: pointer;
     transform: scale(0.98)
+  }
+
+  .UpdateVacation .ImageUploader {
+    position: relative;
+    right: 196px;
   }
 
   /* old:  */

@@ -1,3 +1,8 @@
+.VacationList {
+    background: rgb(196, 213, 219, 76%);
+    text-align: left;
+}
+
 .VacationList .Container {
 	display: flex;
     flex-wrap: wrap;
