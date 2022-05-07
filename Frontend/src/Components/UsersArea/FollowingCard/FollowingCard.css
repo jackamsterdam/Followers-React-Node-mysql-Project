@@ -66,12 +66,12 @@
   width: 100%;
 }
 
-.FollowingCard .reviews {
+/* .FollowingCard .Reviews {
   top: 10px;
   position: absolute;
   color: #bdc2cf;
   font-size: 14px;
-}
+} */
 
 .FollowingCard .FromDate{
   font-size: 14px;

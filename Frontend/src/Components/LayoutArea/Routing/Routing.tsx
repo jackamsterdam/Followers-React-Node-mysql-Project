@@ -3,7 +3,7 @@ import AdminLayout from '../../AdminsArea/AdminLayoutArea/AdminLayout/AdminLayou
 import Login from '../../AuthArea/Login/Login';
 import Logout from '../../AuthArea/Logout/Logout';
 import Register from '../../AuthArea/Register/Register';
-import TestCard from '../../Test/TestCard/TestCard';
+// import TestCard from '../../Test/TestCard/TestCard';
 import UserLayout from '../../UsersArea/UserLayout/UserLayout';
 import PageNotFound from '../PageNotFound/PageNotFound';
 
@@ -15,7 +15,7 @@ function Routing(): JSX.Element {
           <Route path="/logout" element={<Logout/>}/>
 
           //!Delete test componenet!!
-          <Route path='/test' element = {<TestCard/>}/>
+          {/* <Route path='/test' element = {<TestCard/>}/> */}
 
 
 

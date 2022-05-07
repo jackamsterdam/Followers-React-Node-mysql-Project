@@ -19,3 +19,10 @@
     background-color: black;
     box-sizing: border-box;
 } */
+
+
+.UserLayout .SearchVacation {
+    background-color: transparent;
+    border: 1px solid grey;
+    margin-left: 28px;
+}

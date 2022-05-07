@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { SyntheticEvent, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import VacationModel from "../../../../Models/VacationModel";
+// import VacationModel from "../../../../Models/VacationModel";
 import store from "../../../../Redux/Store";
 import authService from "../../../../Services/AuthService";
 import notify from "../../../../Services/NotifyService";
@@ -9,8 +9,17 @@ import Loading from "../../../SharedArea/Loading/Loading";
 import VacationCard from "../VacationCard/VacationCard";
 import "./VacationList.css";
 
-function VacationList(): JSX.Element {
+import Paper from '@mui/material/Paper';
+import InputBase from '@mui/material/InputBase';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import SearchIcon from '@mui/icons-material/Search';
+import DirectionsIcon from '@mui/icons-material/Directions';
+import VacationModel from "../../../../Models/VacationModel";
 
+function VacationList(): JSX.Element {
+// debugger
     const [vacations, setVacations] = useState<VacationModel[]>([])
     const navigate = useNavigate()
 
@@ -68,6 +77,47 @@ function VacationList(): JSX.Element {
 
     return (
         <div className="VacationList">
+
+
+<Paper
+     className='SearchVacation'
+    //   component="form"
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
+    >
+   
+      <InputBase
+  
+        onKeyUp={(e:SyntheticEvent) => {
+            
+       
+            console.log((e.target as HTMLInputElement).value)
+            const value = (e.target as HTMLInputElement).value
+            // if (value === "Enter") {
+            //     e.stopPropagation();
+            //    }
+       if (value === '')  {
+           setVacations(store.getState().vacationsState.vacations)
+       } else {
+             const filteredResult = store.getState().vacationsState.vacations.filter(v => v.destination.toLowerCase().includes(value.toLowerCase()))
+           console.log("filteredResult", filteredResult);
+           setVacations(filteredResult)
+       }
+         
+        // }
+
+        }}
+        sx={{ ml: 1, flex: 1 }}
+        placeholder="Search Vacation"
+        inputProps={{ 'aria-label': 'Search Vacation' }}
+      />
+      <IconButton type="submit" sx={{ p: '10px' }} aria-label="search">
+        <SearchIcon />
+      </IconButton>
+    
+    
+    </Paper>
+
+
             {vacations.length === 0 && <Loading />}
 
             <div className="Container">
@@ -82,3 +132,8 @@ function VacationList(): JSX.Element {
 export default VacationList;
 
 
+
+
+  
+
+  

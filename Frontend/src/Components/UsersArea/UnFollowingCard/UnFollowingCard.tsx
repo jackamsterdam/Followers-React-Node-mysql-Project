@@ -154,7 +154,7 @@ function UnFollowingCard(props: UnFollowingCardProps): JSX.Element {
             </IconButton>
             </CardContent>
           </Box>
-          <div className='imageVacation'>
+          <div className='ImageVacation'>
                <CardMedia
                 component="img"
                 height="140"

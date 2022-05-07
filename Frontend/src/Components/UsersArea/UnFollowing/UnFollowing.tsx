@@ -75,7 +75,7 @@ const navigate = useNavigate()
 
     return (
         <div className="UnFollowing" style={{display: userVacations.length === 0 ? 'none':'block'}}>
-             <Typography className="headline" component="div" variant="h5">
+             <Typography className="Headline" component="div" variant="h5">
             All Vacations
               </Typography>
             {/* {userVacations.length !== 0 && <Loading />} */}

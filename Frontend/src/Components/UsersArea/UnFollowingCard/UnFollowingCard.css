@@ -56,11 +56,11 @@
  transform: scale(0.95);
 }
 
-.UnFollowingCard .imageVacation{
+.UnFollowingCard .ImageVacation{
   width: 200px;
 }
  
-.UnFollowingCard .imageVacation > img{
+.UnFollowingCard .ImageVacation > img{
  height: 100%;
  width: 100%;
 }

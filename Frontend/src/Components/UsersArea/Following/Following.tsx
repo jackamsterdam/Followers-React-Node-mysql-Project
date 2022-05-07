@@ -40,7 +40,7 @@ function Following(props: FollowingProps): JSX.Element {
                 // const userVacationsData = await userVacationsService.getAllUserVacationsData(userId)
                 // console.log("userVacationsData", userVacationsData);
 
-
+debugger
                 const userIsFollowing = props.vacations.filter(f => f.isFollowing)
                 // console.log("userIsFollowing", userIsFollowing);
 
@@ -77,7 +77,7 @@ function Following(props: FollowingProps): JSX.Element {
 
     return (
         <div className="Following" style={{display: userVacations.length === 0 ? 'none':'block'}}>
-                   <Typography className="headline" component="div" variant="h5">
+                   <Typography className="Headline" component="div" variant="h5">
             My Followed Vacations
               </Typography>
             {/* {userVacations.length === 0 && <Loading />} */}
