@@ -1,11 +1,11 @@
 .FollowingCard .Overflow {
-   display: -webkit-box;
-   -webkit-line-clamp: 2;
-   -webkit-box-orient: vertical;
-   overflow: hidden;
-   text-overflow: ellipsis;
-   font-size: 15px;
-   direction: initial;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+  direction: initial;
 }
 
 .FollowingCard .HorizontalCard {
@@ -37,6 +37,7 @@
   font-size: 20px;
   color: orange;
 }
+
 .FollowingCard .CardContent {
   text-align: left;
   padding-top: 5px;
@@ -56,24 +57,16 @@
   transform: scale(0.95);
 }
 
-.FollowingCard .ImageVacation{
-  /* height: 10%; */
+.FollowingCard .ImageVacation {
   width: 200px;
 }
-  
-.FollowingCard .ImageVacation > img{
+
+.FollowingCard .ImageVacation>img {
   height: 100%;
   width: 100%;
 }
 
-/* .FollowingCard .Reviews {
-  top: 10px;
-  position: absolute;
-  color: #bdc2cf;
-  font-size: 14px;
-} */
-
-.FollowingCard .FromDate{
+.FollowingCard .FromDate {
   font-size: 14px;
   bottom: 0px;
   position: absolute;
@@ -82,13 +75,13 @@
 }
 
 .FollowingCard .FollowersCount {
-
   position: absolute;
   bottom: 0px;
   right: 40px;
   font-size: 13px;
   color: #717070;
 }
+
 .FollowingCard .FollowersCount:hover {
   cursor: pointer;
 }

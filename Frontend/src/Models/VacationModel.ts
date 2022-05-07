@@ -1,4 +1,3 @@
-
 class VacationModel {
   vacationId: number 
   destination: string 

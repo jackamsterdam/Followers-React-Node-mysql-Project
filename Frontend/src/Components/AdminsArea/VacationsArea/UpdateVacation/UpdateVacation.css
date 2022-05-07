@@ -1,70 +1,39 @@
 .UpdateVacation {
   text-align: center;
-	display: inline-block;
+  display: inline-block;
 }
 
 .UpdateVacation > form {
-    width: 450px;
-    padding: 20px;
-    background: rgb(196, 213, 219, 66%);
-  }
-  
-  .UpdateVacation .ErrorMsg {
-    color: red;
-    position: relative;
-    font-size: 16px;
-    font-weight: bold;
-    bottom: 21px;
-    float: left;
-  }
-  
-  .UpdateVacation .TextBox {
-    width: 100%;
-    margin: 0 0 20px 0;
-    box-sizing: border-box;
-  }
-  
-  .UpdateVacation button {
-    /* width: 100%; */
-    margin: 10px 0;
-  }
-  
-  .UpdateVacation button:hover {
-    cursor: pointer;
-    transform: scale(0.98)
-  }
+  width: 450px;
+  padding: 20px;
+  background: rgb(196, 213, 219, 66%);
+}
 
-  .UpdateVacation .ImageUploader {
-    position: relative;
-    right: 196px;
-  }
+.UpdateVacation .ErrorMsg {
+  color: red;
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+  bottom: 21px;
+  float: left;
+}
 
-  /* old:  */
-/* .UpdateVacation > form {
-    width: 450px;
-    padding: 20px;
-    margin: 20px;
-  }
-  
-  .UpdateVacation span {
-    color: red;
-    position: absolute;
-    margin: 0 60px;
-  }
-  
-  .UpdateVacation input {
-    width: 100%;
-    margin: 0 0 20px 0;
-    box-sizing: border-box;
-  }
-  
-  .UpdateVacation button {
-    width: 100%;
-    margin: 10px 0;
-  }
-  
-  .UpdateVacation button:hover {
-    cursor: pointer;
-    transform: scale(0.98)
-  }
-   */
+.UpdateVacation .TextBox {
+  width: 100%;
+  margin: 0 0 20px 0;
+  box-sizing: border-box;
+}
+
+.UpdateVacation button {
+  margin: 10px 0;
+}
+
+.UpdateVacation button:hover {
+  cursor: pointer;
+  transform: scale(0.98)
+}
+
+.UpdateVacation .ImageUploader {
+  position: relative;
+  right: 196px;
+}

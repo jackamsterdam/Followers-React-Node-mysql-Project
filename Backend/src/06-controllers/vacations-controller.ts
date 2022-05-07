@@ -1,119 +1,106 @@
 import express, { NextFunction, Request, Response } from 'express'
 import VacationModel from '../03-models/vacation-model'
 import vacationsLogic from '../05-logic/vacations-logic'
-import path from 'path'
 import verifyAdmin from '../02-middleware/verify-admin'
 import socketLogic from '../05-logic/socket-logic'
 
 const router = express.Router()
 
 // http://localhost:3001/api/admin/vacations/
-router.get('/vacations',verifyAdmin, async (request: Request, response: Response, next: NextFunction) => {
+router.get('/vacations', verifyAdmin, async (request: Request, response: Response, next: NextFunction) => {
+
   try {
-      const vacations = await vacationsLogic.getAllVacations()
-      response.json(vacations)
-    
+
+    const vacations = await vacationsLogic.getAllVacations()
+    response.json(vacations)
+
   } catch (err: any) {
-      next(err)
+    next(err)
   }
 })
 
 // http://localhost:3001/api/admin/vacations/1
 router.get('/vacations/:vacationId', verifyAdmin, async (request: Request, response: Response, next: NextFunction) => {
+
   try {
-      const vacationId = +request.params.vacationId
-      // console.log("vacationId", vacationId);
-      const vacation = await vacationsLogic.getOneVacation(vacationId)
-      response.json(vacation)
+
+    const vacationId = +request.params.vacationId
+    const vacation = await vacationsLogic.getOneVacation(vacationId)
+    response.json(vacation)
 
   } catch (err: any) {
-      next(err)
+    next(err)
   }
 })
 
 // http://localhost:3001/api/admin/vacations/
-router.post('/vacations',verifyAdmin, async (request: Request, response: Response, next: NextFunction) => {
+router.post('/vacations', verifyAdmin, async (request: Request, response: Response, next: NextFunction) => {
+
   try {
 
-      request.body.image = request.files?.image
+    request.body.image = request.files?.image
+    const vacation = new VacationModel(request.body)
+    const addedVacation = await vacationsLogic.addVacation(vacation)
+    
+    socketLogic.updateAll()
 
-      const vacation = new VacationModel(request.body)
-      const addedVacation = await vacationsLogic.addVacation(vacation)
-      socketLogic.updateAll()
+    response.status(201).json(addedVacation)
 
-      // const updatedVacations = await vacationsLogic.getAllVacations()
-      // socketLogic.amitAll(updatedVacations)
-
-      
-      response.status(201).json(addedVacation)
-// console.log('added')
   } catch (err: any) {
-      next(err)
+    next(err)
   }
 })
 
 // http://localhost:3001/api/admin/vacations/4
-router.put('/vacations/:vacationId',verifyAdmin, async (request: Request, response: Response, next: NextFunction) => {
+router.put('/vacations/:vacationId', verifyAdmin, async (request: Request, response: Response, next: NextFunction) => {
+
   try {
 
     request.body.image = request.files?.image
-
     const vacationId = +request.params.vacationId
-    request.body.vacationId = vacationId 
+    request.body.vacationId = vacationId
     const vacation = new VacationModel(request.body)
     const updatedVacation = await vacationsLogic.updateVacation(vacation)
-    response.json(updatedVacation)
+
     socketLogic.updateAll()
 
-
+    response.json(updatedVacation)
+    
   } catch (err: any) {
-      next(err)
+    next(err)
   }
 })
 
 // http://localhost:3001/api/admin/vacations/5
-router.delete('/vacations/:vacationId',verifyAdmin, async (request: Request, response: Response, next: NextFunction) => {
-  try {
-     const vacationId = +request.params.vacationId
-     await vacationsLogic.deleteVacation(vacationId)
-     response.sendStatus(204)
-     socketLogic.updateAll()
+router.delete('/vacations/:vacationId', verifyAdmin, async (request: Request, response: Response, next: NextFunction) => {
 
+  try {
+
+    const vacationId = +request.params.vacationId
+    await vacationsLogic.deleteVacation(vacationId)
+
+    socketLogic.updateAll()
+
+    response.sendStatus(204)
 
   } catch (err: any) {
-      next(err)
+    next(err)
   }
 })
 
 
 // For Chart 
 // http://localhost:3001/api/admin/followers-count/
-router.get('/followers-count',verifyAdmin, async (request: Request, response: Response, next: NextFunction) => {
+router.get('/followers-count', verifyAdmin, async (request: Request, response: Response, next: NextFunction) => {
+
   try {
-      const followerCount = await vacationsLogic.getAllFollowersForChart()
-      response.json(followerCount)
-    
+
+    const followerCount = await vacationsLogic.getAllFollowersForChart()
+    response.json(followerCount)
+
   } catch (err: any) {
-      next(err)
+    next(err)
   }
 })
-
-
-// this was moved somewhere else: 
-// //!put back verifyAdmin !!!!!!! and see if pictures come in front end 
-// // http://localhost:3001/api/vacations/images/djkfjie3j9dsfsk/
-// router.get('/vacations/images/:imageName', async (request: Request, response: Response, next: NextFunction) => {
-//   try {
-//     const imageName = request.params.imageName
-//         const absolutePath = path.join(__dirname, '..', 'upload','images', imageName)
-//         response.sendFile(absolutePath)
-
-
-//   } catch (err: any) {
-//     next(err)
-//   }
-// })
-
-
 
 export default router 

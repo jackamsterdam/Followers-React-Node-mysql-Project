@@ -1,13 +1,14 @@
 .AddVacation {
-	text-align: center;
-	display: inline-block;
+  text-align: center;
+  display: inline-block;
 }
+
 .AddVacation > form {
   width: 450px;
   padding: 20px;
   background: rgb(196, 213, 219, 66%);
 }
-/* //!So weird!!!.AddVacation  span makes the line cut it  */
+
 .AddVacation .ErrorMsg {
   color: red;
   position: relative;
@@ -24,7 +25,6 @@
 }
 
 .AddVacation button {
-  /* width: 100%; */
   margin: 10px 0;
 }
 

@@ -1,17 +1,11 @@
 .UnFollowing {
-    /* min-height: 70%; */
-    /* border: 1px solid black; */
     margin: 16px;
 }
 
 .UnFollowing .Container {
     display: flex;
     flex-wrap: wrap;
-   /* justify-content: center; */
-    /* align-items: center; */
     margin: 20px;
-    /* padding: 20px; */
-	
 }
 
 .UnFollowing .Headline {

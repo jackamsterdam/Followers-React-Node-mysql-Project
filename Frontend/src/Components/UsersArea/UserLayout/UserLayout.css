@@ -1,25 +1,12 @@
 .UserLayout {
-	height: 100%;
-    /* display: grid; */
-    box-sizing: border-box; 
-    /* grid-template-columns:1fr; */
-    /* grid-template-rows: 50% 50%; */
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .UserLayout {
     background: rgb(196, 213, 219, 80%);
     height: fit-content;
 }
-
-
-/* .UserLayout .divider {
-	height: 2px;
-    width: 100%;
-    border: 1px solid black;
-    background-color: black;
-    box-sizing: border-box;
-} */
-
 
 .UserLayout .SearchVacation {
     background-color: transparent;

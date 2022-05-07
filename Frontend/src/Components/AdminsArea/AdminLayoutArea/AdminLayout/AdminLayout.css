@@ -1,8 +1,8 @@
 .AdminLayout {
-	height: 100%;
+    height: 100%;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns:1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 10% 90%;
 }
 
@@ -10,8 +10,6 @@
     grid-column: span 6;
 }
 
-.AdminLayout main {  
+.AdminLayout main {
     overflow: auto;
 }
-
-

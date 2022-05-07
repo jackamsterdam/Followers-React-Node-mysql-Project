@@ -4,7 +4,7 @@ import logoSource from '../../../Assets/Images/logo-vacation.png'
 function Logo(): JSX.Element {
     return (
         <div className="Logo">
-			<img src={logoSource} />
+            <img src={logoSource} />
         </div>
     );
 }

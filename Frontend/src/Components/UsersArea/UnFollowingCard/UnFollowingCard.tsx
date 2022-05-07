@@ -6,203 +6,107 @@ import userVacationsService from "../../../Services/UserVacationsService";
 import config from "../../../Utils/Config";
 import dateFormatter from "../../../Utils/formatDate";
 import "./UnFollowingCard.css";
-
-
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import CardHeader from '@mui/material/CardHeader';
-// import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import IconButton from '@mui/material/IconButton';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import Avatar from '@mui/material/Avatar';
-import { red } from '@mui/material/colors';
 import { useNavigate } from "react-router-dom";
 import authService from "../../../Services/AuthService";
-import { addFollowAction } from "../../../Redux/UserVacationsState";
-
 import Box from '@mui/material/Box';
-import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 import StarIcon from '@mui/icons-material/Star';
 
 
 interface UnFollowingCardProps {
-    userVacationData: UserVacationModel
-    // userId: string
+  userVacationData: UserVacationModel
 }
-let timeout:any;
+
+let timeout: any;
+
 function UnFollowingCard(props: UnFollowingCardProps): JSX.Element {
   const navigate = useNavigate()
-    // useEffect(() => {
 
-    // },[])
+  async function followVacation(vacationId: number, destination: string): Promise<void> {
 
-    async function followVacation(vacationId: number, destination: string): Promise<void> {
-        // async function followVacation( vacationId: number):Promise<void> {
+    try {
 
-        try {
-           //Debounce - User can't click multiple times
-          clearTimeout(timeout)
-          timeout = setTimeout(() => addFollow(vacationId, destination), 500)
-          
+      //Debounce - User can't click multiple times
+      clearTimeout(timeout)
+      timeout = setTimeout(() => addFollow(vacationId, destination), 500)
 
-
-        } catch (err: any) {
-          if (err.response.status === 401) {
-            authService.logout()
-            navigate('/login')
-        } else {
-            notify.error(err)
-        }
-        }
-
+    } catch (err: any) {
+      if (err.response.status === 401) {
+        authService.logout()
+        navigate('/login')
+      } else {
+        notify.error(err)
+      }
     }
 
-    async function addFollow(vacationId: number, destination:string ) {
-      const userId = store.getState().authState.user.userId
+  }
 
+  async function addFollow(vacationId: number, destination: string) {
 
-      // console.log("userId of unfollow", userId);
-      // console.log("vacationId of unfollow", vacationId);
+    const userId = store.getState().authState.user.userId
 
+    const follow = new FollowModel(userId, vacationId)
 
-      const follow = new FollowModel(userId, vacationId)
-      // console.log("follow we are in UNfollowing card AND WE ARE FOLLOING what do i look like??", follow);
+    await userVacationsService.addFollow(follow)
 
-      await userVacationsService.addFollow(follow)
+    notify.success(`You are now following destination ${destination}!`)
 
-      notify.success(`You are now following destination ${destination}!`)
-
-    }
+  }
 
 
 
 
-    return (
-        <div className="UnFollowingCard">
-        {/* <Card className="Card" sx={{ maxWidth: 345, margin: '5px', width: 280}}> */}
-        {/* <Card className="Card">
-             <CardHeader
-       
-        action={
-            <IconButton className="FollowButton" aria-label="addToFavorites"  onClick={() => followVacation(props.userVacationData.vacationId, props.userVacationData.destination)}>
-              <FavoriteIcon  />
-            </IconButton>
-         
-        }
-        title={props.userVacationData.destination}
-        subheader={'$' + props.userVacationData.price}
-      />
-       <CardContent>
-        <Typography  title={props.userVacationData.description} className="Overflow" variant="body2" color="text.secondary">
-           {props.userVacationData.description}
-        </Typography>
-      </CardContent>
-      <CardMedia
-        component="img"
-        height="140"
-        image={config.vacationsImageUrl + props.userVacationData.imageName}
-        alt="vacation pic"
-      />
-      <CardContent>
-       
-        <Typography variant="body2" color="text.secondary">
-        {formatDate(props.userVacationData.fromDate)} - {formatDate(props.userVacationData.toDate)} 
-        </Typography>
-        
-          <Avatar className="FollowersCount" sx={{ bgcolor: red[500] }} aria-label="followerCount">
-            {props.userVacationData.followersCount}
-          </Avatar>
-      
-      </CardContent>
+  return (
+    <div className="UnFollowingCard">
     
-    </Card> */}
-
-    <Card className='HorizontalCard' sx={{ display: 'flex'}}>
-          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-            <CardContent sx={{ flex: '1 0 auto'}} className='CardContent'>
-            {/* <Typography className="Reviews" variant="body2" color="text.secondary">
-             {props.userVacationData.review} reviews
-              </Typography> */}
+      <Card className='HorizontalCard' sx={{ display: 'flex' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+          <CardContent sx={{ flex: '1 0 auto' }} className='CardContent'>
             <IconButton className='CardStars'>
-                {[...Array(props.userVacationData.star)].map((e, i) =>   <StarIcon key={props.userVacationData.vacationId + i} className="Stars"/>)}
-              </IconButton>
-              <Typography component="div" variant="h5" className='CardDestination'>
-                 {props.userVacationData.destination}
-              </Typography>
-              <Typography component="div" variant="h5" className='CardPrice'>
+              {[...Array(props.userVacationData.star)].map((e, i) => <StarIcon key={props.userVacationData.vacationId + i} className="Stars" />)}
+            </IconButton>
+            <Typography component="div" variant="h5" className='CardDestination'>
+              {props.userVacationData.destination}
+            </Typography>
+            <Typography component="div" variant="h5" className='CardPrice'>
               {'$' + props.userVacationData.price}
-              </Typography>
-              <Typography variant="subtitle1" color="text.secondary" component="div" className="Overflow" title={props.userVacationData.description}>
-                {props.userVacationData.description}
-              </Typography>
-              <Typography className='FromDate' variant="body2" color="text.secondary">
-                {dateFormatter.formatDate(props.userVacationData.fromDate)} - {dateFormatter.formatDateWithYear(props.userVacationData.toDate)}
-              </Typography>
-              {/* put the color in css after  */}
-      
-              <Typography className="FollowersCount" title='followers' aria-label="followerCount">
-                {props.userVacationData.followersCount}
-              </Typography>
-              <IconButton className="Likes" title='Number of followers'>
+            </Typography>
+            <Typography variant="subtitle1" color="text.secondary" component="div" className="Overflow" title={props.userVacationData.description}>
+              {props.userVacationData.description}
+            </Typography>
+            <Typography className='FromDate' variant="body2" color="text.secondary">
+              {dateFormatter.formatDate(props.userVacationData.fromDate)} - {dateFormatter.formatDateWithYear(props.userVacationData.toDate)}
+            </Typography>
+            <Typography className="FollowersCount" title='followers' aria-label="followerCount">
+              {props.userVacationData.followersCount}
+            </Typography>
+            <IconButton className="Likes" title='Number of followers'>
               <ThumbUpAltIcon />
             </IconButton>
-            </CardContent>
-          </Box>
-          <div className='ImageVacation'>
-               <CardMedia
-                component="img"
-                height="140"
-                image={config.vacationsImageUrl + props.userVacationData.imageName}
-                alt="vacation picture"
-                
-              />
-              <IconButton className="FollowButton" aria-label="addToFavorites" onClick={() => followVacation(props.userVacationData.vacationId, props.userVacationData.destination)}>
-              <FavoriteBorderIcon />
-            </IconButton>
-          </div>
-       
-        </Card>
+          </CardContent>
+        </Box>
+        <div className='ImageVacation'>
+          <CardMedia
+            component="img"
+            height="140"
+            image={config.vacationsImageUrl + props.userVacationData.imageName}
+            alt="vacation picture"
+          />
+          <IconButton className="FollowButton" aria-label="addToFavorites" onClick={() => followVacation(props.userVacationData.vacationId, props.userVacationData.destination)}>
+            <FavoriteBorderIcon />
+          </IconButton>
+        </div>
+      </Card>
 
     </div>
-    );
+  );
 }
 
 export default UnFollowingCard;
 
-
-// without material design: 
-{/* <div className="UnFollowingCard">
-
-<span>{props.userVacationData.destination}</span>
-<br />
-
-<span>{'$' + props.userVacationData.price}</span>
-<br />
-<span title={props.userVacationData.description} className="overflow">{props.userVacationData.description}</span>
-<br />
-
-
-<div className="imageVacation">
-    <img src={config.vacationsImageUrl + props.userVacationData.imageName} alt="vacation pic" />
-
-</div> */}
-
-
-{/* 
-<span>From: {formatDate(props.userVacationData.fromDate)}</span>
-<br />
-<span>To: {formatDate(props.userVacationData.toDate)}</span>
-<br /> */}
-
-{/* <span>{formatDate(props.userVacationData.fromDate)} - {formatDate(props.userVacationData.toDate)} </span>
-<br /> */}
-
-{/* <button onClick={() => followVacation(props.userId, props.userVacationData.vacationId)}>℉</button> */}
-{/* <button className="followBtn" onClick={() => followVacation(props.userVacationData.vacationId, props.userVacationData.destination)}>℉</button>
-<span className="followersCount">{props.userVacationData.followersCount}</span>        </div> */}

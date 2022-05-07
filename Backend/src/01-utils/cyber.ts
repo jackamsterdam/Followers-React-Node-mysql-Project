@@ -2,8 +2,6 @@ import crypto from 'crypto'
 import UserModel from '../03-models/user-model'
 import jwt from 'jsonwebtoken'
 
-
-
 const salt = "MakeThingsGoRight"
 const secretKey = 'KittensAreCute'
 
@@ -11,9 +9,7 @@ function hash(plainText: string): string {
     if (!plainText) return null 
     const hashedText = crypto.createHmac('sha512', salt).update(plainText).digest('hex')
     return hashedText
-
 }
-
 
 function getNewToken(user: UserModel):string {
     const payload = {user}
@@ -57,14 +53,6 @@ function getUserFromToken(authorizationHeader: string):UserModel {
    
     return user
 }
-
-
-
-
-
-
-
-
 
 export default {
     hash,

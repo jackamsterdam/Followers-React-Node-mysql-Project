@@ -6,41 +6,38 @@ import "./AuthMenu.css";
 
 function AuthMenu(): JSX.Element {
 
-   const [user, setUser] = useState<UserModel>(null);
-  //  console.log("user in Auth menu", user);  //!erase this
+  const [user, setUser] = useState<UserModel>(null);
 
-   useEffect(() => {
+  useEffect(() => {
 
-     setUser(store.getState().authState.user) 
+    setUser(store.getState().authState.user)
 
-     const unsubscribe = store.subscribe(() => {
-      //  console.log('subscription executed in AuthMenu for auth state user')
-       setUser(store.getState().authState.user)
-     })
+    const unsubscribe = store.subscribe(() => {
 
-     return () => unsubscribe()
+      setUser(store.getState().authState.user)
+    })
 
-   }, [])
+    return () => unsubscribe()
+
+  }, [])
 
 
-    return (
-        <div className="AuthMenu">
+  return (
+    <div className="AuthMenu">
 
-            {user === null ?    
-            <>
-            <span>Hello Guest</span>
-            </>
-            :
-            <>
-            <span>Hello {user.firstName.charAt(0).toUpperCase() + user.firstName.slice(1)} {user.lastName.charAt(0).toUpperCase() + user.lastName.slice(1)}</span>
-            <span> | </span>
-
-            <NavLink to="/logout">Logout</NavLink>
-
-            </>
-            }             
-        </div>
-    );
+      {user === null ?
+        <>
+          <span>Hello Guest</span>
+        </>
+        :
+        <>
+          <span>Hello {user.firstName.charAt(0).toUpperCase() + user.firstName.slice(1)} {user.lastName.charAt(0).toUpperCase() + user.lastName.slice(1)}</span>
+          <span> | </span>
+          <NavLink to="/logout">Logout</NavLink>
+        </>
+      }
+    </div>
+  );
 }
 
 export default AuthMenu;

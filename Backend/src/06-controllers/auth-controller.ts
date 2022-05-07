@@ -7,27 +7,30 @@ const router = express.Router()
 
 // http://localhost:3001/api/auth/register
 router.post('/auth/register', async (request: Request, response: Response, next: NextFunction) => {
+
   try {
-      const user = new UserModel(request.body)
-      const token = await authLogic.register(user)
-      response.status(201).json(token)
+
+    const user = new UserModel(request.body)
+    const token = await authLogic.register(user)
+    response.status(201).json(token)
 
   } catch (err: any) {
-      next(err)
+    next(err)
   }
 })
 
 //http://localhost:3001/api/auth/login
 router.post('/auth/login', async (request: Request, response: Response, next: NextFunction) => {
+
   try {
-      const credentials = new CredentialsModel(request.body)
-      const token = await authLogic.login(credentials)
-      response.json(token)
+    
+    const credentials = new CredentialsModel(request.body)
+    const token = await authLogic.login(credentials)
+    response.json(token)
+
   } catch (err: any) {
     next(err)
   }
-
 })
-
 
 export default router 

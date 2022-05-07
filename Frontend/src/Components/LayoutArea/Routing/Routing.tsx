@@ -3,34 +3,26 @@ import AdminLayout from '../../AdminsArea/AdminLayoutArea/AdminLayout/AdminLayou
 import Login from '../../AuthArea/Login/Login';
 import Logout from '../../AuthArea/Logout/Logout';
 import Register from '../../AuthArea/Register/Register';
-// import TestCard from '../../Test/TestCard/TestCard';
 import UserLayout from '../../UsersArea/UserLayout/UserLayout';
 import PageNotFound from '../PageNotFound/PageNotFound';
 
 function Routing(): JSX.Element {
-    return (
-        <Routes>
-          <Route path="/register" element={<Register/>}/>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/logout" element={<Logout/>}/>
+  return (
+    <Routes>
+      <Route path="/register" element={<Register />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/logout" element={<Logout />} />
 
-          //!Delete test componenet!!
-          {/* <Route path='/test' element = {<TestCard/>}/> */}
+      <Route path="/home" element={<UserLayout />} />
+      
+      {/* Inner Routing for Admin */}
+      <Route path="/admin/*" element={<AdminLayout />} />
 
+      <Route path="/" element={<Navigate to="/home" />} />
 
-
-          
-          <Route path="/home" element={<UserLayout/>}/>
-          <Route path="/admin/*" element={<AdminLayout/>}/>
-
-
-
-
-          <Route path="/" element={<Navigate to="/home" />} />
-
-          <Route path="*" element={<PageNotFound/>} />
-        </Routes>
-    );
+      <Route path="*" element={<PageNotFound />} />
+    </Routes>
+  );
 }
 
 export default Routing;

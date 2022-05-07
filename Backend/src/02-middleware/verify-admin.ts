@@ -4,24 +4,23 @@ import ErrorModel from "../03-models/error-model";
 import RoleEnum from "../03-models/role-enum";
 
 
-async function verifyAdmin(request: Request, response: Response, next: NextFunction):Promise<void> {
-   const authorizationHeader = request.header('authorization')
-   const isValid = await cyber.verifyToken(authorizationHeader)
-   if (!isValid) {
-     next(new ErrorModel(401, `You are not logged-in`))
-     return
-   }
+async function verifyAdmin(request: Request, response: Response, next: NextFunction): Promise<void> {
+  const authorizationHeader = request.header('authorization')
+  const isValid = await cyber.verifyToken(authorizationHeader)
+  if (!isValid) {
+    next(new ErrorModel(401, `You are not logged-in`))
+    return
+  }
 
-   const user = cyber.getUserFromToken(authorizationHeader)
-   if (user.roleId !== RoleEnum.ADMIN) {
+  const user = cyber.getUserFromToken(authorizationHeader)
+  if (user.roleId !== RoleEnum.ADMIN) {
 
-     next(new ErrorModel(403, `Forbidden: You are not authorized`))
+    next(new ErrorModel(403, `Forbidden: You are not authorized`))
     return
 
-    }
+  }
 
-   next()
+  next()
 }
-
 
 export default verifyAdmin

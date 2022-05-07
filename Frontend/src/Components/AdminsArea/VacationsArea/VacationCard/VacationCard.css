@@ -19,44 +19,42 @@
    font-size: 25px;
    font-weight: bold;
    display: inline;
-      padding-left: 10px;
- }
- 
- .VacationCard .CardPrice {
+   padding-left: 10px;
+}
+
+.VacationCard .CardPrice {
    font-size: 18px;
-      padding-left: 10px;
- }
- 
- .VacationCard .CardStars {
+   padding-left: 10px;
+}
+
+.VacationCard .CardStars {
    color: orange;
    padding-left: 10px;
    display: block;
    padding-top: 0px;
    margin-top: -6px;
- }
+}
 
- .VacationCard .Stars {
+.VacationCard .Stars {
    font-size: 20px!important;
- }
+}
 
- .VacationCard .FromDate{
+.VacationCard .FromDate {
    font-size: 14px;
    font-weight: bold;
    padding-left: 10px;
-    padding-bottom: 3px;
- }
+   padding-bottom: 3px;
+}
 
 .VacationCard .DeleteButton {
    margin: 5px;
    color: red;
-
 }
 
 .VacationCard .EditButton {
    color: lightseagreen;
 }
-/* erase thisline:  */
-/* https://stackoverflow.com/questions/15909489/text-overflow-ellipsis-on-two-lines */
+
 .VacationCard .Overflow {
    display: -webkit-box;
    -webkit-line-clamp: 3;
@@ -65,9 +63,10 @@
    text-overflow: ellipsis;
    font-size: 15px;
    direction: initial;
+}
 
-} 
-.VacationCard .DeleteButton:hover, .VacationCard .EditButton:hover {
+.VacationCard .DeleteButton:hover,
+.VacationCard .EditButton:hover {
    transform: scale(0.90);
 }
 
@@ -86,12 +85,14 @@
 .confirm-box {
    top: 5%!important;
 }
-.confirm-box__content  {
+
+.confirm-box__content {
    background-color: #598da5!important;
    color: white!important;
 }
 
-.cancellable-button, .confirmable-buttton {
+.cancellable-button,
+.confirmable-buttton {
    border-radius: 8px!important;
    background: beige!important;
    border: none!important;

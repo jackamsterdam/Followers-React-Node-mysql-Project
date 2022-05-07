@@ -11,20 +11,16 @@ class SocketService {
         return this.socket;
     }
 
-    connect():void {
-      
+    connect(): void {
+
         this.socket = io(config.socketUrl)
         this.socket.on('msg-from-server', (userVacations: UserVacationModel[]) => {
-            // alert(userVacations.length)
-            // store.dispatch(socketSendAction(msg))
             store.dispatch(fetchUserVacationsAction(userVacations))
         })
-        //  Send the current userId to the server when connecting to the socket
-        this.socket.emit('msg-from-client',  store.getState().authState.user.userId)
-
+        this.socket.emit('msg-from-client', store.getState().authState.user.userId)
     }
 
-    disconnect():void {
+    disconnect(): void {
         this.socket.disconnect()
     }
 }

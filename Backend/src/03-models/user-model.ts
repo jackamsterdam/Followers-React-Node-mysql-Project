@@ -3,10 +3,10 @@ import RoleEnum from "./role-enum"
 
 class UserModel {
     userId: string  //uuid (to prevent IDOR attacks)
-    firstName: string 
-    lastName: string 
-    username: string 
-    password: string 
+    firstName: string
+    lastName: string
+    username: string
+    password: string
     roleId: RoleEnum  // enum either 1 for USER 2 for ADMIN
 
     constructor(user: UserModel) {
@@ -18,17 +18,17 @@ class UserModel {
         this.roleId = user.roleId
     }
 
-    private static postValidationSchema = Joi.object({ //400 errors
+    private static postValidationSchema = Joi.object({ 
         userId: Joi.forbidden(),
         firstName: Joi.string().required().min(2).max(100),
         lastName: Joi.string().required().min(2).max(100),
         username: Joi.string().required().min(2).max(100),
-        password: Joi.string().required().min(2).max(100),  
-        roleId: Joi.number().optional().integer().min(RoleEnum.USER).max(RoleEnum.ADMIN) 
+        password: Joi.string().required().min(2).max(100),
+        roleId: Joi.number().optional().integer().min(RoleEnum.USER).max(RoleEnum.ADMIN)
     })
 
-    validatePost():string {
-        const result = UserModel.postValidationSchema.validate(this, {abortEarly: false})
+    validatePost(): string {
+        const result = UserModel.postValidationSchema.validate(this, { abortEarly: false })
         return result.error?.message
     }
 }

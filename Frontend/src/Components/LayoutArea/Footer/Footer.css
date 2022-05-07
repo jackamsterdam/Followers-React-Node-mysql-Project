@@ -1,16 +1,16 @@
 .Footer {
     height: 100%;
-	display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     color: #bbc3cdd1;
-    background: rgba(0,0,0, 0.6);
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .Footer .Linkedin {
     color: #0171B2;
 }
 
-.Footer .GitHub { 
+.Footer .GitHub {
     color: #eee;
- }
+}

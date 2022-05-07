@@ -15,9 +15,7 @@ function Logout(): JSX.Element {
 
         return () => socketService.getSocket() ? socketService.disconnect() : null
 
-    
-    },[])
-
+    }, [])
 
     return null
 }

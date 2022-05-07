@@ -3,9 +3,10 @@
 	display: inline-block;
 	margin-top: 40px;
 }
-.Login > form {
+
+.Login>form {
 	width: 450px;
-    padding: 20px;
+	padding: 20px;
 	margin: 20px;
 
 }
@@ -17,19 +18,17 @@
 }
 
 .Login .ErrorMsg {
-    color: red;
-    position: relative;
-    font-size: 16px;
-    font-weight: bold;
-    bottom: 21px;
-    float: left;
+	color: red;
+	position: relative;
+	font-size: 16px;
+	font-weight: bold;
+	bottom: 21px;
+	float: left;
 }
 
 .Login button {
-	/* width: 100%; */
 	margin: 10px 0;
 }
-
 
 .Login button:hover {
 	transform: scale(0.98);
@@ -41,11 +40,11 @@
 }
 
 .RegisterText {
-    display: inline;
-    padding-left: 15px;
-    padding-right: 15px;
+	display: inline;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .Login a {
-	color: blue;;
+	color: blue;
 }

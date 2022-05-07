@@ -1,19 +1,17 @@
 import UserModel from "../Models/UserModel"
 import jwtDecode from 'jwt-decode'
 
+
 export class AuthState {
     token: string = null
-    user: UserModel = null 
+    user: UserModel = null
 
     constructor() {
         this.token = localStorage.getItem('token')
-        // console.log("this.token", this.token);
         if (this.token) {
-            // console.log(" inside", this.token);
-            const payload:any = jwtDecode(this.token)
+            const payload: any = jwtDecode(this.token)
             this.user = payload.user
-            // console.log("this.user insdie", this.user);
-           
+              
         }
     }
 }
@@ -25,42 +23,42 @@ export enum AuthActionType {
 }
 
 export interface AuthAction {
-   type: AuthActionType,
-   payload?: string
+    type: AuthActionType,
+    payload?: string
 }
 
-export function registerAction(token: string):AuthAction {
-    return {type: AuthActionType.Register, payload: token}
+export function registerAction(token: string): AuthAction {
+    return { type: AuthActionType.Register, payload: token }
 }
 
 export function loginAction(token: string): AuthAction {
-    return {type: AuthActionType.Login, payload: token}
+    return { type: AuthActionType.Login, payload: token }
 }
 
-export function logoutAction():AuthAction {
-    return {type: AuthActionType.Logout}
+export function logoutAction(): AuthAction {
+    return { type: AuthActionType.Logout }
 }
 
 export function authReducer(currentState = new AuthState(), action: AuthAction): AuthState {
-  const newState = {...currentState}
+    const newState = { ...currentState }
 
-  switch(action.type) {
-      case AuthActionType.Register:
-      case AuthActionType.Login:
-          newState.token = action.payload
-          const payload: any = jwtDecode(newState.token)
-          newState.user = payload.user
-          localStorage.setItem('token', newState.token)
-       break;
-      case AuthActionType.Logout:
-      newState.token = null 
-      newState.user = null 
-      localStorage.removeItem('token')
-      //If user logs out make sure to delete vacations as well.
-      localStorage.removeItem('vacations')
-  }
+    switch (action.type) {
+        case AuthActionType.Register:
+        case AuthActionType.Login:
+            newState.token = action.payload
+            const payload: any = jwtDecode(newState.token)
+            newState.user = payload.user
+            localStorage.setItem('token', newState.token)
+            break;
+        case AuthActionType.Logout:
+            newState.token = null
+            newState.user = null
+            localStorage.removeItem('token')
 
-  return newState
+            //If user logs out make sure to delete vacations as well.
+            localStorage.removeItem('vacations')
+    }
 
-  
+    return newState
+
 }

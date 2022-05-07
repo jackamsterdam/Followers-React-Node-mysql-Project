@@ -1,9 +1,7 @@
 import {combineReducers, createStore} from 'redux'
-import {composeWithDevTools} from 'redux-devtools-extension'
 import { authReducer } from './AuthState'
 import { userVacationsReducer } from './UserVacationsState'
 import { vacationsReducer } from './VacationsState'
-
 
 
 const reducers = combineReducers({
@@ -12,6 +10,6 @@ const reducers = combineReducers({
   userVacationsState: userVacationsReducer
 })
 
-const store = createStore(reducers, composeWithDevTools())
+const store = createStore(reducers)
 
 export default store 

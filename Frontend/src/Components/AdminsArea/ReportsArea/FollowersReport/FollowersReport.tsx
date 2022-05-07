@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import { Typography } from '@mui/material';
 
 function FollowersReport(): JSX.Element {
-const navigate = useNavigate()
+    const navigate = useNavigate()
     const [followersCount, setFollowersCount] = useState<VictoryFollowModel[]>([])
 
     useEffect(() => {
@@ -20,11 +20,7 @@ const navigate = useNavigate()
             try {
                 const followersCount = await vacationsService.getAllFollowersForChart()
 
-                // followersCount[2].vacationCount = 300
-                //  console.log("followersCount", followersCount);
-                
                 setFollowersCount(followersCount)
-
 
             } catch (err: any) {
                 if (err.response.status === 401) {
@@ -34,43 +30,24 @@ const navigate = useNavigate()
                     notify.error(err)
                 }
             }
-
         })()
 
     }, [])
-    // 1: {destination: 'Italy', vacationCount: 3}
-    // 2: {destination: 'Spain', vacationCount: 2}
-    // 3: {destination: 'Germany', vacationCount: 2}
-    // 4: {destination: 'Sweden', vacationCount: 1}
-    // 5: {destination: 'Sweden', vacationCount: 1}
-    // 6: {destination: 'Sweden', vacationCount: 1}
-
 
     return (
         <div className="FollowersReport">
             <Typography>All the followed vacations per quantity of followers</Typography>
             {followersCount.length === 0 && <Loading />}
 
-
-            <VictoryChart domainPadding={20} theme={VictoryTheme.material}  width={followersCount.length * 100} containerComponent={<VictoryContainer responsive={false} />}>
-
-
+            <VictoryChart domainPadding={20} theme={VictoryTheme.material} width={followersCount.length * 100} containerComponent={<VictoryContainer responsive={false} />}>
 
                 <VictoryAxis
-
-                    // tickValues={followersCount.map((f, i) => key={i}, f.destination)}
-                    // tickValues={followersCount.map(f => f.destination)}
                     tickFormat={followersCount.map(f => f.destination)}
-
-                // {allDesserts.map(item =>  <span key={item.id}>{item.name} | </span>)}
                 />
 
                 <VictoryAxis
                     dependentAxis
-
-                    // tickValues={followersCount.map(f => f.vacationCount)}
                     tickFormat={followersCount.map(f => f.vacationCount)}
-
                 />
 
                 <VictoryBar data={followersCount} x="destination" y="vacationCount" />

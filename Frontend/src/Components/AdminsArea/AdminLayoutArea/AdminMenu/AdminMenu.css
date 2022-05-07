@@ -1,13 +1,13 @@
 .AdminMenu {
     height: 100%;
-	display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .AdminMenu > a {
-  text-decoration: none;
-  margin: 0 20px;
+    text-decoration: none;
+    margin: 0 20px;
 }
 
 

@@ -1,25 +1,20 @@
 .Layout {
-	height: 100%;
-    box-sizing: border-box; 
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-template-rows: 15% 80% 5%;
-    background-image: linear-gradient(to top, rgba(0,0,0,0.1) 68%,rgba(0,0,0,0.7) 80%), url(../../../Assets/Images/vacation-bg.jpg);
-    background-repeat: no-repeat;
-      background-size: cover;
+  height: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 15% 80% 5%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1) 68%, rgba(0, 0, 0, 0.7) 80%), url(../../../Assets/Images/vacation-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-/* .Layout, .Layout > * { */
-  /* border: 1px solid black; */
-/* } */
-
-
-.Layout header, .Layout footer {
-    grid-column: span 6;
+.Layout header,
+.Layout footer {
+  grid-column: span 6;
 }
 
 .Layout main {
-    grid-column: span 6;
-    /* grid-column: span 5; */
-    overflow: auto;
+  grid-column: span 6;
+  overflow: auto;
 }
