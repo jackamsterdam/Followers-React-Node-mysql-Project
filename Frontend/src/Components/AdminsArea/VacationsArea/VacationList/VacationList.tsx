@@ -48,21 +48,21 @@ function VacationList(): JSX.Element {
     }, [])
 
 
-    async function deleteVacation(vacationId: number, destination: string): Promise<void> {
-        try {
-            const confirmDelete = window.confirm(`Are you sure you want to delete ${destination}?`)
-            if (!confirmDelete) return
-            await vacationsService.deleteVacation(vacationId)
-            notify.success('Vacation has been deleted')
-        } catch (err: any) {
-            if (err.response.status === 401) {
-                authService.logout()
-                navigate('/login')
-            } else {
-                notify.error(err)
-            }
-        }
-    }
+    // async function deleteVacation(vacationId: number, destination: string): Promise<void> {
+    //     try {
+    //         const confirmDelete = window.confirm(`Are you sure you want to delete ${destination}?`)
+    //         if (!confirmDelete) return
+    //         await vacationsService.deleteVacation(vacationId)
+    //         notify.success('Vacation has been deleted')
+    //     } catch (err: any) {
+    //         if (err.response.status === 401) {
+    //             authService.logout()
+    //             navigate('/login')
+    //         } else {
+    //             notify.error(err)
+    //         }
+    //     }
+    // }
 
 
 
@@ -71,7 +71,8 @@ function VacationList(): JSX.Element {
             {vacations.length === 0 && <Loading />}
 
             <div className="Container">
-                {vacations.map(v => <VacationCard key={v.vacationId} vacation={v} deleteVacation={deleteVacation} />)}
+                {/* {vacations.map(v => <VacationCard key={v.vacationId} vacation={v} deleteVacation={deleteVacation} />)} */}
+                {vacations.map(v => <VacationCard key={v.vacationId} vacation={v} />)}
                 {/* {vacations.length} */}
             </div>
         </div>
@@ -79,3 +80,5 @@ function VacationList(): JSX.Element {
 }
 
 export default VacationList;
+
+

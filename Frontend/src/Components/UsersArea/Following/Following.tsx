@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import UserVacationModel from "../../../Models/UserVacationModel";
@@ -76,6 +77,9 @@ function Following(props: FollowingProps): JSX.Element {
 
     return (
         <div className="Following" style={{display: userVacations.length === 0 ? 'none':'block'}}>
+                   <Typography className="headline" component="div" variant="h5">
+            My Followed Vacations
+              </Typography>
             {/* {userVacations.length === 0 && <Loading />} */}
 
             {/* {userVacations.map(u => u.destination)} */}

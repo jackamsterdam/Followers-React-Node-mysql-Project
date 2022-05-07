@@ -126,9 +126,9 @@ function UnFollowingCard(props: UnFollowingCardProps): JSX.Element {
     <Card className='HorizontalCard' sx={{ display: 'flex'}}>
           <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flex: '1 0 auto'}} className='CardContent'>
-            <Typography className="Reviews" variant="body2" color="text.secondary">
+            {/* <Typography className="Reviews" variant="body2" color="text.secondary">
              {props.userVacationData.review} reviews
-              </Typography>
+              </Typography> */}
             <IconButton className='CardStars'>
                 {[...Array(props.userVacationData.star)].map((e, i) =>   <StarIcon key={props.userVacationData.vacationId + i} className="Stars"/>)}
               </IconButton>
@@ -149,7 +149,7 @@ function UnFollowingCard(props: UnFollowingCardProps): JSX.Element {
               <Typography className="FollowersCount" title='followers' aria-label="followerCount">
                 {props.userVacationData.followersCount}
               </Typography>
-              <IconButton className="Likes">
+              <IconButton className="Likes" title='Number of followers'>
               <ThumbUpAltIcon />
             </IconButton>
             </CardContent>

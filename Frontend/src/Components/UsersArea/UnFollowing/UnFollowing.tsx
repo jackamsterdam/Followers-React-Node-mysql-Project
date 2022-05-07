@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import UserVacationModel from "../../../Models/UserVacationModel";
@@ -74,6 +75,9 @@ const navigate = useNavigate()
 
     return (
         <div className="UnFollowing" style={{display: userVacations.length === 0 ? 'none':'block'}}>
+             <Typography className="headline" component="div" variant="h5">
+            All Vacations
+              </Typography>
             {/* {userVacations.length !== 0 && <Loading />} */}
 
             <div className="Container">

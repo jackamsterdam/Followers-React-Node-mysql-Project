@@ -12,8 +12,7 @@
   direction: rtl;
   position: relative;
   box-shadow: 5px 5px 7px #b4b4b4;
-  margin-right: 30px;
-  margin: 10px;
+  margin: 13px 40px 8px 0px;
   transition: 0.5s all ease-in-out;
   height: 150px;
 }
@@ -79,7 +78,7 @@
   bottom: 0px;
   position: absolute;
   font-weight: bold;
-  right: 228px;
+  left: 209px;
 }
 
 .FollowingCard .FollowersCount {

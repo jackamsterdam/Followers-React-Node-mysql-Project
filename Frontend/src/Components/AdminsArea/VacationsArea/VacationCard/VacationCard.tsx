@@ -23,11 +23,13 @@ import ClearIcon from '@mui/icons-material/Clear';
 import EditIcon from '@mui/icons-material/Edit';
 import authService from "../../../../Services/AuthService";
 
+import {confirm} from 'react-confirm-box'
+
 
 
 interface VacationCardProps {
 	vacation: VacationModel
-    deleteVacation: (vacationId: number, destination: string) => void
+    // deleteVacation: (vacationId: number, destination: string) => void
 }
 
 function VacationCard(props: VacationCardProps): JSX.Element {
@@ -45,7 +47,7 @@ function VacationCard(props: VacationCardProps): JSX.Element {
 
       async function deleteVacation(vacationId: number, destination: string):Promise<void> {
    try {
-       const confirmDelete = window.confirm(`Are you sure you want to delete ${destination}?` )
+       const confirmDelete = await confirm(`Are you sure you want to delete ${destination}?` )
        if (!confirmDelete) return
        await vacationsService.deleteVacation(vacationId)
        notify.success('Vacation has been deleted')
@@ -58,6 +60,21 @@ function VacationCard(props: VacationCardProps): JSX.Element {
   }
    }
 }
+//       async function deleteVacation(vacationId: number, destination: string):Promise<void> {
+//    try {
+//        const confirmDelete = window.confirm(`Are you sure you want to delete ${destination}?` )
+//        if (!confirmDelete) return
+//        await vacationsService.deleteVacation(vacationId)
+//        notify.success('Vacation has been deleted')
+//    } catch (err: any) {
+//     if (err.response.status === 401) {
+//       authService.logout()
+//       navigate('/login')
+//   } else {
+//       notify.error(err)
+//   }
+//    }
+// }
 
 
 
@@ -84,7 +101,7 @@ function VacationCard(props: VacationCardProps): JSX.Element {
    </Typography>
  <CardMedia
    component="img"
-   height="140"
+   height="164"
    image={config.vacationsImageUrl + props.vacation.imageName}
    alt="vacation pic"
  />

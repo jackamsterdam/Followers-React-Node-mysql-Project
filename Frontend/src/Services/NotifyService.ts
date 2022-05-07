@@ -4,7 +4,7 @@ import authService from "./AuthService";
 
 class NotifyService {
   //   navigate = useNavigate()
-    private notification = new Notyf({ duration: 50000, position: { x: 'center', y: 'top' } ,
+    private notification = new Notyf({ duration: 4000, position: { x: 'center', y: 'top' } ,
     types: [
         {
           type: 'success',
