@@ -18,23 +18,33 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 import StarIcon from '@mui/icons-material/Star';
 
+import {  RefObject, SyntheticEvent, useRef } from "react";
 
 interface UnFollowingCardProps {
   userVacationData: UserVacationModel
 }
 
-let timeout: any;
+// let timeout: any;
 
 function UnFollowingCard(props: UnFollowingCardProps): JSX.Element {
   const navigate = useNavigate()
+
+  const buttonBoxRef: RefObject<HTMLButtonElement> = useRef<HTMLButtonElement>()
+
 
   async function followVacation(vacationId: number, destination: string): Promise<void> {
 
     try {
 
       //Debounce - User can't click multiple times
-      clearTimeout(timeout)
-      timeout = setTimeout(() => addFollow(vacationId, destination), 500)
+      // clearTimeout(timeout)
+      // timeout = setTimeout(() => addFollow(vacationId, destination), 500)
+
+      //Protection against clicking more than once on the heart 
+
+      if (buttonBoxRef.current.disabled) return 
+      addFollow(vacationId, destination)
+      buttonBoxRef.current.disabled = true
 
     } catch (err: any) {
       if (err.response.status === 401) {
@@ -98,7 +108,7 @@ function UnFollowingCard(props: UnFollowingCardProps): JSX.Element {
             image={config.vacationsImageUrl + props.userVacationData.imageName}
             alt="vacation picture"
           />
-          <IconButton className="FollowButton" aria-label="addToFavorites" onClick={() => followVacation(props.userVacationData.vacationId, props.userVacationData.destination)}>
+          <IconButton  ref={buttonBoxRef} className="FollowButton" aria-label="addToFavorites" onClick={() => followVacation(props.userVacationData.vacationId, props.userVacationData.destination)}>
             <FavoriteBorderIcon />
           </IconButton>
         </div>

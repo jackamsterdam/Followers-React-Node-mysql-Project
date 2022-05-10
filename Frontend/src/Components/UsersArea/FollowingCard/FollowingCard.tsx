@@ -18,23 +18,34 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import Box from '@mui/material/Box';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 
+import {  RefObject, SyntheticEvent, useRef } from "react";
+
 
 interface FollowingCardProps {
   userVacationData: UserVacationModel
 }
 
-let timeout: any;
+// let timeout: any;
 function FollowingCard(props: FollowingCardProps): JSX.Element {
+
+  const buttonBoxRef: RefObject<HTMLButtonElement> = useRef<HTMLButtonElement>()
 
   const navigate = useNavigate()
 
   function unFollowVacation(vacationId: number, destination: string): void {
-
+    // debugger
+    // console.log(textBoxRef.current)
+// console.log(e.target)
+// console.log(e)
     try {
-
+      // e.target.disabled = true 
       //Debounce - User can't click multiple times
-      clearTimeout(timeout)
-      timeout = setTimeout(() => deleteFollow(vacationId, destination), 500)
+      // clearTimeout(timeout)
+      // timeout = setTimeout(() => deleteFollow(vacationId, destination), 500)
+      
+      if (buttonBoxRef.current.disabled) return 
+      deleteFollow(vacationId, destination)
+      buttonBoxRef.current.disabled = true
 
     } catch (err: any) {
       if (err.response.status === 401) {
@@ -47,7 +58,7 @@ function FollowingCard(props: FollowingCardProps): JSX.Element {
   }
 
   async function deleteFollow(vacationId: number, destination: string) {
-
+    
     const userId = store.getState().authState.user.userId
 
     const unFollow = new FollowModel(userId, vacationId)
@@ -93,7 +104,8 @@ function FollowingCard(props: FollowingCardProps): JSX.Element {
             image={config.vacationsImageUrl + props.userVacationData.imageName}
             alt="vacation picture"
           />
-          <IconButton className="UnFollowButton" aria-label="removeFromFavorites" onClick={() => unFollowVacation(props.userVacationData.vacationId, props.userVacationData.destination)}>
+          {/* <IconButton className="UnFollowButton" aria-label="removeFromFavorites" onClick={(e) => unFollowVacation(props.userVacationData.vacationId, props.userVacationData.destination, e)}> */}
+          <IconButton  ref={buttonBoxRef} className="UnFollowButton" aria-label="removeFromFavorites" onClick={() => unFollowVacation(props.userVacationData.vacationId, props.userVacationData.destination)}>
             <FavoriteIcon />
           </IconButton>
         </div>
