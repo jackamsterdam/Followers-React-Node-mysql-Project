@@ -6,8 +6,8 @@ import AuthMenu from "../../AuthArea/AuthMenu/AuthMenu";
 
 function Header(): JSX.Element {
     return (
-        <div className="Header">
-            <Logo />
+        <div className="Header">         
+            <Logo  />
             <Typography className='VacationHeader'>Vacations by Jack</Typography>
             <AuthMenu />
         </div>

@@ -13,3 +13,14 @@
     font-size: 39px!important;
     color: #bbc3cdd1;
 }
+
+
+@media only screen and (max-width:700px) {
+    .VacationHeader {
+        font-size: 35px!important;
+        position: relative;
+        left: 5px;
+        top: 30px;
+
+    }
+}

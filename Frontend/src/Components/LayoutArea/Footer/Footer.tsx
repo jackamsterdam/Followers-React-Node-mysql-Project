@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 function Footer(): JSX.Element {
     return (
         <div className="Footer">
-            <Typography>All Rights Reserved &copy; 2022 Jack Amsterdam</Typography>
+            <Typography className="SmallerTxt">All Rights Reserved &copy; 2022 Jack Amsterdam</Typography>
           
             <IconButton className='Linkedin' aria-label='http://www.linkedin.com/in/jack-amsterdam' onClick={() => window.open('http://www.linkedin.com/in/jack-amsterdam')}>
                 <LinkedInIcon fontSize="large" />
@@ -20,8 +20,8 @@ function Footer(): JSX.Element {
                 <GitHubIcon fontSize="small" />
             </IconButton>
            
-            <img alt="Code Time" src="https://img.shields.io/endpoint?style=social&url=https://codetime-api.datreks.com/badge/3246?logoColor=dark%26project=%26recentMS=0%26showProject=false" />
-            
+            {/* <img alt="Code Time" src="https://img.shields.io/endpoint?style=social&url=https://codetime-api.datreks.com/badge/3246?logoColor=dark%26project=%26recentMS=0%26showProject=false" />
+             */}
         </div>
     );
 }

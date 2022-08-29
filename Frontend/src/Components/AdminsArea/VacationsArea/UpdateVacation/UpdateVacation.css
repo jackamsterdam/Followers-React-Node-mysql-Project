@@ -37,3 +37,17 @@
   position: relative;
   right: 196px;
 }
+
+@media only screen and (max-width:700px) {
+  .UpdateVacation>form {
+    width: 320px;
+    padding: 20px;
+    margin: 20px;
+
+  }
+
+  .UpdateVacation .ImageUploader {
+    position: relative;
+    right: 127px;
+  }
+}

@@ -48,3 +48,15 @@
 .Login a {
 	color: blue;
 }
+
+@media only screen and (max-width:700px) {
+	.Login > form {
+		width: 320px;
+		padding: 20px;
+		margin: 20px;
+	}
+
+	.Login .RegisterText {
+		background: rgba(198, 207, 211, 0.6);
+	}
+}
