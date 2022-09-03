@@ -15,11 +15,13 @@ First of all the site is deployed on Heroku - https://vacationsbyjack.herokuapp.
 ADMIN
 
 username: jackamsterdam
+
 password: 1234
 
 USER  ( You can register as a new user)
 
 username: kermit
+
 password: 1234
 
 ## Jack's info:
