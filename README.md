@@ -36,4 +36,4 @@ https://hub.docker.com/u/jackamsterdam
 
 https://wakatime.com/@jackamsterdam
 
-https://www.npmjs.com/~jackamsterdam
+https://www.npmjs.com/~jackamsterdam 
