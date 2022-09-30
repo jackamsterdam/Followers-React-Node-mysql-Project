@@ -10,7 +10,7 @@ First of all the site is deployed on Heroku - **https://vacationsbyjack.herokuap
 2. Open 2 terminals - Open Backend folder in the terminal and type: npm i && npm start. Open Frontend folder in the terminal and type: npm i && npm start.
 3. Project will open for you on http://localhost:3000
 
-# Admin login credentials:
+# Admin login credentials: 
 
 ADMIN
 
