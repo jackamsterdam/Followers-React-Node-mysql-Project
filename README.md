@@ -6,6 +6,15 @@
 First of all the site is deployed on Heroku - **https://vacationsbyjack.herokuapp.com/**
 
 
+```
+
+1. Git clone the repository.
+2. There is a folder called Database -import the sql file into your phpMyAdmin or your MySQL Workbench.
+3. Open terminal by clicking on the Backend folder and type: npm i && npm start.
+4. Open a second seperate terminal by clicking on the Frontend folder and type: npm i && npm start.
+5. Backend Server will run on http://localhost:3001
+6. Frontend Server will run on http://localhost:3000
+```
 ![thumbnail](https://user-images.githubusercontent.com/64046793/193428461-bc6eb17e-2843-4421-a98a-4f0d2a4f50a8.JPG)
 
 ![thumbnail3](https://user-images.githubusercontent.com/64046793/193428466-5d76e693-250c-43ce-a99e-09536caadf6f.JPG)
@@ -17,18 +26,9 @@ First of all the site is deployed on Heroku - **https://vacationsbyjack.herokuap
 ![pictures for github 2](https://user-images.githubusercontent.com/64046793/193428660-2f38037c-9b2f-4916-b127-495b59a4cb43.JPG)
 ![pictures for github 3](https://user-images.githubusercontent.com/64046793/193428661-451bf822-b57e-4777-83f6-194bee7e3e4f.JPG)
 ![pictures for github 4](https://user-images.githubusercontent.com/64046793/193428663-a2fec12b-cd57-4df2-bfda-6fd34b12ae96.JPG)
-![pictures for github 5](https://user-images.githubusercontent.com/64046793/193428665-865d0d0c-d7b9-4400-a99e-669361b30afb.JPG)
+
 ![pictures for github 6](https://user-images.githubusercontent.com/64046793/193428666-625da989-0bc7-4a38-b1c0-e5f4b00aa5f8.JPG)
 
-```
-
-1. Git clone the repository.
-2. There is a folder called Database -import the sql file into your phpMyAdmin or your MySQL Workbench.
-3. Open terminal by clicking on the Backend folder and type: npm i && npm start.
-4. Open a second seperate terminal by clicking on the Frontend folder and type: npm i && npm start.
-5. Backend Server will run on http://localhost:3001
-6. Frontend Server will run on http://localhost:3000
-```
 
 # Admin login credentials: 
 
