@@ -26,8 +26,6 @@ First of all the site is deployed on Heroku - **https://vacationsbyjack.herokuap
 
 ![a056bad5-9f3f-45ea-86f0-7bf4ac437ff2](https://user-images.githubusercontent.com/64046793/193428474-ad889892-b57c-4031-99d2-76c80f1fabc1.jpg)
 ![528738fc-74f4-4028-9231-bf6a92d9a41c](https://user-images.githubusercontent.com/64046793/193428485-0763e6fa-6165-4891-8dcb-331366f71624.jpg)
-![cda42bde-763b-45d8-89e8-689472465f0d](https://user-images.githubusercontent.com/64046793/193428768-019a18e1-0346-4a73-8327-2b687d945579.jpg)
-
 ![6eee7e88-cb4a-49e7-bb61-df058adfd35e](https://user-images.githubusercontent.com/64046793/193428810-53765f07-9cfb-4405-9357-4cc571eaf82c.jpg)
 ![65159be4-d772-4c6b-9947-32e9ce222f60](https://user-images.githubusercontent.com/64046793/193428825-6ee4b41d-7524-4f27-9980-faff1cd5c439.jpg)
 
